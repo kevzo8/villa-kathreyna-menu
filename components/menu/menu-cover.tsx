@@ -24,35 +24,35 @@ export function MenuCover() {
         <div className="mb-6">
           <Image
             src="/images/logo-transparent.png"
-            alt="Villa KathReyna Logo"
-            width={280}
-            height={280}
+            alt="Villa Kathreyna Logo"
+            width={300}
+            height={300}
             className="drop-shadow-lg"
             priority
           />
         </div>
 
         {/* Decorative line */}
-        <div className="flex items-center gap-4 mb-8">
-          <div className="w-20 h-px bg-[#d4af37]" />
-          <div className="w-2 h-2 rotate-45 bg-[#d4af37]" />
-          <div className="w-20 h-px bg-[#d4af37]" />
+        <div className="flex items-center gap-4 mb-6">
+          <div className="w-24 h-px bg-[#d4af37]" />
+          <div className="w-2.5 h-2.5 rotate-45 bg-[#d4af37]" />
+          <div className="w-24 h-px bg-[#d4af37]" />
         </div>
 
-        {/* Menu title */}
-        <h1 className="font-serif text-7xl font-bold text-[#d4af37] tracking-wider mb-3" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>
+        {/* Menu title - using Cinzel Decorative */}
+        <h1 className="font-display text-8xl font-bold text-[#d4af37] tracking-wider mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>
           Menu
         </h1>
 
         {/* Decorative line */}
-        <div className="flex items-center gap-4 mt-6 mb-10">
-          <div className="w-20 h-px bg-[#d4af37]" />
-          <div className="w-2 h-2 rotate-45 bg-[#d4af37]" />
-          <div className="w-20 h-px bg-[#d4af37]" />
+        <div className="flex items-center gap-4 mt-4 mb-8">
+          <div className="w-24 h-px bg-[#d4af37]" />
+          <div className="w-2.5 h-2.5 rotate-45 bg-[#d4af37]" />
+          <div className="w-24 h-px bg-[#d4af37]" />
         </div>
 
         {/* Tagline */}
-        <p className="font-sans text-[#d4af37] text-sm tracking-[0.35em] uppercase opacity-80">
+        <p className="font-serif text-[#d4af37] text-base tracking-[0.35em] uppercase opacity-90">
           Event Place & Resort
         </p>
         <p className="font-sans text-[#e8d5a3] text-xs tracking-[0.25em] uppercase mt-3 opacity-60">

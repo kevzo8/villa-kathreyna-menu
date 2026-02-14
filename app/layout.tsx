@@ -1,11 +1,18 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Lato } from 'next/font/google'
+import { Cinzel, Cinzel_Decorative, Lato } from 'next/font/google'
 
 import './globals.css'
 
-const playfair = Playfair_Display({
+const cinzel = Cinzel({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-cinzel',
+  display: 'swap',
+})
+
+const cinzelDecorative = Cinzel_Decorative({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  variable: '--font-cinzel-decorative',
   display: 'swap',
 })
 
@@ -17,8 +24,8 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: 'Villa KathReyna - Menu',
-  description: 'Villa KathReyna Event Place & Resort - Restaurant Menu',
+  title: 'Villa Kathreyna - Menu',
+  description: 'Villa Kathreyna Event Place & Resort - Restaurant Menu',
 }
 
 export default function RootLayout({
@@ -28,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${playfair.variable} ${lato.variable} font-sans antialiased`} suppressHydrationWarning>{children}</body>
+      <body className={`${cinzel.variable} ${cinzelDecorative.variable} ${lato.variable} font-sans antialiased`} suppressHydrationWarning>{children}</body>
     </html>
   )
 }

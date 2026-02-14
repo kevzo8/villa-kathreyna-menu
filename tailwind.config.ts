@@ -64,7 +64,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-lato)', 'sans-serif'],
-        serif: ['var(--font-playfair)', 'serif'],
+        serif: ['var(--font-cinzel)', 'serif'],
+        display: ['var(--font-cinzel-decorative)', 'serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

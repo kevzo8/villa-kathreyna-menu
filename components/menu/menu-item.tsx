@@ -4,14 +4,15 @@ import type { MenuItem } from "@/lib/menu-data"
 interface MenuItemCardProps {
   item: MenuItem
   layout?: "horizontal" | "vertical"
-  imageSize?: "sm" | "md" | "lg"
+  imageSize?: "sm" | "md" | "lg" | "xl"
 }
 
-export function MenuItemCard({ item, layout = "horizontal", imageSize = "md" }: MenuItemCardProps) {
+export function MenuItemCard({ item, layout = "horizontal", imageSize = "lg" }: MenuItemCardProps) {
   const sizeMap = {
-    sm: { w: 64, h: 64, cls: "w-16 h-16" },
-    md: { w: 80, h: 80, cls: "w-20 h-20" },
-    lg: { w: 96, h: 96, cls: "w-24 h-24" },
+    sm: { w: 80, h: 80, cls: "w-20 h-20" },
+    md: { w: 100, h: 100, cls: "w-[100px] h-[100px]" },
+    lg: { w: 120, h: 120, cls: "w-[120px] h-[120px]" },
+    xl: { w: 140, h: 140, cls: "w-[140px] h-[140px]" },
   }
 
   const size = sizeMap[imageSize]
@@ -20,7 +21,7 @@ export function MenuItemCard({ item, layout = "horizontal", imageSize = "md" }: 
     return (
       <div className="flex flex-col items-center text-center">
         {item.image && (
-          <div className={`${size.cls} rounded-full overflow-hidden mb-2 border-2 border-[#d4af37] border-opacity-40 shadow-sm flex-shrink-0`}>
+          <div className={`${size.cls} rounded-full overflow-hidden mb-2 border-2 border-[#d4af37] border-opacity-50 shadow-md flex-shrink-0`}>
             <Image
               src={item.image}
               alt={item.name}
@@ -37,7 +38,7 @@ export function MenuItemCard({ item, layout = "horizontal", imageSize = "md" }: 
           {"P"}{item.price}
         </span>
         {item.description && (
-          <p className="font-sans text-[9px] text-[#5a7a6e] mt-0.5 leading-tight">
+          <p className="font-sans text-[10px] text-[#5a7a6e] mt-0.5 leading-snug">
             {item.description}
           </p>
         )}
@@ -48,7 +49,7 @@ export function MenuItemCard({ item, layout = "horizontal", imageSize = "md" }: 
   return (
     <div className="flex items-start gap-3">
       {item.image && (
-        <div className={`${size.cls} rounded-full overflow-hidden border-2 border-[#d4af37] border-opacity-40 shadow-sm flex-shrink-0`}>
+        <div className={`${size.cls} rounded-full overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md flex-shrink-0`}>
           <Image
             src={item.image}
             alt={item.name}
@@ -58,7 +59,7 @@ export function MenuItemCard({ item, layout = "horizontal", imageSize = "md" }: 
           />
         </div>
       )}
-      <div className="flex-1 min-w-0">
+      <div className="flex-1 min-w-0 pt-1">
         <div className="flex items-baseline justify-between gap-1">
           <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] leading-tight">
             {item.name}
@@ -69,7 +70,7 @@ export function MenuItemCard({ item, layout = "horizontal", imageSize = "md" }: 
           </span>
         </div>
         {item.description && (
-          <p className="font-sans text-[10px] text-[#5a7a6e] leading-tight mt-0.5">
+          <p className="font-sans text-[10px] text-[#5a7a6e] leading-snug mt-0.5">
             {item.description}
           </p>
         )}

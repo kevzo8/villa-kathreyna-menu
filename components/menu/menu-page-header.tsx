@@ -7,7 +7,7 @@ export function MenuPageHeader() {
       <div className="px-4">
         <Image
           src="/images/logo-transparent.png"
-          alt="Villa KathReyna"
+          alt="Villa Kathreyna"
           width={60}
           height={60}
           className="opacity-80"

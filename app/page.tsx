@@ -9,8 +9,15 @@ import { PrintButton } from "@/components/menu/print-button"
 export default function MenuPage() {
   return (
     <main className="bg-[#e8e0d0] min-h-screen">
-      {/* Print button - hidden when printing */}
+      {/* Print / Download buttons - hidden when printing */}
       <PrintButton />
+
+      {/* PDF download tip */}
+      <div className="no-print fixed top-16 right-4 z-50 max-w-[220px] text-right">
+        <p className="text-[10px] text-[#5a7a6e] font-sans leading-snug mt-1">
+          {'Tip: Select "Save as PDF" as the destination in the print dialog to download.'}
+        </p>
+      </div>
 
       {/* Menu pages with spacing for screen view */}
       <div className="flex flex-col items-center gap-8 py-8 print:gap-0 print:py-0">
