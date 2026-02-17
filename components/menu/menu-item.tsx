@@ -4,15 +4,16 @@ import type { MenuItem } from "@/lib/menu-data"
 interface MenuItemCardProps {
   item: MenuItem
   layout?: "horizontal" | "vertical"
-  imageSize?: "sm" | "md" | "lg" | "xl"
+  imageSize?: "sm" | "md" | "lg" | "xl" | "2xl"
 }
 
-export function MenuItemCard({ item, layout = "horizontal", imageSize = "lg" }: MenuItemCardProps) {
+export function MenuItemCard({ item, layout = "horizontal", imageSize = "xl" }: MenuItemCardProps) {
   const sizeMap = {
     sm: { w: 80, h: 80, cls: "w-20 h-20" },
     md: { w: 100, h: 100, cls: "w-[100px] h-[100px]" },
     lg: { w: 120, h: 120, cls: "w-[120px] h-[120px]" },
-    xl: { w: 140, h: 140, cls: "w-[140px] h-[140px]" },
+    xl: { w: 150, h: 150, cls: "w-[150px] h-[150px]" },
+    "2xl": { w: 170, h: 170, cls: "w-[170px] h-[170px]" },
   }
 
   const size = sizeMap[imageSize]
@@ -59,18 +60,18 @@ export function MenuItemCard({ item, layout = "horizontal", imageSize = "lg" }: 
           />
         </div>
       )}
-      <div className="flex-1 min-w-0 pt-1">
+      <div className="flex-1 min-w-0 pt-2">
         <div className="flex items-baseline justify-between gap-1">
-          <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] leading-tight">
+          <h3 className="font-serif text-sm font-bold text-[#0e7c6b] leading-tight">
             {item.name}
           </h3>
           <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
-          <span className="font-sans text-[13px] font-bold text-[#d4af37] whitespace-nowrap">
+          <span className="font-sans text-sm font-bold text-[#d4af37] whitespace-nowrap">
             {"P"}{item.price}
           </span>
         </div>
         {item.description && (
-          <p className="font-sans text-[10px] text-[#5a7a6e] leading-snug mt-0.5">
+          <p className="font-sans text-[11px] text-[#5a7a6e] leading-snug mt-0.5">
             {item.description}
           </p>
         )}
