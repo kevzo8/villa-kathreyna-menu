@@ -13,7 +13,8 @@ export function PageBanner({ imageSrc, alt }: PageBannerProps) {
         alt={alt}
         width={794}
         height={160}
-        className="object-cover w-full h-full"
+        className="object-cover w-full h-auto"
+        style={{ height: "100%" }}
       />
       {/* Subtle gradient overlay at bottom for smooth transition into content */}
       <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#faf8f3] to-transparent" />
