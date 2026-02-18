@@ -1,3 +1,4 @@
+import { MenuPageHeader } from "./menu-page-header"
 import { PageBanner } from "./page-banner"
 import { MenuPageFooter } from "./menu-page-footer"
 import { SectionHeader } from "./section-header"
@@ -13,20 +14,23 @@ export function PageVeggiesSandwichesDesserts() {
       <div className="absolute bottom-3 left-3 w-10 h-10 border-b border-l border-[#d4af37] opacity-30" />
       <div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-[#d4af37] opacity-30" />
 
-      {/* Food banner header */}
+      {/* Logo header */}
+      <MenuPageHeader />
+
+      {/* Food banner below header */}
       <PageBanner imageSrc="/images/banners/veggies-sandwiches-desserts.jpg" alt="Vegetables, Sandwiches and Desserts" />
 
       <div className="px-7 flex-1 flex flex-col pt-2">
         {/* Vegetables */}
         <SectionHeader title="Vegetables" />
-        <div className="grid grid-cols-2 gap-x-4 gap-y-3 mb-2">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-1">
           {vegetables.items.map((item) => (
             <MenuItemCard key={item.name} item={item} imageSize="xl" />
           ))}
         </div>
 
         {/* Decorative divider */}
-        <div className="flex items-center justify-center gap-3 my-2">
+        <div className="flex items-center justify-center gap-3 my-1.5">
           <div className="w-16 h-px bg-[#d4af37] opacity-40" />
           <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37] opacity-60" />
           <div className="w-16 h-px bg-[#d4af37] opacity-40" />
@@ -34,14 +38,14 @@ export function PageVeggiesSandwichesDesserts() {
 
         {/* Sandwiches */}
         <SectionHeader title="Sandwiches" />
-        <div className="grid grid-cols-2 gap-x-4 gap-y-3 mb-2">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-1">
           {sandwiches.items.map((item) => (
             <MenuItemCard key={item.name} item={item} imageSize="xl" />
           ))}
         </div>
 
         {/* Decorative divider */}
-        <div className="flex items-center justify-center gap-3 my-2">
+        <div className="flex items-center justify-center gap-3 my-1.5">
           <div className="w-16 h-px bg-[#d4af37] opacity-40" />
           <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37] opacity-60" />
           <div className="w-16 h-px bg-[#d4af37] opacity-40" />
@@ -49,7 +53,7 @@ export function PageVeggiesSandwichesDesserts() {
 
         {/* Desserts */}
         <SectionHeader title="Desserts" />
-        <div className="grid grid-cols-3 gap-x-4 gap-y-3">
+        <div className="grid grid-cols-3 gap-x-4 gap-y-2">
           {desserts.items.map((item) => (
             <MenuItemCard key={item.name} item={item} layout="vertical" imageSize="xl" />
           ))}
