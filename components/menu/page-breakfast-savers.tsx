@@ -33,13 +33,6 @@ export function PageBreakfastAndSavers() {
           ))}
         </div>
 
-        {/* Decorative divider */}
-        <div className="flex items-center justify-center gap-3 my-1.5">
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-          <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37] opacity-60" />
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-        </div>
-
         {/* Savers Meal */}
         <SectionHeader title="Savers Meal" />
         <div className="flex gap-5 items-center">
@@ -65,13 +58,6 @@ export function PageBreakfastAndSavers() {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Decorative divider */}
-        <div className="flex items-center justify-center gap-3 my-1.5">
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-          <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37] opacity-60" />
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
         </div>
 
         {/* Rice */}

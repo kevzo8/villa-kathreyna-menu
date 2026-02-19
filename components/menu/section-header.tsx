@@ -12,8 +12,12 @@ export function SectionHeader({ title, subtitle }: SectionHeaderProps) {
           <h2 className="font-display text-xl font-bold text-[#0e7c6b] tracking-wider uppercase">
             {title}
           </h2>
-          {/* Small decorative line under the title */}
-          <div className="w-12 h-[2px] bg-[#d4af37] mt-1 rounded-full" />
+          {/* Small decorative line-diamond-line under the title */}
+          <div className="flex items-center gap-2 mt-1">
+            <div className="w-8 h-px bg-[#d4af37] opacity-60" />
+            <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37] opacity-80" />
+            <div className="w-8 h-px bg-[#d4af37] opacity-60" />
+          </div>
         </div>
         <div className="flex-1 h-px bg-[#d4af37] opacity-40" />
       </div>

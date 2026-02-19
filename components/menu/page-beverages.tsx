@@ -75,13 +75,6 @@ export function PageBeverages() {
           </div>
         </div>
 
-        {/* Decorative divider */}
-        <div className="flex items-center justify-center gap-3 my-1.5">
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-          <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37] opacity-60" />
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-        </div>
-
         {/* Beer in Can */}
         <SectionHeader title="Beer in Can" />
         <div className="grid grid-cols-2 gap-x-8 gap-y-2 mb-2">
@@ -99,13 +92,6 @@ export function PageBeverages() {
               )}
             </div>
           ))}
-        </div>
-
-        {/* Decorative divider */}
-        <div className="flex items-center justify-center gap-3 my-1.5">
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-          <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37] opacity-60" />
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
         </div>
 
         {/* Beer Bites Promo */}

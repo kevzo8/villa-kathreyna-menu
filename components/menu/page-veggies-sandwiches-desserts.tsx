@@ -29,26 +29,12 @@ export function PageVeggiesSandwichesDesserts() {
           ))}
         </div>
 
-        {/* Decorative divider */}
-        <div className="flex items-center justify-center gap-3 my-1.5">
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-          <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37] opacity-60" />
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-        </div>
-
         {/* Sandwiches */}
         <SectionHeader title="Sandwiches" />
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-1">
           {sandwiches.items.map((item) => (
             <MenuItemCard key={item.name} item={item} imageSize="xl" />
           ))}
-        </div>
-
-        {/* Decorative divider */}
-        <div className="flex items-center justify-center gap-3 my-1.5">
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-          <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37] opacity-60" />
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
         </div>
 
         {/* Desserts */}
