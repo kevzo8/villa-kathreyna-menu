@@ -8,9 +8,13 @@ export function SectionHeader({ title, subtitle }: SectionHeaderProps) {
     <div className="mb-3">
       <div className="flex items-center gap-3">
         <div className="flex-1 h-px bg-[#d4af37] opacity-40" />
-        <h2 className="font-display text-xl font-bold text-[#0e7c6b] tracking-wider uppercase">
-          {title}
-        </h2>
+        <div className="flex flex-col items-center">
+          <h2 className="font-display text-xl font-bold text-[#0e7c6b] tracking-wider uppercase">
+            {title}
+          </h2>
+          {/* Small decorative line under the title */}
+          <div className="w-12 h-[2px] bg-[#d4af37] mt-1 rounded-full" />
+        </div>
         <div className="flex-1 h-px bg-[#d4af37] opacity-40" />
       </div>
       {subtitle && (

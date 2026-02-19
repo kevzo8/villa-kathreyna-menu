@@ -21,25 +21,10 @@ export function PageAppetizersAndSoups() {
       <PageBanner imageSrc="/images/banners/appetizers-soups.jpg" alt="Appetizers and Soups" />
 
       <div className="px-7 flex-1 flex flex-col pt-2">
-        {/* Appetizers */}
-        <SectionHeader title="Appetizers" />
+        {/* Appetizers & Soups */}
+        <SectionHeader title="Appetizers & Soups" />
         <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-          {appetizers.items.map((item) => (
-            <MenuItemCard key={item.name} item={item} imageSize="xl" />
-          ))}
-        </div>
-
-        {/* Decorative divider */}
-        <div className="flex items-center justify-center gap-3 my-1.5">
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-          <div className="w-1.5 h-1.5 rotate-45 bg-[#d4af37] opacity-60" />
-          <div className="w-16 h-px bg-[#d4af37] opacity-40" />
-        </div>
-
-        {/* Soups */}
-        <SectionHeader title="Soups" />
-        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-          {soups.items.map((item) => (
+          {[...appetizers.items, ...soups.items].map((item) => (
             <MenuItemCard key={item.name} item={item} imageSize="xl" />
           ))}
         </div>
