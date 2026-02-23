@@ -342,8 +342,8 @@ export const beer = {
 }
 
 export const beerBites = {
-  title: "Beer Bites Promo",
+  title: "The Royal Toast",
   price: "410",
-  description: "3 Beer Cans (same kind) + 1 Beer Bites of your choice",
+  description: "3 Beer Cans (same kind) + 1 Royal Bite of your choice",
   choices: ["Crispy Chicken Skin", "Sauteed Sweet & Spicy Hotdog", "Tofu Sisig"],
 }

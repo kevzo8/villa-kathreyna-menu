@@ -53,10 +53,10 @@ export function MenuCover() {
 
         {/* Tagline */}
         <p className="font-serif text-[#d4af37] text-base tracking-[0.35em] uppercase opacity-90">
-          Event Place & Resort
+          La Bella Cafe & Resto Bar
         </p>
         <p className="font-sans text-[#e8d5a3] text-xs tracking-[0.25em] uppercase mt-3 opacity-60">
-          Where Your Royal Celebrations Reign
+          Villa Kathreyna Event Place & Resort
         </p>
       </div>
 

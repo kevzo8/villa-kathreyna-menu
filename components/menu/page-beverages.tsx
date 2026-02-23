@@ -94,13 +94,13 @@ export function PageBeverages() {
           ))}
         </div>
 
-        {/* Beer Bites Promo */}
-        <SectionHeader title="Beer Bites Promo" />
+        {/* The Royal Toast */}
+        <SectionHeader title="The Royal Toast" />
         <div className="flex gap-5 items-center">
           <div className="w-[160px] h-[160px] rounded-full overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md flex-shrink-0">
             <Image
               src="/images/food/beer-bites.jpg"
-              alt="Beer Bites Promo"
+              alt="The Royal Toast"
               width={160}
               height={160}
               className="object-cover w-full h-full"
@@ -119,7 +119,7 @@ export function PageBeverages() {
               </p>
               <div className="flex flex-col gap-1">
                 <p className="font-sans text-[10px] text-[#5a7a6e] font-bold uppercase tracking-wider mb-0.5">
-                  Beer Bites Choices:
+                  Your Royal Choices:
                 </p>
                 {beerBites.choices.map((choice) => (
                   <div key={choice} className="flex items-center gap-2">

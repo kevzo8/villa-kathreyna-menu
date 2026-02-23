@@ -24,8 +24,8 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: 'Villa Kathreyna - Menu',
-  description: 'Villa Kathreyna Event Place & Resort - Restaurant Menu',
+  title: 'La Bella Cafe & Resto Bar - Menu',
+  description: 'La Bella Cafe & Resto Bar at Villa Kathreyna Event Place & Resort',
 }
 
 export default function RootLayout({
