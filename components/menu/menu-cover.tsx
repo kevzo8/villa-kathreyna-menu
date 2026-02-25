@@ -53,7 +53,7 @@ export function MenuCover() {
 
         {/* Tagline */}
         <p className="font-serif text-[#d4af37] text-base tracking-[0.35em] uppercase opacity-90">
-          La Bella Cafe & Resto Bar
+          La Bella Caf&egrave; & Resto Bar
         </p>
         <p className="font-sans text-[#e8d5a3] text-xs tracking-[0.25em] uppercase mt-3 opacity-60">
           Villa Kathreyna Event Place & Resort
