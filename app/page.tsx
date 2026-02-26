@@ -1,93 +1,293 @@
+import { MenuCover } from "@/components/menu/menu-cover"
+import { MenuPageHeader } from "@/components/menu/menu-page-header"
+import { PageBanner } from "@/components/menu/page-banner"
+import { MenuPageFooter } from "@/components/menu/menu-page-footer"
+import { SectionHeader } from "@/components/menu/section-header"
+import { MenuItemCard } from "@/components/menu/menu-item"
+import { PrintButton } from "@/components/menu/print-button"
+import { CafeSection } from "@/components/menu/cafe-section"
+import { StoreSection } from "@/components/menu/store-section"
 import Image from "next/image"
-import Link from "next/link"
+import {
+  appetizers, soups, alaCarte, nilagaSinigang,
+  pasta, noodles,
+  filipinoBreakfast, saversMeal, rice,
+  sandwiches, desserts,
+  beverages, beer, beerBites,
+} from "@/lib/menu-data"
 
-const materials = [
-  {
-    title: "Restaurant Menu",
-    description: "La Bella Caf\u00e8 & Resto Bar - Full food & beverage menu",
-    href: "/menu",
-    icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
-  },
-  {
-    title: "Resort Rates",
-    description: "Walk-in rates, venue packages, and amenity pricing",
-    href: "/resort-rates",
-    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
-  },
-  {
-    title: "Room Accommodation",
-    description: "Luxurious rooms & suites with rates and amenities",
-    href: "/rooms",
-    icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
-  },
-  {
-    title: "Rules & Regulations",
-    description: "Resort policies, dress code, safety, and conduct guidelines",
-    href: "/rules",
-    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
-  },
-  {
-    title: "Emergency Hotlines",
-    description: "Front desk, police, fire, ambulance contact numbers",
-    href: "/emergency",
-    icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
-  },
-]
-
-export default function HomePage() {
+function BeverageItem({ name, price, pitcher }: { name: string; price: string; pitcher?: string }) {
   return (
-    <main className="min-h-screen bg-[#0e7c6b]">
-      {/* Header */}
-      <div className="flex flex-col items-center pt-12 pb-8 px-4">
-        <Image
-          src="/images/logo-transparent.png"
-          alt="Villa Kathreyna"
-          width={180}
-          height={180}
-          className="drop-shadow-lg"
-          priority
-        />
-        <div className="flex items-center gap-3 mt-4 mb-3">
-          <div className="w-16 h-px bg-[#d4af37]" />
-          <div className="w-2 h-2 rotate-45 bg-[#d4af37]" />
-          <div className="w-16 h-px bg-[#d4af37]" />
+    <div className="flex items-baseline justify-between gap-1">
+      <span className="font-sans text-[11px] text-[#0e7c6b] font-medium">{name}</span>
+      <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
+      <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap">
+        {"P"}{price}
+        {pitcher && <span className="text-[#5a7a6e] font-normal text-[10px]"> / P{pitcher}</span>}
+      </span>
+    </div>
+  )
+}
+
+function DualPriceItem({ item }: { item: { name: string; price: string; price2?: string; description: string; image?: string } }) {
+  return (
+    <div className="flex items-baseline justify-between gap-1">
+      <span className="font-sans text-[11px] text-[#0e7c6b] font-medium">{item.name}</span>
+      <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
+      <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap">
+        {"P"}{item.price}
+        {item.price2 && <span className="text-[#5a7a6e] font-normal text-[10px]"> / P{item.price2}</span>}
+      </span>
+    </div>
+  )
+}
+
+export default function MenuPage() {
+  return (
+    <main className="bg-[#2a2a2a] min-h-screen">
+      <PrintButton />
+
+      {/* ============ COVER ============ */}
+      <MenuCover />
+
+      {/* ============ PAGE 1: Appetizers & Soups ============ */}
+      <div className="menu-page w-[210mm] min-h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
+        <div className="absolute top-3 left-3 w-10 h-10 border-t border-l border-[#d4af37] opacity-30 z-10" />
+        <div className="absolute top-3 right-3 w-10 h-10 border-t border-r border-[#d4af37] opacity-30 z-10" />
+        <div className="absolute bottom-3 left-3 w-10 h-10 border-b border-l border-[#d4af37] opacity-30" />
+        <div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-[#d4af37] opacity-30" />
+        <MenuPageHeader />
+        <PageBanner imageSrc="/images/banners/appetizers-soups.jpg" alt="Appetizers and Soups" />
+        <div className="px-7 flex-1 flex flex-col pt-2 pb-8">
+          <SectionHeader title="Appetizers" />
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+            {appetizers.items.map((item) => (
+              <MenuItemCard key={item.name} item={item} imageSize="lg" />
+            ))}
+          </div>
+          <div className="mt-2">
+            <SectionHeader title="Soups" />
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+              {soups.items.map((item) => (
+                <MenuItemCard key={item.name} item={item} imageSize="lg" />
+              ))}
+            </div>
+          </div>
         </div>
-        <h1 className="font-display text-3xl text-[#d4af37] text-center">Printable Materials</h1>
-        <p className="font-sans text-sm text-[#e8d5a3] opacity-70 mt-2 text-center">
-          Villa Kathreyna Event Place & Resort
-        </p>
+        <MenuPageFooter pageNumber={1} />
       </div>
 
-      {/* Material cards */}
-      <div className="max-w-3xl mx-auto px-6 pb-12 grid grid-cols-1 gap-4">
-        {materials.map((mat) => (
-          <Link
-            key={mat.href}
-            href={mat.href}
-            className="flex items-center gap-5 bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-[#d4af37]/30 hover:bg-white/15 hover:border-[#d4af37]/60 transition-all group"
-          >
-            <div className="w-14 h-14 rounded-full bg-[#d4af37]/15 flex items-center justify-center flex-shrink-0 group-hover:bg-[#d4af37]/25 transition-colors">
-              <svg className="w-7 h-7 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d={mat.icon} />
-              </svg>
+      {/* ============ PAGE 2: Ala Carte & Nilaga/Sinigang ============ */}
+      <div className="menu-page w-[210mm] min-h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
+        <div className="absolute top-3 left-3 w-10 h-10 border-t border-l border-[#d4af37] opacity-30 z-10" />
+        <div className="absolute top-3 right-3 w-10 h-10 border-t border-r border-[#d4af37] opacity-30 z-10" />
+        <div className="absolute bottom-3 left-3 w-10 h-10 border-b border-l border-[#d4af37] opacity-30" />
+        <div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-[#d4af37] opacity-30" />
+        <MenuPageHeader />
+        <PageBanner imageSrc="/images/banners/ala-carte-nilaga.jpg" alt="Ala Carte and Nilaga Sinigang" />
+        <div className="px-7 flex-1 flex flex-col pt-2 pb-8">
+          <SectionHeader title="Ala Carte" />
+          <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
+            {alaCarte.items.map((item) => (
+              <MenuItemCard key={item.name} item={item} imageSize="md" />
+            ))}
+          </div>
+          <div className="mt-2">
+            <SectionHeader title="Nilaga & Sinigang" />
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
+              {nilagaSinigang.items.map((item) => (
+                <MenuItemCard key={item.name} item={item} imageSize="md" />
+              ))}
+            </div>
+          </div>
+        </div>
+        <MenuPageFooter pageNumber={2} />
+      </div>
+
+      {/* ============ PAGE 3: Pasta, Noodles, Sandwiches ============ */}
+      <div className="menu-page w-[210mm] min-h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
+        <div className="absolute top-3 left-3 w-10 h-10 border-t border-l border-[#d4af37] opacity-30 z-10" />
+        <div className="absolute top-3 right-3 w-10 h-10 border-t border-r border-[#d4af37] opacity-30 z-10" />
+        <div className="absolute bottom-3 left-3 w-10 h-10 border-b border-l border-[#d4af37] opacity-30" />
+        <div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-[#d4af37] opacity-30" />
+        <MenuPageHeader />
+        <PageBanner imageSrc="/images/banners/veggies-sandwiches-desserts.jpg" alt="Pasta, Noodles, and Sandwiches" />
+        <div className="px-7 flex-1 flex flex-col pt-2 pb-8">
+          <SectionHeader title="Pasta" subtitle={pasta.subtitle} />
+          <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 mb-2">
+            {pasta.items.map((item) => (
+              <div key={item.name}>
+                <DualPriceItem item={item} />
+                {item.description && (
+                  <p className="font-sans text-[9px] text-[#5a7a6e] leading-snug mt-0.5">{item.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <SectionHeader title="Noodles" subtitle={noodles.subtitle} />
+          <div className="grid grid-cols-2 gap-x-8 gap-y-1.5 mb-2">
+            {noodles.items.map((item) => (
+              <div key={item.name}>
+                <DualPriceItem item={item} />
+                {item.description && (
+                  <p className="font-sans text-[9px] text-[#5a7a6e] leading-snug mt-0.5">{item.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <SectionHeader title="Sandwiches" />
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+            {sandwiches.items.map((item) => (
+              <MenuItemCard key={item.name} item={item} imageSize="md" />
+            ))}
+          </div>
+        </div>
+        <MenuPageFooter pageNumber={3} />
+      </div>
+
+      {/* ============ PAGE 4: Breakfast, Savers, Rice ============ */}
+      <div className="menu-page w-[210mm] min-h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
+        <div className="absolute top-3 left-3 w-10 h-10 border-t border-l border-[#d4af37] opacity-30 z-10" />
+        <div className="absolute top-3 right-3 w-10 h-10 border-t border-r border-[#d4af37] opacity-30 z-10" />
+        <div className="absolute bottom-3 left-3 w-10 h-10 border-b border-l border-[#d4af37] opacity-30" />
+        <div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-[#d4af37] opacity-30" />
+        <MenuPageHeader />
+        <PageBanner imageSrc="/images/banners/breakfast-savers.jpg" alt="Filipino Breakfast and Savers Meals" />
+        <div className="px-7 flex-1 flex flex-col pt-2 pb-8">
+          <SectionHeader title="Filipino Breakfast (Silog)" subtitle={filipinoBreakfast.subtitle} />
+          <div className="grid grid-cols-3 gap-x-6 gap-y-1.5 mb-2">
+            {filipinoBreakfast.items.map((item) => (
+              <div key={item.name} className="flex items-baseline justify-between gap-1">
+                <span className="font-sans text-[11px] text-[#0e7c6b] font-medium">{item.name}</span>
+                <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-2" />
+                <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap">P{item.price}</span>
+              </div>
+            ))}
+          </div>
+
+          <SectionHeader title="Savers Meal" />
+          <div className="grid grid-cols-2 gap-x-6 gap-y-1.5 mb-2">
+            {saversMeal.items.map((item) => (
+              <div key={item.name} className="flex items-baseline justify-between gap-1">
+                <span className="font-sans text-[11px] text-[#0e7c6b] font-medium">{item.name}</span>
+                <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-2" />
+                <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap">P{item.price}</span>
+              </div>
+            ))}
+          </div>
+
+          <SectionHeader title="Rice" subtitle={rice.subtitle} />
+          <div className="grid grid-cols-2 gap-x-6 gap-y-1.5">
+            {rice.items.map((item) => (
+              <div key={item.name}>
+                <DualPriceItem item={item} />
+                {item.description && (
+                  <p className="font-sans text-[9px] text-[#5a7a6e] leading-snug mt-0.5">{item.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        <MenuPageFooter pageNumber={4} />
+      </div>
+
+      {/* ============ PAGE 5: Desserts, Beverages, Beer, Royal Toast ============ */}
+      <div className="menu-page w-[210mm] min-h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
+        <div className="absolute top-3 left-3 w-10 h-10 border-t border-l border-[#d4af37] opacity-30 z-10" />
+        <div className="absolute top-3 right-3 w-10 h-10 border-t border-r border-[#d4af37] opacity-30 z-10" />
+        <div className="absolute bottom-3 left-3 w-10 h-10 border-b border-l border-[#d4af37] opacity-30" />
+        <div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-[#d4af37] opacity-30" />
+        <MenuPageHeader />
+        <PageBanner imageSrc="/images/banners/beverages-beer.jpg" alt="Desserts and Beverages" />
+        <div className="px-7 flex-1 flex flex-col pt-2 pb-8">
+          <SectionHeader title="Desserts" />
+          <div className="grid grid-cols-4 gap-x-4 gap-y-1.5 mb-2">
+            {desserts.items.map((item) => (
+              <div key={item.name} className="flex items-baseline justify-between gap-1">
+                <span className="font-sans text-[11px] text-[#0e7c6b] font-medium">{item.name}</span>
+                <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-2" />
+                <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap">P{item.price}</span>
+              </div>
+            ))}
+          </div>
+
+          <SectionHeader title="Beverages" />
+          <div className="grid grid-cols-2 gap-x-8 gap-y-4 mb-2">
+            <div className="flex flex-col gap-2">
+              <h3 className="font-serif text-[12px] font-bold text-[#0e7c6b] pb-1 border-b border-[#d4af37] border-opacity-30">
+                Juices & Iced Drinks
+                <span className="text-[9px] font-normal text-[#5a7a6e] ml-2">Glass / Pitcher</span>
+              </h3>
+              <div className="flex flex-col gap-1.5">
+                {beverages.drinks.map((item) => (
+                  <BeverageItem key={item.name} name={item.name} price={item.price} pitcher={item.pitcher} />
+                ))}
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="font-serif text-[12px] font-bold text-[#0e7c6b] pb-1 border-b border-[#d4af37] border-opacity-30">
+                Hot Drinks
+              </h3>
+              <div className="flex flex-col gap-1.5">
+                {beverages.hotDrinks.map((item) => (
+                  <BeverageItem key={item.name} name={item.name} price={item.price} />
+                ))}
+              </div>
+              <p className="font-sans text-[9px] text-[#5a7a6e] italic mt-1">{beverages.note}</p>
+            </div>
+          </div>
+
+          <SectionHeader title="Beer & Alcohol" />
+          <div className="grid grid-cols-3 gap-x-6 gap-y-1.5 mb-2">
+            {beer.items.map((item) => (
+              <div key={item.name} className="flex items-baseline justify-between gap-1">
+                <span className="font-sans text-[11px] text-[#0e7c6b] font-medium">{item.name}</span>
+                <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-2" />
+                <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap">P{item.price}</span>
+              </div>
+            ))}
+          </div>
+
+          <SectionHeader title="The Royal Toast" />
+          <div className="flex gap-5 items-center">
+            <div className="w-[120px] h-[120px] rounded-full overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md flex-shrink-0">
+              <Image
+                src="/images/food/beer-bites.jpg"
+                alt="The Royal Toast"
+                width={120}
+                height={120}
+                className="object-cover w-full h-full"
+              />
             </div>
             <div className="flex-1">
-              <h2 className="font-serif text-lg text-[#d4af37] group-hover:text-[#e8c547] transition-colors">{mat.title}</h2>
-              <p className="font-sans text-sm text-[#e8d5a3] opacity-70">{mat.description}</p>
+              <div className="bg-[#0e7c6b] bg-opacity-5 rounded-lg p-3 border border-[#d4af37] border-opacity-30">
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="font-display text-lg font-bold text-[#d4af37]">P{beerBites.price}</span>
+                  <span className="font-sans text-[11px] text-[#0e7c6b] opacity-70">only</span>
+                </div>
+                <p className="font-sans text-[11px] text-[#0e7c6b] mb-1 font-medium">{beerBites.description}</p>
+                <div className="flex flex-wrap gap-x-4 gap-y-0.5">
+                  {beerBites.choices.map((choice) => (
+                    <div key={choice} className="flex items-center gap-1.5">
+                      <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
+                      <span className="font-sans text-[11px] text-[#0e7c6b]">{choice}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-            <svg className="w-5 h-5 text-[#d4af37] opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-        ))}
+          </div>
+        </div>
+        <MenuPageFooter pageNumber={5} />
       </div>
 
-      {/* Footer */}
-      <div className="text-center pb-8">
-        <p className="font-sans text-xs text-[#e8d5a3] opacity-50">
-          Zone 5, Planza, San Fernando, Camarines Sur | 0977 627 1360 | 054 341 3605
-        </p>
-      </div>
+      {/* ============ PAGE 6: Cafe Menu ============ */}
+      <CafeSection />
+
+      {/* ============ PAGE 7: Chips, Snacks & Store Items ============ */}
+      <StoreSection />
     </main>
   )
 }
