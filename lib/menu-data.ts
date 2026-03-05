@@ -67,10 +67,10 @@ export const pasta: MenuCategory = {
   title: "Pasta",
   subtitle: "Solo / Platter (good for 2-3)",
   items: [
-    { name: "Chicken Alfredo", price: "199", price2: "299", description: "Creamy white sauce pasta with tender chicken strips." },
+    { name: "Chicken Alfredo", price: "199", price2: "299", description: "Creamy white sauce pasta with tender chicken strips.", image: "/images/food/carbonara.jpg" },
     { name: "Meatball Spaghetti", price: "199", price2: "299", description: "Filipino-style sweet tomato sauce with savory meatballs.", image: "/images/food/spaghetti.jpg" },
     { name: "Creamy Carbonara", price: "199", price2: "299", description: "Rich and creamy egg-based pasta with bacon.", image: "/images/food/carbonara.jpg" },
-    { name: "Chicken Fettuccini", price: "199", price2: "299", description: "Fettuccini noodles in a creamy chicken sauce." },
+    { name: "Chicken Petuccini", price: "199", price2: "299", description: "Petuccini noodles in a creamy chicken sauce.", image: "/images/food/spaghetti.jpg" },
   ],
 }
 
@@ -80,9 +80,9 @@ export const noodles: MenuCategory = {
   subtitle: "Solo / Platter (good for 2-3)",
   items: [
     { name: "Pancit Guisado", price: "149", price2: "249", description: "Classic stir-fried rice noodles with meat and vegetables.", image: "/images/food/pancit-guisado.jpg" },
-    { name: "Sotanghon Guisado", price: "149", price2: "249", description: "Glass noodles stir-fried with chicken and vegetables." },
-    { name: "Bihon Guisado", price: "149", price2: "249", description: "Thin rice noodles sauteed with pork and mixed vegetables." },
-    { name: "Palabok", price: "149", price2: "249", description: "Rice noodles in rich shrimp sauce with pork, egg, and chicharon." },
+    { name: "Sotanghon Guisado", price: "149", price2: "249", description: "Glass noodles stir-fried with chicken and vegetables.", image: "/images/food/lomi.jpg" },
+    { name: "Bihon Guisado", price: "149", price2: "249", description: "Thin rice noodles sauteed with pork and mixed vegetables.", image: "/images/food/pancit-guisado.jpg" },
+    { name: "Palabok", price: "149", price2: "249", description: "Rice noodles in rich shrimp sauce with pork, egg, and chicharon.", image: "/images/food/pancit-guisado.jpg" },
   ],
 }
 
@@ -124,22 +124,24 @@ export const rice: MenuCategory = {
   title: "Rice",
   subtitle: "Solo / Platter (good for 2-3)",
   items: [
-    { name: "Plain Steamed Rice", price: "35", description: "Fragrant steamed white rice." },
-    { name: "Garlic Rice", price: "50", description: "Stir-fried rice with golden brown garlic." },
+    { name: "Plain Steamed Rice", price: "35", description: "Fragrant steamed white rice.", image: "/images/food/yang-chow.jpg" },
+    { name: "Garlic Rice", price: "50", description: "Stir-fried rice with golden brown garlic.", image: "/images/food/pancit-guisado.jpg" },
     { name: "Yang Chow Fried Rice", price: "120", price2: "159", description: "Chinese fried rice with chorizo, egg, green peas.", image: "/images/food/yang-chow.jpg" },
-    { name: "Merah Rice", price: "55", price2: "159", description: "Flavorful spiced rice." },
-    { name: "Chiao Fan", price: "55", price2: "159", description: "Chinese-style fried rice." },
-    { name: "Tinapa Rice", price: "55", price2: "159", description: "Rice with smoked fish flakes." },
+    { name: "Merah Rice", price: "55", price2: "159", description: "Flavorful spiced rice.", image: "/images/food/chicken-wings.jpg" },
+    { name: "Chiao Fan", price: "55", price2: "159", description: "Chinese-style fried rice.", image: "/images/food/carbonara.jpg" },
+    { name: "Tinapa Rice", price: "55", price2: "159", description: "Rice with smoked fish flakes.", image: "/images/food/lomi.jpg" },
   ],
 }
 
-// ===== SANDWICHES =====
+
+// ===== SANDWICHES (updated: added nachos) =====
 export const sandwiches: MenuCategory = {
-  title: "Sandwiches",
+  title: "Snacks & Sandwiches",
   items: [
     { name: "Cheeseburger", price: "165", description: "Delicious American-style burger topped with cheddar cheese.", image: "/images/food/cheeseburger.jpg" },
     { name: "Classic Clubhouse", price: "200", description: "Double-decker sandwich with ham, cheese, egg, and chicken.", image: "/images/food/clubhouse.jpg" },
     { name: "Grilled Ham & Cheese", price: "135", description: "Classic grilled sandwich with ham and cheese.", image: "/images/food/grilled-ham-cheese.jpg" },
+    { name: "Nachos", price: "160", description: "Crispy tortilla chips topped with cheese and jalapeños.", image: "/images/food/french-fries.jpg" },
   ],
 }
 
@@ -158,17 +160,20 @@ export const desserts: MenuCategory = {
   ],
 }
 
-// ===== BEVERAGES (updated with pitchers and new drinks) =====
+// ===== BEVERAGES (reorganized by juice/tea/coffee with pitchered add-ons) =====
 export const beverages = {
   title: "Beverages",
-  drinks: [
-    { name: "Cucumber Juice", price: "45", pitcher: "299" },
-    { name: "4 Seasons Juice", price: "45", pitcher: "299" },
-    { name: "Blue Lemonade", price: "45", pitcher: "299" },
+  juices: [
+    { name: "Pineapple Juice", price: "45", pitcher: "299" },
+    { name: "Mango Juice", price: "45", pitcher: "299" },
+    { name: "Calamansi Juice", price: "45", pitcher: "299" },
     { name: "Iced Tea (Lemon)", price: "45", pitcher: "299" },
     { name: "Red Iced Tea", price: "45", pitcher: "299" },
+    { name: "Cucumber", price: "45", pitcher: "299" },
+    { name: "4 Seasons", price: "45", pitcher: "299" },
+    { name: "Blue Lemonade", price: "45", pitcher: "299" },
   ],
-  hotDrinks: [
+  teaCoffee: [
     { name: "Coffee (3-in-1)", price: "30" },
     { name: "Milo (Hot/Cold)", price: "30" },
     { name: "Hot Tea", price: "30" },
@@ -238,44 +243,41 @@ export const instantNoodles = {
 export const cafeMenu = {
   title: "La Bella Caf\u00e8 Menu",
   coffee: [
-    { name: "Coffee Latte", price: "Hot/Iced" },
-    { name: "Spanish Latte", price: "Hot/Iced" },
-    { name: "Caramel Macchiato", price: "Hot/Iced" },
-    { name: "Vietnamese Coffee", price: "Iced" },
-    { name: "Hazelnut Latte", price: "Hot/Iced" },
-    { name: "White Mocha Latte", price: "Hot/Iced" },
-    { name: "Caf\u00e8 Mocha", price: "Hot/Iced" },
-    { name: "French Vanilla Latte", price: "Hot/Iced" },
-    { name: "Salted Caramel Latte", price: "Hot/Iced" },
-    { name: "Sea Salt Latte", price: "Hot/Iced" },
+    { name: "Coffee Latte", price: "150" },
+    { name: "Spanish Latte", price: "160" },
+    { name: "Caramel Macchiato", price: "170" },
+    { name: "Vietnamese Coffee", price: "180" },
+    { name: "Hazelnut Latte", price: "150" },
+    { name: "White Mocha Latte", price: "160" },
+    { name: "Café Mocha", price: "160" },
+    { name: "French Vanilla Latte", price: "150" },
+    { name: "Salted Caramel Latte", price: "170" },
+    { name: "Sea Salt Latte", price: "170" },
   ],
-  nonCoffee: [
-    { name: "Matcha Latte", price: "Hot/Iced" },
-    { name: "Matcha Strawberry Latte", price: "Iced" },
-    { name: "Matcha Caramel Latte", price: "Iced" },
-    { name: "Milky Chocolate", price: "Hot/Iced" },
+  juices: [
+    { name: "Pineapple Juice", price: "45", pitcher: "299" },
+    { name: "Mango Juice", price: "45", pitcher: "299" },
+    { name: "Calamansi Juice", price: "45", pitcher: "299" },
+    { name: "Lemon Iced Tea", price: "45", pitcher: "299" },
+    { name: "Red Iced Tea", price: "45", pitcher: "299" },
   ],
   smoothies: [
-    { name: "Mango Smoothie", price: "" },
-    { name: "Strawberry Smoothie", price: "" },
-    { name: "Banana Smoothie", price: "" },
+    { name: "Mango Smoothie", price: "180", image: "/images/food/smoothie.jpg" },
+    { name: "Strawberry Smoothie", price: "180" },
+    { name: "Banana Smoothie", price: "180" },
+    { name: "Blueberry Smoothie", price: "180" },
+    { name: "Choco Banana Smoothie", price: "180" },
+    { name: "Melon Smoothie", price: "170" },
+    { name: "Apple Smoothie", price: "170" },
   ],
   pastries: [
-    { name: "Brownies", price: "" },
-    { name: "Brownies Nachos", price: "" },
-    { name: "Butterscotch", price: "" },
-    { name: "Banana Cake", price: "" },
+    { name: "Brownies", price: "150" },
+    { name: "Butterscotch", price: "130" },
+    { name: "Banana Cake", price: "140" },
   ],
-  tea: [
-    { name: "Chamomile", price: "" },
-    { name: "Earl Grey", price: "" },
-    { name: "Oolong", price: "" },
-    { name: "Passion Fruit", price: "" },
-  ],
-  frappe: [
-    { name: "Blueberry", price: "" },
-    { name: "Choco Banana", price: "" },
-    { name: "Melon", price: "" },
-    { name: "Apple", price: "" },
+  hotTea: [
+    { name: "Chamomile", price: "120" },
+    { name: "Earl Grey", price: "120" },
+    { name: "Oolong", price: "120" },
   ],
 }

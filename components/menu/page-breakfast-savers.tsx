@@ -4,7 +4,7 @@ import { PageBanner } from "./page-banner"
 import { MenuPageFooter } from "./menu-page-footer"
 import { SectionHeader } from "./section-header"
 import { MenuItemCard } from "./menu-item"
-import { filipinoBreakfast, saversMeal, rice } from "@/lib/menu-data"
+import { filipinoBreakfast, saversMeal } from "@/lib/menu-data"
 
 export function PageBreakfastAndSavers() {
   return (
@@ -28,8 +28,8 @@ export function PageBreakfastAndSavers() {
           subtitle={filipinoBreakfast.subtitle}
         />
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-1">
-          {filipinoBreakfast.items.map((item) => (
-            <MenuItemCard key={item.name} item={item} imageSize="xl" />
+          {filipinoBreakfast?.items?.map((item) => (
+            <MenuItemCard key={item?.name} item={item} imageSize="xl" />
           ))}
         </div>
 
@@ -47,8 +47,8 @@ export function PageBreakfastAndSavers() {
           </div>
           <div className="flex-1">
             <div className="flex flex-col gap-2">
-              {saversMeal.items.map((item) => (
-                <div key={item.name} className="flex items-baseline justify-between gap-1">
+              {saversMeal?.items?.map((item) => (
+                <div key={item?.name} className="flex items-baseline justify-between gap-1">
                   <span className="font-sans text-[12px] text-[#0e7c6b] font-medium">{item.name}</span>
                   <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
                   <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap">
@@ -60,42 +60,9 @@ export function PageBreakfastAndSavers() {
           </div>
         </div>
 
-        {/* Rice */}
-        <SectionHeader title="Rice" />
-        <div className="flex gap-5 items-center">
-          <div className="flex-1">
-            <div className="flex flex-col gap-2.5">
-              {rice.items.map((item) => (
-                <div key={item.name}>
-                  <div className="flex items-baseline justify-between gap-1">
-                    <span className="font-serif text-[13px] font-bold text-[#0e7c6b]">{item.name}</span>
-                    <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
-                    <span className="font-sans text-[13px] font-bold text-[#d4af37] whitespace-nowrap">
-                      {"P"}{item.price}
-                    </span>
-                  </div>
-                  {item.description && (
-                    <p className="font-sans text-[10px] text-[#5a7a6e] leading-snug mt-0.5">
-                      {item.description}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="w-[140px] h-[140px] rounded-full overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md flex-shrink-0">
-            <Image
-              src="/images/food/yang-chow.jpg"
-              alt="Yang Chow Rice"
-              width={140}
-              height={140}
-              className="object-cover w-full h-full"
-            />
-          </div>
-        </div>
       </div>
 
-      <MenuPageFooter pageNumber={3} />
+      <MenuPageFooter pageNumber={4} />
     </div>
   )
 }

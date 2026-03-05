@@ -5,14 +5,16 @@ import { MenuPageFooter } from "./menu-page-footer"
 import { SectionHeader } from "./section-header"
 import { beverages, beer, beerBites } from "@/lib/menu-data"
 
-function BeverageItem({ name, price }: { name: string; price: string }) {
+function BeverageItem({ name, price, pitcher, showPitcher = true }: { name: string; price: string; pitcher?: string; showPitcher?: boolean }) {
   return (
-    <div className="flex items-baseline justify-between gap-1">
-      <span className="font-sans text-[12px] text-[#0e7c6b] font-medium">{name}</span>
-      <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
-      <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap">
-        {"P"}{price}
-      </span>
+    <div className={`grid ${showPitcher ? "grid-cols-[1fr_auto_auto]" : "grid-cols-[1fr_auto]"} items-baseline gap-x-2`}>
+      <span className="font-sans text-[12px] text-[#0e7c6b] font-medium leading-tight">{name}</span>
+      <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap text-right">P{price}</span>
+      {showPitcher && (
+        <span className="font-sans text-[11px] text-[#5a7a6e] whitespace-nowrap text-right">
+          {pitcher ? `P${pitcher}` : "-"}
+        </span>
+      )}
     </div>
   )
 }
@@ -37,49 +39,50 @@ export function PageBeverages() {
         <SectionHeader title="Beverages" />
 
         <div className="grid grid-cols-2 gap-x-8 gap-y-4 mb-2">
-          {/* Left column - Juices & Tea/Coffee */}
-          <div className="flex flex-col gap-3">
-            <div>
-              <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] mb-1.5 pb-1 border-b border-[#d4af37] border-opacity-30">
-                Juices
-              </h3>
-              <div className="flex flex-col gap-1.5">
-                {beverages.juices.map((item) => (
-                  <BeverageItem key={item.name} {...item} />
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] mb-1.5 pb-1 border-b border-[#d4af37] border-opacity-30">
-                Tea & Coffee
-              </h3>
-              <div className="flex flex-col gap-1.5">
-                {beverages.teaCoffee.map((item) => (
-                  <BeverageItem key={item.name} {...item} />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right column - Others */}
+          {/* Juices */}
           <div>
             <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] mb-1.5 pb-1 border-b border-[#d4af37] border-opacity-30">
-              Others
+              Juices
             </h3>
+            <div className="grid grid-cols-[1fr_auto_auto] items-center gap-x-2 mb-1 border-b border-[#d4af37] border-opacity-20 pb-1">
+              <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e]">Item</span>
+              <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e] text-right">Glass</span>
+              <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e] text-right">Pitcher</span>
+            </div>
             <div className="flex flex-col gap-1.5">
-              {beverages.others.map((item) => (
+              {beverages?.juices?.map((item) => (
                 <BeverageItem key={item.name} {...item} />
               ))}
             </div>
+          </div>
+
+          {/* Tea & Coffee */}
+          <div>
+            <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] mb-1.5 pb-1 border-b border-[#d4af37] border-opacity-30">
+              Tea & Coffee
+            </h3>
+            <div className="grid grid-cols-[1fr_auto] items-center gap-x-2 mb-1 border-b border-[#d4af37] border-opacity-20 pb-1">
+              <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e]">Item</span>
+              <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e] text-right">Cup</span>
+            </div>
+            <div className="flex flex-col gap-1.5">
+              {beverages?.teaCoffee?.map((item) => (
+                <BeverageItem key={item.name} {...item} showPitcher={false} />
+              ))}
+            </div>
+            {beverages?.note && (
+              <p className="font-sans text-[10px] text-[#5a7a6e] italic mt-1">
+                {beverages.note}
+              </p>
+            )}
           </div>
         </div>
 
         {/* Beer in Can */}
         <SectionHeader title="Beer in Can" />
         <div className="grid grid-cols-2 gap-x-8 gap-y-2 mb-2">
-          {beer.items.map((item) => (
-            <div key={item.name}>
+          {beer?.items?.map((item: { name: string; price: string; description?: string }) => (
+            <div key={item?.name}>
               <div className="flex items-baseline justify-between gap-1">
                 <span className="font-sans text-[12px] text-[#0e7c6b] font-medium">{item.name}</span>
                 <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
@@ -121,7 +124,7 @@ export function PageBeverages() {
                 <p className="font-sans text-[10px] text-[#5a7a6e] font-bold uppercase tracking-wider mb-0.5">
                   Your Royal Choices:
                 </p>
-                {beerBites.choices.map((choice) => (
+                {beerBites?.choices?.map((choice) => (
                   <div key={choice} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
                     <span className="font-sans text-[12px] text-[#0e7c6b]">{choice}</span>
@@ -133,7 +136,7 @@ export function PageBeverages() {
         </div>
       </div>
 
-      <MenuPageFooter pageNumber={5} />
+      <MenuPageFooter pageNumber={3} />
     </div>
   )
 }

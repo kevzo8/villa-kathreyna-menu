@@ -80,9 +80,11 @@
     display: none !important;
   }
 
-  img {
+  img, svg {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    max-width: 100% !important;
+    height: auto !important;
   }
 }
 

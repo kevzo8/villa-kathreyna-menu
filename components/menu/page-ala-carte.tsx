@@ -6,7 +6,7 @@ import { MenuItemCard } from "./menu-item"
 import { alaCarte, nilagaSinigang } from "@/lib/menu-data"
 
 export function PageAlaCarte() {
-  const allItems = [...alaCarte.items, ...nilagaSinigang.items]
+  const allItems = [...(alaCarte?.items || []), ...(nilagaSinigang?.items || [])]
 
   return (
     <div className="menu-page w-[210mm] h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
@@ -26,7 +26,7 @@ export function PageAlaCarte() {
         <SectionHeader title="Ala Carte" />
         <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
           {allItems.map((item) => (
-            <MenuItemCard key={item.name} item={item} imageSize="xl" />
+            <MenuItemCard key={item?.name} item={item} imageSize="lg" />
           ))}
         </div>
       </div>

@@ -3,9 +3,9 @@ import { PageBanner } from "./page-banner"
 import { MenuPageFooter } from "./menu-page-footer"
 import { SectionHeader } from "./section-header"
 import { MenuItemCard } from "./menu-item"
-import { appetizers, soups } from "@/lib/menu-data"
+import { desserts } from "@/lib/menu-data"
 
-export function PageAppetizersAndSoups() {
+export function PageDesserts() {
   return (
     <div className="menu-page w-[210mm] h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
       {/* Corner accents */}
@@ -18,19 +18,19 @@ export function PageAppetizersAndSoups() {
       <MenuPageHeader />
 
       {/* Food banner below header */}
-      <PageBanner imageSrc="/images/banners/appetizers-soups.jpg" alt="Appetizers and Soups" />
+      <PageBanner imageSrc="/images/banners/veggies-sandwiches-desserts.jpg" alt="Desserts" />
 
       <div className="px-7 flex-1 flex flex-col pt-2">
-        {/* Appetizers & Soups */}
-        <SectionHeader title="Appetizers & Soups" />
-        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-          {[...(appetizers?.items || []), ...(soups?.items || [])].map((item) => (
-            <MenuItemCard key={item.name} item={item} imageSize="xl" />
+        {/* Desserts */}
+        <SectionHeader title="Desserts" />
+        <div className="grid grid-cols-3 gap-x-3 gap-y-1">
+          {desserts?.items?.map((item) => (
+            <MenuItemCard key={item?.name} item={item} layout="vertical" imageSize="sm" />
           ))}
         </div>
       </div>
 
-      <MenuPageFooter pageNumber={1} />
+      <MenuPageFooter pageNumber={6} />
     </div>
   )
 }
