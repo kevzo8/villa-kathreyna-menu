@@ -6,11 +6,11 @@ interface PageBannerProps {
 
 export function PageBanner({ imageSrc, alt }: PageBannerProps) {
   return (
-    <div className="relative w-full h-[140px] overflow-hidden mx-auto flex-shrink-0">
+    <div className="menu-banner relative w-full h-[140px] overflow-hidden mx-auto flex-shrink-0">
       <img
         src={imageSrc}
         alt={alt}
-        className="object-cover w-full h-full"
+        className="menu-banner-image object-cover w-full h-full"
       />
       {/* Subtle gradient overlay at bottom for smooth transition */}
       <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-[#faf8f3] to-transparent" />

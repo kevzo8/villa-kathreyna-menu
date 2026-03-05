@@ -56,6 +56,39 @@
   }
 
   main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .menu-print-stack {
+    gap: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .menu-print-root {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 210mm !important;
+    max-width: 210mm !important;
+  }
+
+  .menu-print-sheet {
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .menu-banner {
+    background: #faf8f3 !important;
+  }
+
+  .menu-banner-image {
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  main {
     background: transparent !important;
   }
 
@@ -64,8 +97,12 @@
     page-break-inside: avoid;
     break-after: page;
     break-inside: avoid;
-    width: 100% !important;
-    height: 100vh !important;
+    width: 210mm !important;
+    min-width: 210mm !important;
+    max-width: 210mm !important;
+    height: 297mm !important;
+    min-height: 297mm !important;
+    max-height: 297mm !important;
     margin: 0 !important;
     box-shadow: none !important;
     border-radius: 0 !important;

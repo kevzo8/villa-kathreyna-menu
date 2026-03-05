@@ -135,11 +135,11 @@ export function CafeSection() {
   const categoryVisuals: Record<string, { image?: string; imageAlt?: string; reverse?: boolean; imageSize?: "sm" | "md" | "lg" | "xl" }> = {
     coffee: { image: "/images/food/coffee-latte.jpg", imageAlt: "Coffee", imageSize: "xl" },
     hotTea: {},
-    pastries: { image: "/images/food/pastries.jpg", imageAlt: "Pastries", imageSize: "lg" },
+    pastries: { image: "/images/food/pastries.jpg", imageAlt: "Pastries", imageSize: "md" },
   }
 
   return (
-    <div className="menu-page w-[210mm] min-h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
+    <div className="menu-page w-[210mm] h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
       {/* corner accents copied from other pages */}
       <div className="absolute top-3 left-3 w-10 h-10 border-t border-l border-[#d4af37] opacity-30 z-10" />
       <div className="absolute top-3 right-3 w-10 h-10 border-t border-r border-[#d4af37] opacity-30 z-10" />
@@ -149,7 +149,7 @@ export function CafeSection() {
       <MenuPageHeader />
       <PageBanner imageSrc="/images/banners/cafe-drinks.jpg" alt="La Bella Café Menu" />
 
-      <div className="px-7 flex-1 flex flex-col pt-2 pb-8">
+      <div className="px-7 flex-1 flex flex-col pt-2 pb-14">
         <SectionHeader title="La Bella Café" />
 
         {/* walk through each category except the title field */}

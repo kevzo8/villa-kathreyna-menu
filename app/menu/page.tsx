@@ -11,40 +11,40 @@ import { StoreSection } from '../../components/menu/store-section'
 export default function MenuIndexPage() {
   return (
     <main className="min-h-screen bg-[#0e7c6b] py-8">
-      <div className="mx-auto px-4">
+      <div className="menu-print-root mx-auto px-4">
         <MenuCover />
 
         {/* All menu sections in one scroll; each component is a printable page */}
-        <div className="flex flex-col gap-8 mt-8 items-center">
-          <div style={{ pageBreakAfter: 'always' }}>
+        <div className="menu-print-stack flex flex-col gap-8 mt-8 items-center">
+          <div className="menu-print-sheet">
             <PageAlaCarte />
           </div>
 
-          <div style={{ pageBreakAfter: 'always' }}>
+          <div className="menu-print-sheet">
             <PageAppetizersAndSoups />
           </div>
 
-          <div style={{ pageBreakAfter: 'always' }}>
+          <div className="menu-print-sheet">
             <PageBeverages />
           </div>
 
-          <div style={{ pageBreakAfter: 'always' }}>
+          <div className="menu-print-sheet">
             <PageBreakfastAndSavers />
           </div>
 
-          <div style={{ pageBreakAfter: 'always' }}>
+          <div className="menu-print-sheet">
             <PagePastaNoodles />
           </div>
 
-          <div style={{ pageBreakAfter: 'always' }}>
+          <div className="menu-print-sheet">
             <PageRiceSandwichesDesserts />
           </div>
 
-          <div style={{ pageBreakAfter: 'always' }}>
+          <div className="menu-print-sheet">
             <CafeSection />
           </div>
 
-          <div style={{ pageBreakAfter: 'always' }}>
+          <div className="menu-print-sheet">
             <StoreSection />
           </div>
         </div>
