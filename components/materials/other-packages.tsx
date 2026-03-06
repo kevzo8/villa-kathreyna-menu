@@ -573,7 +573,7 @@ export function OtherPackages() {
               </div>
               <div className="flex items-baseline justify-between mb-1.5">
                 <div className="flex items-center gap-2">
-                  <span className="w-6 h-6 rounded-full bg-red-600 text-white text-[12px] leading-none flex items-center justify-center font-bold">◆</span>
+                  <span className="w-6 h-6 rounded-full bg-red-600 text-white text-[12px] leading-none flex items-center justify-center font-bold">☀</span>
                   <h2 className="font-display text-[18px] text-[#0e7c6b] font-bold">Debut Package A</h2>
                 </div>
                 <div className="text-right">
@@ -608,7 +608,7 @@ export function OtherPackages() {
               </div>
               <div className="flex items-baseline justify-between mb-1.5">
                 <div className="flex items-center gap-2">
-                  <span className="w-6 h-6 rounded-full bg-blue-600 text-white text-[12px] leading-none flex items-center justify-center font-bold">◆</span>
+                  <span className="w-6 h-6 rounded-full bg-blue-600 text-white text-[12px] leading-none flex items-center justify-center font-bold">☾</span>
                   <h2 className="font-display text-[18px] text-[#0e7c6b] font-bold">Debut Package B</h2>
                 </div>
                 <div className="text-right">
