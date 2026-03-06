@@ -75,7 +75,7 @@ export function OtherPackages() {
                 src="/images/materials/villa.jpg"
                 alt="Exclusive access to Villa Kathreyna"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
               <div className="absolute inset-0 bg-[#0e7c6b]/85" />
@@ -134,7 +134,7 @@ export function OtherPackages() {
                       src={item.src}
                       alt={item.label}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                   <p className="font-sans text-[9px] text-[#3e5a52] leading-tight text-center">{item.label}</p>
@@ -288,7 +288,7 @@ export function OtherPackages() {
               src="/images/materials/wedding.jpg"
               alt="Wedding setup at Villa Kathreyna"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-[#faf7f0]/60" />
@@ -413,7 +413,7 @@ export function OtherPackages() {
                 src="/images/materials/wedding-venue.png"
                 alt="Wedding venue decoration"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
 
@@ -480,7 +480,7 @@ export function OtherPackages() {
                   src="/images/materials/birthday.jpg"
                   alt="Birthday celebration setup"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
               <div className="flex items-baseline justify-between mb-1.5">
@@ -527,7 +527,7 @@ export function OtherPackages() {
                   src="/images/materials/baptism.jpg"
                   alt="Baptism or celebration setup"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
               <div className="flex items-baseline justify-between mb-1.5">
@@ -568,7 +568,7 @@ export function OtherPackages() {
                   src="/images/materials/debut.jpg"
                   alt="Debut celebration package A"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
               <div className="flex items-baseline justify-between mb-1.5">
@@ -603,7 +603,7 @@ export function OtherPackages() {
                   src="/images/materials/debut.png"
                   alt="Debut celebration package B"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
               <div className="flex items-baseline justify-between mb-1.5">
