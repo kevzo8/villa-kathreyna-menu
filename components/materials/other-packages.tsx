@@ -574,7 +574,7 @@ export function OtherPackages() {
               <div className="flex items-baseline justify-between mb-1.5">
                 <div className="flex items-center gap-2">
                   <span className="w-6 h-6 rounded-full bg-red-600 text-white text-[12px] leading-none flex items-center justify-center font-bold">◆</span>
-                  <h2 className="font-display text-[18px] text-[#0e7c6b] font-bold">Ruby Debut Package</h2>
+                  <h2 className="font-display text-[18px] text-[#0e7c6b] font-bold">Debut Package A</h2>
                 </div>
                 <div className="text-right">
                   <p className="font-display text-[22px] text-[#d4af37] font-bold">₱55,000</p>
@@ -609,7 +609,7 @@ export function OtherPackages() {
               <div className="flex items-baseline justify-between mb-1.5">
                 <div className="flex items-center gap-2">
                   <span className="w-6 h-6 rounded-full bg-blue-600 text-white text-[12px] leading-none flex items-center justify-center font-bold">◆</span>
-                  <h2 className="font-display text-[18px] text-[#0e7c6b] font-bold">Sapphire Debut Package</h2>
+                  <h2 className="font-display text-[18px] text-[#0e7c6b] font-bold">Debut Package B</h2>
                 </div>
                 <div className="text-right">
                   <p className="font-display text-[22px] text-[#d4af37] font-bold">₱80,000</p>
