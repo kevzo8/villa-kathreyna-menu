@@ -1,6 +1,6 @@
 import { CateringPackageCard } from "./catering-package-card"
 
-const menuA = [
+export const goldCateringMenuA = [
   "Creamy Mushroom Soup",
   "Pork Steak",
   "Pan-Seared Chicken with Roasted Garlic",
@@ -10,7 +10,7 @@ const menuA = [
   "Juice",
 ]
 
-const menuB = [
+export const goldCateringMenuB = [
   "Corn Soup",
   "Pork Medallion",
   "Fried Chicken",
@@ -20,7 +20,7 @@ const menuB = [
   "Juice",
 ]
 
-const menuC = [
+export const goldCateringMenuC = [
   "Creamy Onion Soup",
   "Pork Hamonado",
   "Cordon Bleu",
@@ -30,6 +30,8 @@ const menuC = [
   "Juice",
 ]
 
+export const goldPricePerHead = 500
+
 export function PageCateringGold() {
-  return <CateringPackageCard packageName="Gold" menuA={menuA} menuB={menuB} menuC={menuC} />
+  return <CateringPackageCard packageName="Gold" menuA={goldCateringMenuA} menuB={goldCateringMenuB} menuC={goldCateringMenuC} pricePerHead={goldPricePerHead} pageNumber={9} />
 }

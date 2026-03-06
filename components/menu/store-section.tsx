@@ -5,14 +5,55 @@ import { MenuPageFooter } from "./menu-page-footer"
 import { SectionHeader } from "./section-header"
 import { chipsSnacks, instantNoodles } from "@/lib/menu-data"
 
-function StoreItemRow({ name, price }: { name: string; price: string }) {
+function StoreCategoryBlock({
+  title,
+  items,
+  image,
+  imageAlt,
+  imageRight,
+}: {
+  title: string
+  items: { name: string; price: string }[]
+  image?: string
+  imageAlt?: string
+  imageRight?: boolean
+}) {
   return (
-    <div className="flex items-baseline justify-between gap-1">
-      <span className="font-sans text-[12px] text-[#0e7c6b] font-medium">{name}</span>
-      <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
-      <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap">
-        {price}
-      </span>
+    <div className="mb-3">
+      <SectionHeader title={title} />
+      <div className={`flex gap-3 items-start ${imageRight ? "flex-row-reverse" : "flex-row"}`}>
+        {image && (
+          <div className="w-[150px] h-[150px] rounded-2xl overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md flex-shrink-0">
+            <Image src={image} alt={imageAlt || title} width={150} height={150} className="object-cover w-full h-full" />
+          </div>
+        )}
+        <div className="flex-1 min-w-0 rounded-sm border border-[#d4af37]/35 overflow-hidden bg-[#fffef9]">
+          <table className="w-full border-collapse table-fixed">
+            <thead>
+              <tr className="bg-[#f5efde]">
+                <th className="px-2 py-1 text-left font-sans text-[10px] uppercase tracking-wide text-[#0e7c6b] border-b border-[#d4af37]/30">
+                  Item
+                </th>
+                <th className="px-2 py-1 text-right font-sans text-[10px] uppercase tracking-wide text-[#0e7c6b] border-b border-[#d4af37]/30 w-[64px]">
+                  Price
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {items.map((it) => (
+                <tr key={it.name}>
+                  <td className="px-2 py-[5px] font-sans text-[12px] text-[#0e7c6b] border-b border-[#d4af37]/20">
+                    {it.name}
+                  </td>
+                  <td className="px-2 py-[5px] font-sans text-[12px] font-bold text-[#d4af37] text-right whitespace-nowrap border-b border-[#d4af37]/20">
+                    {it.price}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   )
 }
@@ -31,19 +72,20 @@ export function StoreSection() {
       <PageBanner imageSrc="/images/banners/cafe-drinks.jpg" alt="Store Items" />
 
       <div className="px-7 flex-1 flex flex-col pt-2 pb-8">
-        <SectionHeader title="Chips & Snacks" />
-        <div className="flex flex-col gap-1.5 mb-3">
-          {chipsSnacks.items.map((it) => (
-            <StoreItemRow key={it.name} name={it.name} price={it.price} />
-          ))}
-        </div>
+        <StoreCategoryBlock
+          title="Chips & Snacks"
+          items={chipsSnacks.items}
+          image="/images/food/beer-bites.jpg"
+          imageAlt="Chips and snacks"
+          imageRight
+        />
 
-        <SectionHeader title="Instant Noodles" />
-        <div className="flex flex-col gap-1.5">
-          {instantNoodles.items.map((it) => (
-            <StoreItemRow key={it.name} name={it.name} price={it.price} />
-          ))}
-        </div>
+        <StoreCategoryBlock
+          title="Instant Noodles"
+          items={instantNoodles.items}
+          image="/images/food/batchoy.jpg"
+          imageAlt="Instant noodles"
+        />
       </div>
 
       <MenuPageFooter pageNumber={7} />

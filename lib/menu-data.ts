@@ -97,12 +97,12 @@ export const filipinoBreakfast: MenuCategory = {
     { name: "Longsilog", price: "149", description: "Northern-style sausage with egg and garlic rice.", image: "/images/food/longganisa.jpg" },
     { name: "Hungarian Silog", price: "149", description: "Hungarian sausage with egg and garlic rice." },
     { name: "Chicken Silog", price: "149", description: "Fried chicken with egg and garlic rice." },
-    { name: "Cornsilog", price: "129", description: "Corned beef with egg and garlic rice." },
-    { name: "Hotsilog", price: "129", description: "Hotdog with egg and garlic rice." },
-    { name: "Hamsilog", price: "129", description: "Ham with egg and garlic rice." },
+    { name: "Cornsilog", price: "149", description: "Corned beef with egg and garlic rice." },
     { name: "Sisigsilog", price: "149", description: "Spicy sizzling sisig with egg and garlic rice." },
     { name: "Liemposilog", price: "149", description: "Grilled liempo with egg and garlic rice." },
     { name: "Porkchopsilog", price: "149", description: "Breaded porkchop with egg and garlic rice." },
+    { name: "Hotsilog", price: "129", description: "Hotdog with egg and garlic rice." },
+    { name: "Hamsilog", price: "129", description: "Ham with egg and garlic rice." },
   ],
 }
 

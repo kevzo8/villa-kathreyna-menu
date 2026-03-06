@@ -6,11 +6,11 @@ export function MenuPageHeader() {
       <div className="flex-1 h-px bg-[#d4af37] opacity-40" />
       <div className="px-4">
         <Image
-          src="/images/logo-transparent.png"
+          src="/images/emblem-transparent-invert.png"
           alt="Villa Kathreyna"
-          width={60}
-          height={60}
-          className="opacity-80"
+          width={110}
+          height={40}
+          className="opacity-90 h-auto"
         />
       </div>
       <div className="flex-1 h-px bg-[#d4af37] opacity-40" />

@@ -25,7 +25,7 @@ export function PageAppetizersAndSoups() {
         <SectionHeader title="Appetizers & Soups" />
         <div className="grid grid-cols-2 gap-x-4 gap-y-2">
           {[...(appetizers?.items || []), ...(soups?.items || [])].map((item) => (
-            <MenuItemCard key={item.name} item={item} imageSize="xl" />
+            <MenuItemCard key={item.name} item={item} imageSize="lg" />
           ))}
         </div>
       </div>

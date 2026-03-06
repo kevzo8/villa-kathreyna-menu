@@ -63,6 +63,7 @@ function CafeCategoryBlock({
   imageAlt,
   reverse,
   imageSize = "md",
+  imageHeight,
 }: {
   title: string
   items: CafeItem[]
@@ -70,8 +71,10 @@ function CafeCategoryBlock({
   imageAlt?: string
   reverse?: boolean
   imageSize?: "sm" | "md" | "lg" | "xl"
+  imageHeight?: number
 }) {
   const imageBoxSize = imageSize === "xl" ? 190 : imageSize === "lg" ? 170 : imageSize === "sm" ? 108 : 132
+  const imageBoxHeight = imageHeight ?? imageBoxSize
   const imageGridCols = imageSize === "xl" ? "grid-cols-[190px_1fr]" : imageSize === "lg" ? "grid-cols-[170px_1fr]" : imageSize === "sm" ? "grid-cols-[108px_1fr]" : "grid-cols-[132px_1fr]"
 
   return (
@@ -84,9 +87,9 @@ function CafeCategoryBlock({
         <div className={`grid ${imageGridCols} gap-2.5 items-start ${reverse ? "[&>*:first-child]:order-2 [&>*:last-child]:order-1" : ""}`}>
           <div
             className="rounded-2xl overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md"
-            style={{ width: `${imageBoxSize}px`, height: `${imageBoxSize}px` }}
+            style={{ width: `${imageBoxSize}px`, height: `${imageBoxHeight}px` }}
           >
-            <Image src={image} alt={imageAlt || title} width={imageBoxSize} height={imageBoxSize} className="object-cover w-full h-full" />
+            <Image src={image} alt={imageAlt || title} width={imageBoxSize} height={imageBoxHeight} className="object-cover w-full h-full" />
           </div>
           <div className="flex flex-col gap-1.5">
             {items.map((it) => (
@@ -113,10 +116,6 @@ function SmoothiesTable({ items }: { items: CafeItem[] }) {
       </h3>
       <div className="grid grid-cols-[1fr_170px] gap-3 items-start">
         <div>
-          <div className="grid grid-cols-[1fr_auto] px-1 py-1">
-            <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e]">Item</span>
-            <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e] text-right">Price</span>
-          </div>
           <div className="flex flex-col gap-1.5">
             {items.map((it) => (
               <CafeItemRow key={it.name} name={it.name} price={it.price} />
@@ -132,10 +131,10 @@ function SmoothiesTable({ items }: { items: CafeItem[] }) {
 }
 
 export function CafeSection() {
-  const categoryVisuals: Record<string, { image?: string; imageAlt?: string; reverse?: boolean; imageSize?: "sm" | "md" | "lg" | "xl" }> = {
-    coffee: { image: "/images/food/coffee-latte.jpg", imageAlt: "Coffee", imageSize: "xl" },
+  const categoryVisuals: Record<string, { image?: string; imageAlt?: string; reverse?: boolean; imageSize?: "sm" | "md" | "lg" | "xl"; imageHeight?: number }> = {
+    coffee: { image: "/images/food/coffee-latte.jpg", imageAlt: "Coffee", imageSize: "lg" },
     hotTea: {},
-    pastries: { image: "/images/food/pastries.jpg", imageAlt: "Pastries", imageSize: "md" },
+    pastries: { image: "/images/food/pastries.jpg", imageAlt: "Pastries", imageSize: "lg", imageHeight: 115 },
   }
 
   return (
@@ -176,6 +175,7 @@ export function CafeSection() {
                 imageAlt={visual.imageAlt}
                 reverse={visual.reverse}
                 imageSize={visual.imageSize}
+                imageHeight={visual.imageHeight}
               />
             )
           })

@@ -12,6 +12,7 @@ export default function HomePage() {
           {[
             { href: '/menu', label: 'Full Restaurant Menu' },
             { href: '/menu/cafe', label: 'Cafe Menu' },
+            { href: '/menu/catering', label: 'Combined Catering Menu' },
             { href: '/menu/catering-diamond', label: 'Diamond Catering Menu' },
             { href: '/menu/catering-platinum', label: 'Platinum Catering Menu' },
             { href: '/menu/catering-gold', label: 'Gold Catering Menu' },

@@ -25,8 +25,8 @@ export function MenuCover() {
           <Image
             src="/images/logo-transparent.png"
             alt="Villa Kathreyna Logo"
-            width={300}
-            height={300}
+            width={420}
+            height={220}
             className="drop-shadow-lg"
             priority
           />
@@ -64,6 +64,7 @@ export function MenuCover() {
       <div className="absolute bottom-14 flex flex-col items-center text-[#e8d5a3] text-xs tracking-wider opacity-70">
         <p className="font-sans">Zone 5, Planza, San Fernando, Camarines Sur</p>
         <p className="font-sans mt-1">0977 627 1360 | 054 341 3605</p>
+        <p className="font-sans mt-1">villakathreyna.com | Facebook: Villa Kathreyna</p>
       </div>
     </div>
   )

@@ -7,6 +7,7 @@ import { PagePastaNoodles } from '../../components/menu/page-pasta-noodles'
 import { PageRiceSandwichesDesserts } from '../../components/menu/page-rice-sandwiches-desserts'
 import { CafeSection } from '../../components/menu/cafe-section'
 import { StoreSection } from '../../components/menu/store-section'
+import { PageCateringCombined } from '../../components/menu/page-catering-combined'
 
 export default function MenuIndexPage() {
   return (
@@ -46,6 +47,10 @@ export default function MenuIndexPage() {
 
           <div className="menu-print-sheet">
             <StoreSection />
+          </div>
+
+          <div className="menu-print-sheet">
+            <PageCateringCombined pageNumber={8} />
           </div>
         </div>
       </div>

@@ -1,63 +1,85 @@
-import Image from "next/image"
+import { MenuPageFooter } from "./menu-page-footer"
+import { MenuPageHeader } from "./menu-page-header"
+import { SectionHeader } from "./section-header"
 
 interface CateringPackageCardProps {
-  packageName: string
-  menuA: string[]
-  menuB: string[]
-  menuC: string[]
+	packageName: string
+	menuA: string[]
+	menuB: string[]
+	menuC: string[]
+	pricePerHead: number
+	pageNumber?: number
+	compact?: boolean
+	className?: string
 }
 
-function MenuColumn({ title, items }: { title: string; items: string[] }) {
-  return (
-    <div className="text-center">
-      <h3 className="font-display text-5xl text-[#2f2f2f] italic leading-none">{title}</h3>
-      <ul className="mt-2 space-y-0.5 font-serif text-[12px] text-[#2f2f2f]">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  )
+function CateringMenuColumn({ title, items, compact = false }: { title: string; items: string[]; compact?: boolean }) {
+	return (
+		<div className={`rounded-sm border border-[#d4af37]/30 bg-[#fffdf8] ${compact ? "p-2.5" : "p-3"}`}>
+			<h3 className={`font-serif text-[#0e7c6b] text-center tracking-wide ${compact ? "text-base" : "text-lg"}`}>{title}</h3>
+			<div className={`bg-[#d4af37] mx-auto opacity-60 ${compact ? "w-7 h-px my-1.5" : "w-10 h-px my-2"}`} />
+			<ul className={compact ? "space-y-0.5" : "space-y-1"}>
+				{items.map((item) => (
+					<li key={`${title}-${item}`} className={`font-sans text-[#2f4f45] text-center ${compact ? "text-[10px] leading-tight" : "text-[11px] leading-snug"}`}>
+						{item}
+					</li>
+				))}
+			</ul>
+		</div>
+	)
 }
 
-export function CateringPackageCard({ packageName, menuA, menuB, menuC }: CateringPackageCardProps) {
-  return (
-    <main className="min-h-screen bg-[#ece9e3] py-8 px-4">
-      <div className="menu-page w-[210mm] h-[297mm] mx-auto relative bg-[#ece9e3] border border-[#6a6a6a] p-7 overflow-hidden">
-        <div className="absolute inset-3 border border-[#9a9a9a] pointer-events-none" />
+export function CateringPackageCard({
+	packageName,
+	menuA,
+	menuB,
+	menuC,
+	pricePerHead,
+	pageNumber = 1,
+	compact = false,
+	className,
+}: CateringPackageCardProps) {
+	const content = (
+		<>
+			<div className={`flex items-center justify-between ${compact ? "mb-2" : "mb-4 mt-1"}`}>
+				<h2 className={`font-display text-[#0e7c6b] ${compact ? "text-[32px]" : "text-3xl"}`}>{packageName}</h2>
+				<div className={`rounded-sm border border-[#d4af37]/40 bg-[#0e7c6b] text-center ${compact ? "px-4 py-1.5" : "px-6 py-2"}`}>
+					<p className={`font-sans uppercase text-[#e8d5a3] opacity-90 ${compact ? "text-[10px] tracking-[0.12em]" : "text-xs tracking-[0.2em]"}`}>Per Head</p>
+					<p className={`font-serif text-[#d4af37] leading-none mt-1 ${compact ? "text-[30px]" : "text-3xl"}`}>₱{pricePerHead}</p>
+				</div>
+			</div>
 
-        <div className="absolute -top-2 -left-2 w-20 h-20 border-t-2 border-l-2 border-[#0e7c6b] opacity-50" />
-        <div className="absolute -top-2 -right-2 w-20 h-20 border-t-2 border-r-2 border-[#0e7c6b] opacity-50" />
-        <div className="absolute -bottom-2 -left-2 w-20 h-20 border-b-2 border-l-2 border-[#0e7c6b] opacity-50" />
-        <div className="absolute -bottom-2 -right-2 w-20 h-20 border-b-2 border-r-2 border-[#0e7c6b] opacity-50" />
+			<p className={`font-sans text-[#5a7a6e] text-center uppercase ${compact ? "text-[10px] tracking-[0.1em] mb-2" : "text-[10px] tracking-[0.15em] mb-3"}`}>
+				Choose from Menu A, Menu B, or Menu C
+			</p>
 
-        <div className="relative z-10 h-full flex flex-col">
-          <header className="text-center mt-3">
-            <h1 className="font-display text-[48px] leading-none tracking-wider text-[#3e3e3e] uppercase">{packageName} Package</h1>
-            <p className="font-serif text-[30px] text-[#4b4b4b] -mt-1">Menu Options</p>
-          </header>
+			<div className={`grid grid-cols-3 ${compact ? "gap-2.5" : "gap-3"}`}>
+				<CateringMenuColumn title="Menu A" items={menuA} compact={compact} />
+				<CateringMenuColumn title="Menu B" items={menuB} compact={compact} />
+				<CateringMenuColumn title="Menu C" items={menuC} compact={compact} />
+			</div>
+		</>
+	)
 
-          <section className="mt-6 grid grid-cols-2 gap-12 px-10">
-            <MenuColumn title="Menu A" items={menuA} />
-            <MenuColumn title="Menu B" items={menuB} />
-          </section>
+	if (compact) {
+		return <div className={`rounded-sm border border-[#d4af37]/40 bg-[#fffef9] p-3 h-full ${className ?? ""}`}>{content}</div>
+	}
 
-          <section className="mt-8 px-20">
-            <MenuColumn title="Menu C" items={menuC} />
-          </section>
+	return (
+		<div className="menu-page w-[210mm] h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
+			<div className="absolute top-3 left-3 w-10 h-10 border-t border-l border-[#d4af37] opacity-30 z-10" />
+			<div className="absolute top-3 right-3 w-10 h-10 border-t border-r border-[#d4af37] opacity-30 z-10" />
+			<div className="absolute bottom-3 left-3 w-10 h-10 border-b border-l border-[#d4af37] opacity-30" />
+			<div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-[#d4af37] opacity-30" />
 
-          <div className="mt-auto mb-2 flex flex-col items-center">
-            <Image
-              src="/images/logo-transparent.png"
-              alt="Villa Kathreyna"
-              width={76}
-              height={76}
-              className="opacity-80"
-            />
-            <p className="font-display text-[20px] tracking-wide text-[#3e3e3e] -mt-1">Villa Kathreyna</p>
-          </div>
-        </div>
-      </div>
-    </main>
-  )
+			<MenuPageHeader />
+
+			<div className="px-7 pt-2 pb-12 flex-1 flex flex-col">
+				<SectionHeader title={`${packageName} Catering Package`} />
+				{content}
+			</div>
+
+			<MenuPageFooter pageNumber={pageNumber} />
+		</div>
+	)
 }
