@@ -22,6 +22,7 @@ export default function HomePage() {
             { href: '/resort-rates', label: 'Resort Rates' },
             { href: '/rooms', label: 'Room Accommodation' },
             { href: '/rules', label: 'Rules & Regulations' },
+            { href: '/other-packages', label: 'Other Packages (Events)' },
           ].map((link) => (
             <Link
               key={link.href}

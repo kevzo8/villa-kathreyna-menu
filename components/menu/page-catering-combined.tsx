@@ -142,7 +142,7 @@ export function PageCateringCombined({ pageNumber = 8 }: { pageNumber?: number }
 
           <div className="relative h-[120px] overflow-hidden rounded-sm border border-[#d4af37]/40 menu-banner">
             <Image
-              src="/images/banners/ala-carte-nilaga.jpg"
+              src="/images/banners/catering.jpg"
               alt="Catering dishes banner"
               fill
               className="object-cover menu-banner-image"
@@ -168,7 +168,7 @@ export function PageCateringCombined({ pageNumber = 8 }: { pageNumber?: number }
         </div>
       </div>
 
-      <MenuPageFooter pageNumber={pageNumber} />
+      <MenuPageFooter />
     </div>
   )
 }
