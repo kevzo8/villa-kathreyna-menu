@@ -407,16 +407,6 @@ export function OtherPackages() {
               </table>
             </div>
 
-            {/* Wedding venue banner */}
-            <div className="relative h-[100px] overflow-hidden rounded-sm border border-[#d4af37]/40">
-              <Image
-                src="/images/materials/wedding-venue.png"
-                alt="Wedding venue decoration"
-                fill
-                className="object-cover"
-              />
-            </div>
-
             {/* All-In Wedding Package summary */}
             <div className="bg-white rounded-lg border border-[#d4af37]/40 px-4 py-3 flex flex-col gap-2">
               <div className="flex items-center justify-center text-center">
@@ -424,6 +414,7 @@ export function OtherPackages() {
                   <h3 className="font-serif text-[15px] font-bold text-[#0e7c6b] flex items-center justify-center gap-1.5">
                     <span className="text-[15px]">👑</span>
                     <span>All-In Wedding Package</span>
+                    <span className="text-[15px]">👑</span>
                   </h3>
                   <p className="font-sans text-[11px] text-[#5a7a6e] mt-0.5">Complete package options for 100, 150, and 200 pax</p>
                 </div>
@@ -441,19 +432,34 @@ export function OtherPackages() {
                   ),
                 )}
               </div>
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-0.5 font-sans text-[11px] text-[#3e5a52] list-disc pl-4">
+              <h4 className="font-serif text-[12px] font-bold text-[#0e7c6b] mb-1">Package Inclusions</h4>
+              <ul className="grid grid-cols-3 gap-x-4 gap-y-0.5 font-sans text-[11px] text-[#3e5a52] list-disc pl-4">
                 <li>All access to the venue</li>
                 <li>All 5 rooms for 22 hours</li>
                 <li>Food catering services</li>
                 <li>Simple motif venue decoration</li>
                 <li>Photo &amp; video coverage</li>
                 <li>Emcee/Host</li>
-                <li>Sounds &amp; lights</li>
+                <li>Sounds, lights &amp; videoke</li>
                 <li>1 tier cake</li>
                 <li>Wine &amp; couch for couple</li>
                 <li>Grazing table</li>
                 <li>Photobooth</li>
                 <li>Free entrance signage (mirror or easel)</li>
+              </ul>
+            </div>
+
+            {/* Optional Add-Ons */}
+            <div className="bg-white rounded-lg border border-[#d4af37]/40 px-4 py-2.5">
+              <h4 className="font-serif text-[12px] font-bold text-[#0e7c6b] mb-1">Optional Add-Ons</h4>
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-0.5 list-disc pl-4 font-sans text-[10px] text-[#3e5a52]">
+                <li>Bride's Bouquet &amp; Groom's Boutonniere</li>
+                <li>Entourage Bouquets &amp; Boutonnieres</li>
+                <li>Invitation for Guests</li>
+                <li>Bridal Car w/ Flower Decoration</li>
+                <li>HMUA for Bride</li>
+                <li>HMUA for Parents &amp; Entourage</li>
+                <li>Same Day Edit (SDE)</li>
               </ul>
             </div>
           </div>
@@ -466,7 +472,7 @@ export function OtherPackages() {
       <div className="menu-page w-[210mm] h-[297mm] mx-auto relative overflow-hidden bg-white flex flex-col">
         <MaterialHeader
           title="Celebration Packages"
-          subtitle="Birthday, Baptism & Debut"
+          subtitle="We create, you celebrate—hassle-free moments for your special day."
           titleClassName="font-bold"
           logoSize={86}
         />

@@ -11,7 +11,7 @@ export function MaterialFooter() {
         0977 627 1360 | 054 341 3605
       </span>
       <span className="font-sans text-[9px] text-[#e8d5a3] opacity-70">
-        villakathreyna.com | Facebook: Villa Kathreyna
+        Website: villakathreyna.com | Facebook: Villa Kathreyna
       </span>
     </div>
   )
