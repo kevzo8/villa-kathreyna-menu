@@ -75,7 +75,7 @@ export function OtherPackages() {
                 src="/images/materials/villa.jpg"
                 alt="Exclusive access to Villa Kathreyna"
                 fill
-                className="object-contain"
+                className="object-cover"
                 priority
               />
               <div className="absolute inset-0 bg-[#0e7c6b]/85" />
@@ -107,25 +107,25 @@ export function OtherPackages() {
                 src: "/images/materials/lobby.png",
                 label: "Lobby & Lounge",
               }, {
-                src: "/images/materials/duchess.png",
+                src: "/images/materials/duchess copy.png",
                 label: "Duchess Room",
               }, {
-                src: "/images/materials/prince.png",
+                src: "/images/materials/prince copy.png",
                 label: "Prince Room",
               }, {
-                src: "/images/materials/princess.png",
+                src: "/images/materials/princess copy.png",
                 label: "Princess Room",
               }, {
-                src: "/images/materials/queen.png",
+                src: "/images/materials/queen copy.png",
                 label: "Queen Room",
               }, {
-                src: "/images/materials/king.png",
+                src: "/images/materials/king copy.png",
                 label: "King Room",
               }, {
-                src: "/images/materials/garden-pool-full.png",
+                src: "/images/materials/garden-pool.png",
                 label: "Garden & Pool",
               }, {
-                src: "/images/materials/hall-full.png",
+                src: "/images/materials/hall.png",
                 label: "Event Hall",
               }].map((item) => (
                 <div key={item.label} className="flex flex-col items-center gap-1">
@@ -134,7 +134,7 @@ export function OtherPackages() {
                       src={item.src}
                       alt={item.label}
                       fill
-                      className="object-contain"
+                      className="object-cover"
                     />
                   </div>
                   <p className="font-sans text-[9px] text-[#3e5a52] leading-tight text-center">{item.label}</p>
@@ -288,7 +288,7 @@ export function OtherPackages() {
               src="/images/materials/wedding.jpg"
               alt="Wedding setup at Villa Kathreyna"
               fill
-              className="object-contain"
+              className="object-cover"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-[#faf7f0]/60" />
@@ -413,7 +413,7 @@ export function OtherPackages() {
                 src="/images/materials/wedding-venue.png"
                 alt="Wedding venue decoration"
                 fill
-                className="object-contain"
+                className="object-cover"
               />
             </div>
 
@@ -480,7 +480,7 @@ export function OtherPackages() {
                   src="/images/materials/birthday.jpg"
                   alt="Birthday celebration setup"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
               <div className="flex items-baseline justify-between mb-1.5">
@@ -527,7 +527,7 @@ export function OtherPackages() {
                   src="/images/materials/baptism.jpg"
                   alt="Baptism or celebration setup"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
               <div className="flex items-baseline justify-between mb-1.5">
@@ -568,7 +568,7 @@ export function OtherPackages() {
                   src="/images/materials/debut.jpg"
                   alt="Debut celebration package A"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
               <div className="flex items-baseline justify-between mb-1.5">
@@ -603,7 +603,7 @@ export function OtherPackages() {
                   src="/images/materials/debut.png"
                   alt="Debut celebration package B"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
               <div className="flex items-baseline justify-between mb-1.5">

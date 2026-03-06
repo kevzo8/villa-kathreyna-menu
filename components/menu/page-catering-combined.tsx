@@ -145,7 +145,7 @@ export function PageCateringCombined({ pageNumber = 8 }: { pageNumber?: number }
               src="/images/banners/catering.jpg"
               alt="Catering dishes banner"
               fill
-              className="object-contain menu-banner-image"
+              className="object-cover menu-banner-image"
             />
           </div>
 
