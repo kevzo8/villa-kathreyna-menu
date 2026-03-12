@@ -1,5 +1,5 @@
 interface MenuPageFooterProps {
-  pageNumber: number
+  pageNumber?: number
 }
 
 export function MenuPageFooter({ pageNumber }: MenuPageFooterProps) {
@@ -10,7 +10,7 @@ export function MenuPageFooter({ pageNumber }: MenuPageFooterProps) {
       </div>
       <div className="flex items-center gap-2">
         <div className="w-8 h-px bg-[#d4af37] opacity-30" />
-        <span className="text-[10px] text-[#d4af37] font-serif">{pageNumber}</span>
+        <span className="text-lg text-[#d4af37]">◆</span>
         <div className="w-8 h-px bg-[#d4af37] opacity-30" />
       </div>
       <div className="text-[9px] text-[#5a7a6e] font-sans opacity-60 max-w-[44%] text-right leading-tight flex items-center gap-1 justify-end">

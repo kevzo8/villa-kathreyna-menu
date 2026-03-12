@@ -8,10 +8,13 @@ import { PageRiceSandwichesDesserts } from '../../components/menu/page-rice-sand
 import { CafeSection } from '../../components/menu/cafe-section'
 import { StoreSection } from '../../components/menu/store-section'
 import { PageCateringCombined } from '../../components/menu/page-catering-combined'
+import { PagePanTrays } from '../../components/menu/page-pan-trays'
+import { PrintButton } from '../../components/menu/print-button'
 
 export default function MenuIndexPage() {
   return (
     <main className="min-h-screen bg-[#0e7c6b] py-8">
+      <PrintButton />
       <div className="menu-print-root mx-auto px-4">
         <MenuCover />
 
@@ -51,6 +54,10 @@ export default function MenuIndexPage() {
 
           <div className="menu-print-sheet">
             <PageCateringCombined pageNumber={8} />
+          </div>
+
+          <div className="menu-print-sheet">
+            <PagePanTrays pageNumber={9} />
           </div>
         </div>
       </div>

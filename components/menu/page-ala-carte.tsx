@@ -9,7 +9,7 @@ export function PageAlaCarte() {
   const allItems = [...(alaCarte?.items || []), ...(nilagaSinigang?.items || [])]
 
   return (
-    <div className="menu-page w-[210mm] h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col">
+    <div className="menu-page w-[210mm] h-[297mm] mx-auto relative bg-[#faf8f3] overflow-hidden flex flex-col" data-page-name="ala-carte">
       {/* Corner accents */}
       <div className="absolute top-3 left-3 w-10 h-10 border-t border-l border-[#d4af37] opacity-30 z-10" />
       <div className="absolute top-3 right-3 w-10 h-10 border-t border-r border-[#d4af37] opacity-30 z-10" />
