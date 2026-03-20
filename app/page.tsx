@@ -12,11 +12,13 @@ export default function HomePage() {
           {[
             { href: '/menu', label: 'Full Restaurant Menu' },
             { href: '/menu/cafe', label: 'Cafe Menu' },
+            { href: '/menu/facebook-promos', label: 'Facebook Promos (Catering & Pan Trays)' },
             { href: '/menu/catering', label: 'Combined Catering Menu' },
             { href: '/menu/catering-diamond', label: 'Diamond Catering Menu' },
             { href: '/menu/catering-platinum', label: 'Platinum Catering Menu' },
             { href: '/menu/catering-gold', label: 'Gold Catering Menu' },
             { href: '/menu/catering-silver', label: 'Silver Catering Menu' },
+            { href: '/menu/pan-trays', label: 'Pan Trays Menu' },
             { href: '/menu/store', label: 'Store & Snacks' },
             { href: '/emergency', label: 'Emergency Hotlines' },
             { href: '/resort-rates', label: 'Resort Rates' },
