@@ -67,7 +67,7 @@ export function RoomAccommodation() {
 
   return (
     <div className="menu-page w-[210mm] h-[297mm] mx-auto relative overflow-hidden bg-white flex flex-col">
-      <MaterialHeader title="Room Accommodation" subtitle="Luxurious Rooms &amp; Suites" titleClassName="font-bold" logoSize={88} />
+      <MaterialHeader title="Room Accommodation" subtitle="Rest in regal comfort with our elegant rooms &amp; suites" titleClassName="font-bold" logoSize={88} />
 
       {/* Content */}
       <div className="flex-1 px-6 py-3 flex flex-col gap-3.5">

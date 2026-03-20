@@ -6,7 +6,7 @@ import { MaterialFooter } from "./material-footer"
 export function ResortRates() {
   return (
     <div className="menu-page w-[210mm] h-[297mm] mx-auto relative overflow-hidden bg-white flex flex-col">
-      <MaterialHeader title="Resort Rates" subtitle="Walk-In Rates &amp; Amenities" titleClassName="font-bold" logoSize={86} />
+      <MaterialHeader title="Resort Rates" subtitle="Swim, unwind, and celebrate with flexible rates &amp; amenities" titleClassName="font-bold" logoSize={86} />
 
       {/* Banner image */}
       <div className="h-[142px] w-full overflow-hidden relative">

@@ -4,6 +4,7 @@ import { MaterialFooter } from "./material-footer"
 
 const availableAddOns = [
   "Catering Service (Food, Utensils & Waiters)",
+  "Dish set (plate, spoon, fork, etc.)",
   "Backdrop Decor",
   "All-In Customized Decor",
   "Host/Clown/Magician/Game Facilitator",
@@ -21,6 +22,7 @@ const availableAddOns = [
 
 const availableAddOnPrices = [
   "starts at ₱400/head",
+  "₱20/set",
   "starts at ₱5,000",
   "starts at ₱10,000",
   "starts at ₱5,000",
