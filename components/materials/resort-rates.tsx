@@ -44,8 +44,8 @@ export function ResortRates() {
                     </h3>
                   </div>
                   <div className="flex flex-col gap-0.5">
-                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">Adults</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">P120</span></div>
-                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">{'Kids (6-12 yrs)'}</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">P80</span></div>
+                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">Adults</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">?120</span></div>
+                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">{'Kids (6-12 yrs)'}</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">?80</span></div>
                   </div>
                 </div>
                 <div className="bg-[#0e7c6b]/5 rounded-lg p-3 border border-[#0e7c6b]/20">
@@ -56,8 +56,8 @@ export function ResortRates() {
                     </h3>
                   </div>
                   <div className="flex flex-col gap-0.5">
-                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">Adults</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">P150</span></div>
-                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">{'Kids (6-12 yrs)'}</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">P100</span></div>
+                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">Adults</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">?150</span></div>
+                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">{'Kids (6-12 yrs)'}</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">?100</span></div>
                   </div>
                 </div>
               </div>
@@ -73,7 +73,7 @@ export function ResortRates() {
                     </p>
                   </div>
                   <div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" />
-                  <p className="font-serif text-[16px] font-bold text-[#d4af37]">P250</p>
+                  <p className="font-serif text-[16px] font-bold text-[#d4af37]">?250</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <div>
@@ -83,7 +83,7 @@ export function ResortRates() {
                     </p>
                   </div>
                   <div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" />
-                  <p className="font-serif text-[16px] font-bold text-[#d4af37]">P400</p>
+                  <p className="font-serif text-[16px] font-bold text-[#d4af37]">?400</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <div>
@@ -93,7 +93,7 @@ export function ResortRates() {
                     </p>
                   </div>
                   <div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" />
-                  <p className="font-serif text-[16px] font-bold text-[#d4af37]">P2,000</p>
+                  <p className="font-serif text-[16px] font-bold text-[#d4af37]">?2,000</p>
                 </div>
               </div>
             </div>
@@ -139,10 +139,10 @@ export function ResortRates() {
                 RK Hall
               </h4>
               <div className="flex flex-col gap-1 text-[10.5px] font-sans text-[#5a7a6e]">
-                <div className="flex items-center gap-1"><span>20-50 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P5,000</span></div>
-                <div className="flex items-center gap-1"><span>20-50 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P7,000</span></div>
-                <div className="flex items-center gap-1"><span>50-100 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P8,000</span></div>
-                <div className="flex items-center gap-1"><span>50-100 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P10,000</span></div>
+                <div className="flex items-center gap-1"><span>20-50 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?5,000</span></div>
+                <div className="flex items-center gap-1"><span>20-50 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?7,000</span></div>
+                <div className="flex items-center gap-1"><span>50-100 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?8,000</span></div>
+                <div className="flex items-center gap-1"><span>50-100 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?10,000</span></div>
               </div>
             </div>
             {/* RK Hall + Pool */}
@@ -152,10 +152,10 @@ export function ResortRates() {
                 RK Hall + Pool
               </h4>
               <div className="flex flex-col gap-1 text-[10.5px] font-sans text-[#5a7a6e]">
-                <div className="flex items-center gap-1"><span>20-50 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P10,000</span></div>
-                <div className="flex items-center gap-1"><span>20-50 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P12,000</span></div>
-                <div className="flex items-center gap-1"><span>50-100 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P13,000</span></div>
-                <div className="flex items-center gap-1"><span>50-100 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P15,000</span></div>
+                <div className="flex items-center gap-1"><span>20-50 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?10,000</span></div>
+                <div className="flex items-center gap-1"><span>20-50 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?12,000</span></div>
+                <div className="flex items-center gap-1"><span>50-100 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?13,000</span></div>
+                <div className="flex items-center gap-1"><span>50-100 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?15,000</span></div>
               </div>
             </div>
             {/* KR Garden & Pool */}
@@ -166,18 +166,18 @@ export function ResortRates() {
               </h4>
               <div className="grid grid-cols-2 gap-2 text-[10.5px] font-sans text-[#5a7a6e] leading-[1.35]">
                 <div className="flex flex-col gap-0.5">
-                  <div className="flex items-center gap-1"><span>20-50 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P8,000</span></div>
-                  <div className="flex items-center gap-1"><span>20-50 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P10,000</span></div>
-                  <div className="flex items-center gap-1"><span>50-100 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P11,000</span></div>
-                  <div className="flex items-center gap-1"><span>50-100 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P13,000</span></div>
-                  <div className="flex items-center gap-1"><span>100-150 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P15,000</span></div>
+                  <div className="flex items-center gap-1"><span>20-50 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?8,000</span></div>
+                  <div className="flex items-center gap-1"><span>20-50 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?10,000</span></div>
+                  <div className="flex items-center gap-1"><span>50-100 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?11,000</span></div>
+                  <div className="flex items-center gap-1"><span>50-100 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?13,000</span></div>
+                  <div className="flex items-center gap-1"><span>100-150 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?15,000</span></div>
                 </div>
                 <div className="flex flex-col gap-0.5">
-                  <div className="flex items-center gap-1"><span>100-150 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P17,000</span></div>
-                  <div className="flex items-center gap-1"><span>150-200 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P18,000</span></div>
-                  <div className="flex items-center gap-1"><span>150-200 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P20,000</span></div>
-                  <div className="flex items-center gap-1"><span>200-250 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P21,000</span></div>
-                  <div className="flex items-center gap-1"><span>200-250 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P23,000</span></div>
+                  <div className="flex items-center gap-1"><span>100-150 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?17,000</span></div>
+                  <div className="flex items-center gap-1"><span>150-200 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?18,000</span></div>
+                  <div className="flex items-center gap-1"><span>150-200 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?20,000</span></div>
+                  <div className="flex items-center gap-1"><span>200-250 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?21,000</span></div>
+                  <div className="flex items-center gap-1"><span>200-250 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?23,000</span></div>
                 </div>
               </div>
             </div>
@@ -189,18 +189,18 @@ export function ResortRates() {
               </h4>
               <div className="grid grid-cols-2 gap-2 text-[10.5px] font-sans text-[#5a7a6e] leading-[1.35]">
                 <div className="flex flex-col gap-0.5">
-                  <div className="flex items-center gap-1"><span>20-50 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P12,000</span></div>
-                  <div className="flex items-center gap-1"><span>20-50 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P14,000</span></div>
-                  <div className="flex items-center gap-1"><span>50-100 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P15,000</span></div>
-                  <div className="flex items-center gap-1"><span>50-100 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P17,000</span></div>
-                  <div className="flex items-center gap-1"><span>100-150 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P18,000</span></div>
+                  <div className="flex items-center gap-1"><span>20-50 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?12,000</span></div>
+                  <div className="flex items-center gap-1"><span>20-50 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?14,000</span></div>
+                  <div className="flex items-center gap-1"><span>50-100 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?15,000</span></div>
+                  <div className="flex items-center gap-1"><span>50-100 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?17,000</span></div>
+                  <div className="flex items-center gap-1"><span>100-150 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?18,000</span></div>
                 </div>
                 <div className="flex flex-col gap-0.5">
-                  <div className="flex items-center gap-1"><span>100-150 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P20,000</span></div>
-                  <div className="flex items-center gap-1"><span>150-200 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P21,000</span></div>
-                  <div className="flex items-center gap-1"><span>150-200 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P23,000</span></div>
-                  <div className="flex items-center gap-1"><span>200-250 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P24,000</span></div>
-                  <div className="flex items-center gap-1"><span>200-250 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">P26,000</span></div>
+                  <div className="flex items-center gap-1"><span>100-150 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?20,000</span></div>
+                  <div className="flex items-center gap-1"><span>150-200 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?21,000</span></div>
+                  <div className="flex items-center gap-1"><span>150-200 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?23,000</span></div>
+                  <div className="flex items-center gap-1"><span>200-250 pax • 6hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?24,000</span></div>
+                  <div className="flex items-center gap-1"><span>200-250 pax • 8hrs</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" /><span className="text-[#d4af37] font-bold">?26,000</span></div>
                 </div>
               </div>
             </div>

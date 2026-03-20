@@ -117,7 +117,7 @@ export function PageCateringCombined({ pageNumber = 8 }: { pageNumber?: number }
       <MenuPageHeader />
 
       <div className="px-6 pt-1 pb-11 flex-1 flex flex-col">
-        <h1 className="font-display font-bold text-[34px] text-[#0e7c6b] leading-none text-center">Catering Packages</h1>
+        <h1 className="font-display font-bold text-[34px] text-[#0e7c6b] leading-none text-center capitalize">Catering Packages</h1>
         <p className="font-sans text-[11px] text-[#5a7a6e] text-center uppercase tracking-[0.16em] mt-1 mb-2.5">
           Per Head Pricing & Menu Options
         </p>

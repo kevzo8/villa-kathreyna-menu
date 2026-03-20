@@ -87,7 +87,7 @@ export function OtherPackages() {
               <p className="font-display text-[34px] leading-none text-[#ffd86f] mt-0.5 font-bold">
                 25,000
               </p>
-              <h1 className="font-display text-[26px] leading-tight text-[#fdf8e5] tracking-[0.12em] uppercase font-bold mt-0.5">
+              <h1 className="font-display text-[26px] leading-tight text-[#fdf8e5] tracking-[0.12em] capitalize font-bold mt-0.5">
                 Exclusive Access
               </h1>
               <p className="font-sans text-[11px] text-[#f5e9c9] max-w-[460px] mt-0.5">
@@ -160,7 +160,6 @@ export function OtherPackages() {
             <li>Tables &amp; chairs for 50 pax</li>
             <li>1 buffet table</li>
             <li>Water dispenser with free 2 gallons of water</li>
-            <li>Full kitchen access (Corkage fee: ₱500)</li>
             <li>Hall use included with free table &amp; chair setup for 50 pax</li>
             <li>
             All Access Package good for 50 guests total (day + overnight combined, including 20 overnight guests)
@@ -210,6 +209,15 @@ export function OtherPackages() {
                 <span className="flex-1 border-b border-dashed border-[#d4af37]/50 mx-1" />
               </span>
               <span className="font-sans font-bold text-[#d4af37] text-[12px]">₱300/set</span>
+            </div>
+          </li>
+          <li>
+            <div className="flex items-baseline gap-1">
+              <span className="flex-1 flex items-center">
+                <span>Full kitchen access</span>
+                <span className="flex-1 border-b border-dashed border-[#d4af37]/50 mx-1" />
+              </span>
+              <span className="font-sans font-bold text-[#d4af37] text-[12px]">₱500</span>
             </div>
           </li>
           <li>
@@ -298,7 +306,7 @@ export function OtherPackages() {
 
           {/* Intro Banner */}
           <div className="px-8 pt-4 pb-2 text-center">
-            <h2 className="font-display text-[22px] text-[#0e7c6b] tracking-[0.18em] uppercase mb-1 font-bold">
+            <h2 className="font-display text-[22px] text-[#0e7c6b] tracking-[0.18em] capitalize mb-1 font-bold">
               Your Dream Wedding Awaits
             </h2>
             <p className="font-sans text-[11px] text-[#5a7a6e] max-w-[540px] mx-auto">

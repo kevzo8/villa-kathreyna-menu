@@ -89,7 +89,7 @@ export const noodles: MenuCategory = {
 // ===== FILIPINO BREAKFAST / SILOG (updated) =====
 export const filipinoBreakfast: MenuCategory = {
   title: "Filipino Breakfast (Silog)",
-  subtitle: "Served with egg, pickled papaya & garlic rice. Choice of coffee, hot tea, iced tea, or Milo. Upgrade to Merah/Chiao Fan/Tinapa Rice +P25",
+  subtitle: "Served with egg, pickled papaya & garlic rice. Choice of coffee, hot tea, iced tea, or Milo. Upgrade to Merah/Chiao Fan/Tinapa Rice +?25",
   items: [
     { name: "Tapsilog", price: "149", description: "Marinated beef sirloin with egg and garlic rice.", image: "/images/food/beef-tapa.jpg" },
     { name: "Tocilog", price: "149", description: "Sweet cured pork with egg and garlic rice.", image: "/images/food/tocino.jpg" },

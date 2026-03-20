@@ -14,7 +14,7 @@ export function MaterialHeader({ title, subtitle, titleClassName, logoSize = 70 
         <p className="font-sans text-[10px] text-[#e8d5a3] tracking-[0.2em] uppercase opacity-70">
           Villa Kathreyna Event Place & Resort
         </p>
-        <h1 className={`font-display text-2xl text-[#d4af37] mt-0.5 ${titleClassName ?? ''}`}>
+        <h1 className={`font-display text-2xl text-[#d4af37] mt-0.5 capitalize ${titleClassName ?? ''}`}>
           {title}
         </h1>
         {subtitle && (

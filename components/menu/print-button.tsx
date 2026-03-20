@@ -11,7 +11,12 @@ export function PrintButton() {
     try {
       // Find the menu page that's currently in or near the viewport
       const pages = document.querySelectorAll(".menu-page")
-      let targetPage = pages[0]
+      let targetPage: Element | null = pages[0] ?? null
+
+      // Fallback for routes that don't render .menu-page blocks (e.g. promo pages)
+      if (!targetPage) {
+        targetPage = document.querySelector("main") ?? document.body
+      }
 
       if (pages.length > 1) {
         // Find the page closest to the center of the viewport
@@ -30,7 +35,7 @@ export function PrintButton() {
         })
       }
 
-      const pageName = targetPage.getAttribute("data-page-name") || "menu-page"
+      const pageName = targetPage.getAttribute("data-page-name") || "resource-page"
       
       // Clone the element
       const clonedPage = targetPage.cloneNode(true) as HTMLElement

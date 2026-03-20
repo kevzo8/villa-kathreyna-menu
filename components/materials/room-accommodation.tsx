@@ -133,17 +133,17 @@ export function RoomAccommodation() {
         <div className="grid grid-cols-4 gap-3 mt-auto">
           <div className="bg-[#f8f5ef] rounded-lg p-3 text-center border border-[#d4af37]/20">
             <h4 className="font-serif text-[11px] font-bold text-[#0e7c6b]">Reservation Fee</h4>
-            <p className="font-display text-[18px] font-bold text-[#d4af37]">P500</p>
+            <p className="font-display text-[18px] font-bold text-[#d4af37]">?500</p>
             <p className="font-sans text-[9px] text-[#5a7a6e] font-medium">Non-refundable</p>
           </div>
           <div className="bg-[#f8f5ef] rounded-lg p-3 text-center border border-[#d4af37]/20">
             <h4 className="font-serif text-[11px] font-bold text-[#0e7c6b]">Extra Bed (Single)</h4>
-            <p className="font-display text-[18px] font-bold text-[#d4af37]">P300</p>
+            <p className="font-display text-[18px] font-bold text-[#d4af37]">?300</p>
             <p className="font-sans text-[9px] text-[#5a7a6e] font-medium">per night</p>
           </div>
           <div className="bg-[#f8f5ef] rounded-lg p-3 text-center border border-[#d4af37]/20">
             <h4 className="font-serif text-[11px] font-bold text-[#0e7c6b]">Extra Bed (Double)</h4>
-            <p className="font-display text-[18px] font-bold text-[#d4af37]">P500</p>
+            <p className="font-display text-[18px] font-bold text-[#d4af37]">?500</p>
             <p className="font-sans text-[9px] text-[#5a7a6e] font-medium">per night</p>
           </div>
           <div className="bg-[#f8f5ef] rounded-lg p-3 text-center border border-[#d4af37]/20">

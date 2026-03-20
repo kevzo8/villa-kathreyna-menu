@@ -99,7 +99,7 @@ export function PagePastaNoodles() {
       <div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-[#d4af37] opacity-30" />
 
       <MenuPageHeader />
-      <PageBanner imageSrc="/images/food/carbonara.jpg" alt="Pasta and Noodles" />
+      <PageBanner imageSrc="/images/banners/pasta.jpg" alt="Pasta and Noodles" />
 
       <div className="px-7 flex-1 flex flex-col pt-2 gap-2">
         <PastaNoodleSection
