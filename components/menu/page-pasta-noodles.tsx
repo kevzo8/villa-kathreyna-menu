@@ -24,8 +24,8 @@ function PastaNoodleTableRow({
           <p className="font-sans text-[10px] text-[#5a7a6e] leading-snug mt-0.5">{description}</p>
         )}
       </div>
-      <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap text-right pt-0.5">P{solo}</span>
-      <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap text-right pt-0.5">P{platter ?? "-"}</span>
+      <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap text-right pt-0.5">₱{solo}</span>
+      <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap text-right pt-0.5">₱{platter ?? "-"}</span>
     </div>
   )
 }
@@ -121,7 +121,8 @@ export function PagePastaNoodles() {
         />
       </div>
 
-      <MenuPageFooter pageNumber={6} />
+      <MenuPageFooter pageNumber={5} />
     </div>
   )
 }
+

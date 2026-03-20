@@ -5,6 +5,10 @@ import { MenuPageFooter } from "./menu-page-footer"
 import { SectionHeader } from "./section-header"
 import { chipsSnacks, instantNoodles } from "@/lib/menu-data"
 
+function formatPeso(value: string) {
+  return value.startsWith("₱") ? value : `₱${value}`
+}
+
 function StoreCategoryBlock({
   title,
   items,
@@ -46,7 +50,7 @@ function StoreCategoryBlock({
                     {it.name}
                   </td>
                   <td className="px-2 py-[5px] font-sans text-[12px] font-bold text-[#d4af37] text-right whitespace-nowrap border-b border-[#d4af37]/20">
-                    {it.price}
+                    {formatPeso(it.price)}
                   </td>
                 </tr>
               ))}

@@ -9,10 +9,10 @@ function BeverageItem({ name, price, pitcher, showPitcher = true }: { name: stri
   return (
     <div className={`grid ${showPitcher ? "grid-cols-[1fr_auto_auto]" : "grid-cols-[1fr_auto]"} items-baseline gap-x-2`}>
       <span className="font-sans text-[12px] text-[#0e7c6b] font-medium leading-tight">{name}</span>
-      <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap text-right">P{price}</span>
+      <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap text-right">₱{price}</span>
       {showPitcher && (
         <span className="font-sans text-[11px] text-[#5a7a6e] whitespace-nowrap text-right">
-          {pitcher ? `P${pitcher}` : "-"}
+          {pitcher ? `₱${pitcher}` : "-"}
         </span>
       )}
     </div>
@@ -87,7 +87,7 @@ export function PageBeverages() {
                 <span className="font-sans text-[12px] text-[#0e7c6b] font-medium">{item.name}</span>
                 <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
                 <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap">
-                  {"P"}{item.price}
+                  {"₱"}{item.price}
                 </span>
               </div>
               {item.description && (
@@ -113,7 +113,7 @@ export function PageBeverages() {
             <div className="bg-[#0e7c6b] bg-opacity-5 rounded-lg p-4 border border-[#d4af37] border-opacity-30">
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="font-display text-xl font-bold text-[#d4af37]">
-                  {"P"}{beerBites.price}
+                  {"₱"}{beerBites.price}
                 </span>
                 <span className="font-sans text-[12px] text-[#0e7c6b] opacity-70">only</span>
               </div>
@@ -140,3 +140,4 @@ export function PageBeverages() {
     </div>
   )
 }
+

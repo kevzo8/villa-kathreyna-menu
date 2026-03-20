@@ -30,7 +30,7 @@ export function PageRiceSandwichesDesserts() {
                 <span className="font-serif text-[13px] font-bold text-[#0e7c6b]">{item.name}</span>
                 <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
                 <span className="font-sans text-[13px] font-bold text-[#d4af37] whitespace-nowrap">
-                  {"P"}{item.price}
+                  {"₱"}{item.price}
                 </span>
               </div>
               {item.description && (
@@ -59,7 +59,8 @@ export function PageRiceSandwichesDesserts() {
         </div>
       </div>
 
-      <MenuPageFooter pageNumber={5} />
+      <MenuPageFooter pageNumber={6} />
     </div>
   )
 }
+

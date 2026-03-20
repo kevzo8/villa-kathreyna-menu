@@ -23,10 +23,10 @@ export function PageAlaCarte() {
       <PageBanner imageSrc="/images/banners/ala-carte-nilaga.jpg" alt="Ala Carte dishes featuring crispy pata, fried chicken, sinigang, and bulalo" />
 
       <div className="px-7 flex-1 flex flex-col pt-2">
-        <SectionHeader title="Ala Carte" />
+        <SectionHeader title="Ala Carte" subtitle="Good for 3-5 pax" />
         <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
           {allItems.map((item) => (
-            <MenuItemCard key={item?.name} item={item} imageSize="lg" />
+            <MenuItemCard key={item?.name} item={item} imageSize="mdPlus" />
           ))}
         </div>
       </div>

@@ -37,11 +37,11 @@ export default function MenuIndexPage() {
           </div>
 
           <div className="menu-print-sheet">
-            <PagePastaNoodles />
+            <PageRiceSandwichesDesserts />
           </div>
 
           <div className="menu-print-sheet">
-            <PageRiceSandwichesDesserts />
+            <PagePastaNoodles />
           </div>
 
           <div className="menu-print-sheet">

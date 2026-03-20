@@ -11,6 +11,10 @@ interface CafeItem {
   pitcher?: string
 }
 
+function formatPeso(value: string) {
+  return value.startsWith("₱") ? value : `₱${value}`
+}
+
 function CafeItemRow({ name, price, pitcher }: CafeItem) {
   return (
     <div>
@@ -18,7 +22,7 @@ function CafeItemRow({ name, price, pitcher }: CafeItem) {
         <span className="font-sans text-[12px] text-[#0e7c6b] font-medium">{name}</span>
         <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
         <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap">
-          {price}
+          {formatPeso(price)}
         </span>
       </div>
       {pitcher && (
@@ -26,7 +30,7 @@ function CafeItemRow({ name, price, pitcher }: CafeItem) {
           <span className="font-sans text-[11px] text-[#0e7c6b]">Pitcher</span>
           <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-30 mx-1 mb-0.5 min-w-4" />
           <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap">
-            {pitcher}
+            {formatPeso(pitcher)}
           </span>
         </div>
       )}
