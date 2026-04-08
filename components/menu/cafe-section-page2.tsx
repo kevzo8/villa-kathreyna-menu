@@ -21,17 +21,17 @@ function CafeItemRow({ name, price, pitcher }: CafeItem) {
   return (
     <div>
       <div className="flex items-baseline justify-between gap-2 py-1.5">
-        <span className="font-sans text-[14px] text-[#0e7c6b] font-medium flex-1">{name}</span>
+        <span className="font-sans text-[16px] text-[#0e7c6b] font-medium flex-1">{name}</span>
         <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-2 mb-0.5 min-w-4" />
-        <span className="font-sans text-[14px] font-bold text-[#d4af37] whitespace-nowrap">
+        <span className="font-sans text-[16px] font-bold text-[#d4af37] whitespace-nowrap">
           {formatPeso(price!)}
         </span>
       </div>
       {pitcher && (
         <div className="flex items-baseline justify-between gap-2 ml-4">
-          <span className="font-sans text-[13px] text-[#5a7a6e]">Pitcher</span>
+          <span className="font-sans text-[15px] text-[#5a7a6e]">Pitcher</span>
           <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-30 mx-2 mb-0.5 min-w-4" />
-          <span className="font-sans text-[13px] font-bold text-[#d4af37] whitespace-nowrap">
+          <span className="font-sans text-[15px] font-bold text-[#d4af37] whitespace-nowrap">
             {formatPeso(pitcher)}
           </span>
         </div>
@@ -43,9 +43,9 @@ function CafeItemRow({ name, price, pitcher }: CafeItem) {
 function CafeDualPriceRow({ name, priceHot, priceIced }: { name: string; priceHot: string; priceIced: string }) {
   return (
     <div className="grid grid-cols-[2fr_1fr_1fr] gap-3 items-center py-2.5 border-b border-[#d4af37] border-opacity-20">
-      <span className="font-sans text-[15px] text-[#0e7c6b] font-medium">{name}</span>
-      <span className="font-sans text-[15px] font-bold text-[#d4af37] text-center">{formatPeso(priceHot)}</span>
-      <span className="font-sans text-[15px] font-bold text-[#d4af37] text-center">{formatPeso(priceIced)}</span>
+      <span className="font-sans text-[17px] text-[#0e7c6b] font-medium">{name}</span>
+      <span className="font-sans text-[17px] font-bold text-[#d4af37] text-center">{formatPeso(priceHot)}</span>
+      <span className="font-sans text-[17px] font-bold text-[#d4af37] text-center">{formatPeso(priceIced)}</span>
     </div>
   )
 }
@@ -78,11 +78,11 @@ function CafeCategoryBlock({
   return (
     <div className="mb-4">
       <div className="mb-3">
-        <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none">
+        <h3 className="font-serif text-[18px] font-bold text-[#0e7c6b] leading-none">
           {title}
         </h3>
         {subtitle ? (
-          <p className="text-[11px] text-[#5a7a6e] mt-2 font-sans">{subtitle}</p>
+          <p className="text-[13px] text-[#5a7a6e] mt-2 font-sans">{subtitle}</p>
         ) : null}
       </div>
 
@@ -90,8 +90,8 @@ function CafeCategoryBlock({
         <div>
           <div className="grid grid-cols-[2fr_1fr_1fr] gap-3 mb-2 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
             <div></div>
-            <div className="text-center font-serif text-[12px] font-bold text-[#0e7c6b]">🔥 Hot</div>
-            <div className="text-center font-serif text-[12px] font-bold text-[#0e7c6b]">❄️ Iced</div>
+            <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">🔥 Hot</div>
+            <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">❄️ Iced</div>
           </div>
           {items.map((it) => (
             <CafeDualPriceRow key={it.name} name={it.name} priceHot={it.priceHot!} priceIced={it.priceIced!} />
@@ -125,7 +125,7 @@ function CafeCategoryBlock({
 function CafeTwoImageLayout({ title, items, image1, image2, image1Alt, image2Alt }: { title: string; items: CafeItem[]; image1: string; image2: string; image1Alt: string; image2Alt: string }) {
   return (
     <div className="mb-4">
-      <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none mb-3">
+      <h3 className="font-serif text-[18px] font-bold text-[#0e7c6b] leading-none mb-3">
         {title}
       </h3>
       <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-3 items-start">
@@ -146,21 +146,6 @@ function CafeTwoImageLayout({ title, items, image1, image2, image1Alt, image2Alt
             <Image src={image2} alt={image2Alt} width={130} height={130} className="object-cover w-full h-full" />
           </div>
         </div>
-      </div>
-    </div>
-  )
-}
-
-function DrinkSizesBlock({ sizes }: { sizes: string[] }) {
-  return (
-    <div className="mb-4 px-4 py-3 rounded-3xl text-center">
-      <p className="font-serif text-[15px] text-[#0e7c6b] font-bold uppercase tracking-[0.1em] mb-3">Drink Sizes</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[13px] text-[#5a7a6e] font-sans">
-        {sizes.map((line) => (
-          <div key={line} className="rounded-2xl bg-[#fbf8f0] py-2 border border-[#d4af37] border-opacity-20">
-            {line}
-          </div>
-        ))}
       </div>
     </div>
   )
@@ -191,14 +176,14 @@ export function CafeSectionPage2() {
             <div className="flex-1 flex flex-col">
               {/* Non-Coffee Drinks */}
               <div className="mb-6">
-                <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none mb-3">
+                <h3 className="font-serif text-[18px] font-bold text-[#0e7c6b] leading-none mb-3">
                   🍵 Non-Coffee Drinks
                 </h3>
                 <div>
                   <div className="grid grid-cols-[2fr_1fr_1fr] gap-3 mb-2 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
                     <div></div>
-                    <div className="text-center font-serif text-[12px] font-bold text-[#0e7c6b]">🔥 Hot</div>
-                    <div className="text-center font-serif text-[12px] font-bold text-[#0e7c6b]">❄️ Iced</div>
+                    <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">🔥 Hot</div>
+                    <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">❄️ Iced</div>
                   </div>
                   {nonCoffeeItems.map((it: CafeItem) => (
                     <CafeDualPriceRow key={it.name} name={it.name} priceHot={it.priceHot!} priceIced={it.priceIced!} />
@@ -208,14 +193,14 @@ export function CafeSectionPage2() {
 
               {/* Smoothies */}
               <div className="mb-6">
-                <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none mb-3 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
+                <h3 className="font-serif text-[18px] font-bold text-[#0e7c6b] leading-none mb-3 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
                   🥤 Smoothies
                 </h3>
                 <div>
                   {smoothiesItems.map((it: CafeItem) => (
                     <div key={it.name} className="grid grid-cols-[2fr_1fr_1fr] gap-3 items-center py-2.5 border-b border-[#d4af37] border-opacity-20">
-                      <span className="font-sans text-[15px] text-[#0e7c6b] font-medium">{it.name}</span>
-                      <span className="font-sans text-[15px] font-bold text-[#d4af37] text-center">{formatPeso(it.price!)}</span>
+                      <span className="font-sans text-[17px] text-[#0e7c6b] font-medium">{it.name}</span>
+                      <span className="font-sans text-[17px] font-bold text-[#d4af37] text-center">{formatPeso(it.price!)}</span>
                       <div></div>
                     </div>
                   ))}
@@ -223,24 +208,29 @@ export function CafeSectionPage2() {
               </div>
 
               {/* Two images below pricelists */}
-              <div className="grid grid-cols-2 gap-4 mt-4 mb-6">
+              <div className="grid grid-cols-2 gap-4 mt-4 mb-4">
                 <div className="flex flex-col items-center">
                   <div className="w-[170px] h-[170px] rounded-2xl overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md mb-2">
                     <Image src="/images/cafe/ube-latte.jpg" alt="Ube Latte" width={170} height={170} className="object-cover w-full h-full" />
                   </div>
-                  <span className="text-[11px] text-[#0e7c6b] font-medium">Ube Latte</span>
+                  <span className="text-[13px] text-[#0e7c6b] font-medium">Ube Latte</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-[170px] h-[170px] rounded-2xl overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md mb-2">
                     <Image src="/images/cafe/strawberry-smoothie.jpg" alt="Strawberry Smoothie" width={170} height={170} className="object-cover w-full h-full" />
                   </div>
-                  <span className="text-[11px] text-[#0e7c6b] font-medium">Strawberry Smoothie</span>
+                  <span className="text-[13px] text-[#0e7c6b] font-medium">Strawberry Smoothie</span>
                 </div>
               </div>
 
               {/* Drink sizes at bottom */}
-              <div className="mt-auto">
-                <DrinkSizesBlock sizes={(cafeMenu as any).drinkSizes || []} />
+              <div className="mb-4 text-center">
+                <p className="text-[13px] text-[#5a7a6e] font-sans inline-flex items-center justify-center gap-1">
+                  <span className="font-serif font-bold text-[#0e7c6b]">Drink Sizes:</span>
+                  <span>Hot Drinks – Tall (12oz)</span>
+                  <span className="text-[#d4af37]">|</span>
+                  <span>Iced Drinks – Grande (16oz)</span>
+                </p>
               </div>
             </div>
           )
