@@ -153,7 +153,7 @@ function CafeTwoImageLayout({ title, items, image1, image2, image1Alt, image2Alt
 
 function DrinkSizesBlock({ sizes }: { sizes: string[] }) {
   return (
-    <div className="mb-4 px-4 py-3 rounded-3xl border border-[#d4af37] border-opacity-30 bg-white/90 text-center shadow-sm">
+    <div className="mb-4 px-4 py-3 rounded-3xl text-center">
       <p className="font-serif text-[15px] text-[#0e7c6b] font-bold uppercase tracking-[0.1em] mb-3">Drink Sizes</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[13px] text-[#5a7a6e] font-sans">
         {sizes.map((line) => (
@@ -208,7 +208,7 @@ export function CafeSectionPage2() {
 
               {/* Smoothies */}
               <div className="mb-6">
-                <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none mb-3">
+                <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none mb-3 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
                   🥤 Smoothies
                 </h3>
                 <div>

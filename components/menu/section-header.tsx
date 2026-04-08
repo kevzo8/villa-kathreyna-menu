@@ -9,7 +9,7 @@ export function SectionHeader({ title, subtitle }: SectionHeaderProps) {
       <div className="flex items-center gap-3">
         <div className="flex-1 h-px bg-[#d4af37] opacity-40" />
         <div className="flex flex-col items-center">
-          <h2 className="font-display text-xl font-bold text-[#0e7c6b] tracking-wider capitalize">
+          <h2 className="font-display text-3xl font-bold text-[#0e7c6b] tracking-wider capitalize">
             {title}
           </h2>
           {/* Small decorative line-diamond-line under the title */}

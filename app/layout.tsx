@@ -26,6 +26,9 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: 'La Bella Caf\u00e8 & Resto Bar - Villa Kathreyna',
   description: 'La Bella Caf\u00e8 & Resto Bar at Villa Kathreyna Event Place & Resort',
+  icons: {
+    icon: '/images/logo.png',
+  },
 }
 
 export default function RootLayout({
