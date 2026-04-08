@@ -1,4 +1,5 @@
 import { CafeSection } from '../../../components/menu/cafe-section'
+import { CafeSectionPage2 } from '../../../components/menu/cafe-section-page2'
 import { PrintButton } from '../../../components/menu/print-button'
 
 export default function CafeMenuPage() {
@@ -8,6 +9,7 @@ export default function CafeMenuPage() {
       <div className="menu-print-root mx-auto px-4">
         <div className="menu-print-stack flex flex-col gap-8 items-center">
           <CafeSection />
+          <CafeSectionPage2 />
         </div>
       </div>
     </main>

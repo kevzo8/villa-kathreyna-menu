@@ -239,46 +239,32 @@ export const instantNoodles = {
   ],
 }
 
-// ===== CAFE MENU (from handwritten note) =====
+// ===== CAFE MENU =====
 export const cafeMenu = {
   title: "La Bella Caf\u00e8 Menu",
-  coffee: [
-    { name: "Coffee Latte", price: "150" },
-    { name: "Spanish Latte", price: "160" },
-    { name: "Caramel Macchiato", price: "170" },
-    { name: "Vietnamese Coffee", price: "180" },
-    { name: "Hazelnut Latte", price: "150" },
-    { name: "White Mocha Latte", price: "160" },
-    { name: "Café Mocha", price: "160" },
-    { name: "French Vanilla Latte", price: "150" },
-    { name: "Salted Caramel Latte", price: "170" },
-    { name: "Sea Salt Latte", price: "170" },
+  drinkSizes: [
+    "Hot Drinks – Tall (12oz)",
+    "Iced Drinks – Grande (16oz)",
   ],
-  juices: [
-    { name: "Pineapple Juice", price: "45", pitcher: "299" },
-    { name: "Mango Juice", price: "45", pitcher: "299" },
-    { name: "Calamansi Juice", price: "45", pitcher: "299" },
-    { name: "Lemon Iced Tea", price: "45", pitcher: "299" },
-    { name: "Red Iced Tea", price: "45", pitcher: "299" },
+  espresso: [
+    { name: "Caffè Americano", priceHot: "99", priceIced: "109" },
+    { name: "Caffè Latte", priceHot: "119", priceIced: "129" },
+    { name: "Spanish Latte", priceHot: "139", priceIced: "149" },
+    { name: "Caramel Macchiato", priceHot: "149", priceIced: "159" },
+    { name: "Caffè Mocha", priceHot: "149", priceIced: "159" },
+    { name: "White Chocolate Mocha", priceHot: "159", priceIced: "169" },
+    { name: "Salted Caramel Latte", priceHot: "149", priceIced: "159" },
+    { name: "French Vanilla Latte", priceHot: "149", priceIced: "159" },
+  ],
+  nonCoffee: [
+    { name: "Matcha Latte", priceHot: "139", priceIced: "159" },
+    { name: "Ube Latte", priceHot: "149", priceIced: "159" },
+    { name: "Choco Latte", priceHot: "129", priceIced: "139" },
   ],
   smoothies: [
-    { name: "Mango Smoothie", price: "180", image: "/images/food/smoothie.jpg" },
-    { name: "Strawberry Smoothie", price: "180" },
-    { name: "Banana Smoothie", price: "180" },
-    { name: "Blueberry Smoothie", price: "180" },
-    { name: "Choco Banana Smoothie", price: "180" },
-    { name: "Melon Smoothie", price: "170" },
-    { name: "Apple Smoothie", price: "170" },
-  ],
-  pastries: [
-    { name: "Brownies", price: "150" },
-    { name: "Butterscotch", price: "130" },
-    { name: "Banana Cake", price: "140" },
-  ],
-  hotTea: [
-    { name: "Chamomile", price: "120" },
-    { name: "Earl Grey", price: "120" },
-    { name: "Oolong", price: "120" },
+    { name: "Strawberry", price: "159" },
+    { name: "Mango", price: "159" },
+    { name: "Blueberry", price: "169" },
   ],
 }
 
