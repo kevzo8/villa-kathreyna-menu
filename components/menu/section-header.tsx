@@ -1,15 +1,18 @@
 interface SectionHeaderProps {
   title: string
   subtitle?: string
+  size?: "sm" | "md" | "lg"
 }
 
-export function SectionHeader({ title, subtitle }: SectionHeaderProps) {
+export function SectionHeader({ title, subtitle, size = "md" }: SectionHeaderProps) {
+  const titleSizeClass = size === "sm" ? "text-[24px]" : size === "lg" ? "text-5xl" : "text-4xl"
+
   return (
     <div className="mb-3">
       <div className="flex items-center gap-3">
         <div className="flex-1 h-px bg-[#d4af37] opacity-40" />
         <div className="flex flex-col items-center">
-          <h2 className="font-display text-3xl font-bold text-[#0e7c6b] tracking-wider capitalize">
+          <h2 className={`font-display ${titleSizeClass} font-bold text-[#0e7c6b] tracking-wider capitalize`}>
             {title}
           </h2>
           {/* Small decorative line-diamond-line under the title */}
@@ -22,7 +25,7 @@ export function SectionHeader({ title, subtitle }: SectionHeaderProps) {
         <div className="flex-1 h-px bg-[#d4af37] opacity-40" />
       </div>
       {subtitle && (
-        <p className="text-center text-[10px] text-[#5a7a6e] mt-1 font-sans italic px-8">
+        <p className="text-center text-[12px] text-[#5a7a6e] mt-1 font-sans italic px-8">
           {subtitle}
         </p>
       )}

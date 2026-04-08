@@ -1,7 +1,6 @@
 import { MenuPageHeader } from "./menu-page-header"
 import { MenuPageFooter } from "./menu-page-footer"
 import { SectionHeader } from "./section-header"
-import { PageBanner } from "./page-banner"
 import Image from "next/image"
 
 interface TrayItem {
@@ -94,25 +93,9 @@ export function PagePanTrays({ pageNumber = 9 }: { pageNumber?: number }) {
       <div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-[#d4af37] opacity-30" />
 
       <MenuPageHeader />
-      
-      {/* Pan tray images carousel */}
-      <div className="menu-banner relative w-full h-[140px] overflow-hidden mx-auto flex-shrink-0">
-        <div className="absolute inset-0 flex gap-2">
-          <div className="flex-1 relative">
-            <Image
-              src="/images/banners/pan-tray-beef.png"
-              alt="Beef pan tray"
-              fill
-              className="object-cover menu-banner-image"
-            />
-          </div>
-        </div>
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#d4af37] opacity-60" />
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#d4af37] opacity-40" />
-      </div>
 
       <div className="px-6 pt-2 pb-12 flex-1 flex flex-col gap-2">
-        <SectionHeader title="Pan Trays Menu" subtitle="Good for 10-12 pax" />
+        <SectionHeader title="Pan Trays Menu" subtitle="Good for 10-12 pax" size="sm" />
 
         <div className="grid grid-cols-2 gap-2">
           {panTrayCategories.map((category) => (
@@ -126,7 +109,7 @@ export function PagePanTrays({ pageNumber = 9 }: { pageNumber?: number }) {
           </p>
         </div>
 
-        <SectionHeader title="Bilao Menu" subtitle="Tray sizes and pricing" />
+        <SectionHeader title="Bilao Menu" subtitle="Tray sizes and pricing" size="sm" />
 
         <div className="rounded-sm border border-[#d4af37]/35 bg-[#fffef9] overflow-hidden">
           <table className="w-full border-collapse table-fixed">
@@ -157,7 +140,6 @@ export function PagePanTrays({ pageNumber = 9 }: { pageNumber?: number }) {
           <p className="font-sans text-[#5a7a6e] uppercase tracking-[0.08em]">Large: 10-13 pax</p>
         </div>
 
-        {/* Pan Tray Image Gallery */}
         <div className="mt-3 grid grid-cols-3 gap-2">
           <div className="relative h-[60px] rounded-sm border border-[#d4af37]/30 overflow-hidden">
             <Image
@@ -184,6 +166,7 @@ export function PagePanTrays({ pageNumber = 9 }: { pageNumber?: number }) {
             />
           </div>
         </div>
+
       </div>
 
       <MenuPageFooter pageNumber={pageNumber} />
