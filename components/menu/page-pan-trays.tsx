@@ -69,15 +69,15 @@ const bilaoItems = [
 function TrayCategoryCard({ title, items }: TrayCategory) {
   return (
     <div className="rounded-sm border border-[#d4af37]/35 bg-[#fffef9] p-2.5">
-      <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] text-center">{title}</h3>
+      <h3 className="font-serif text-[18px] font-bold text-[#0e7c6b] text-center">{title}</h3>
       <div className="w-10 h-px bg-[#d4af37] opacity-60 mx-auto my-1.5" />
 
       <div className="space-y-0.5">
         {items.map((item) => (
           <div key={`${title}-${item.name}`} className="flex items-baseline gap-1">
-            <span className="font-sans text-[11px] text-[#2f4f45] leading-tight">{item.name}</span>
+            <span className="font-sans text-[13px] text-[#2f4f45] leading-tight">{item.name}</span>
             <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mb-1" />
-            <span className="font-sans text-[11px] font-bold text-[#d4af37]">₱{item.price}</span>
+            <span className="font-sans text-[13px] font-bold text-[#d4af37]">₱{item.price}</span>
           </div>
         ))}
       </div>
@@ -120,32 +120,38 @@ export function PagePanTrays({ pageNumber = 9 }: { pageNumber?: number }) {
           ))}
         </div>
 
+        <div className="text-center py-4">
+          <p className="font-sans text-[15px] font-semibold text-[#0e7c6b]">
+            Rice — ₱399
+          </p>
+        </div>
+
         <SectionHeader title="Bilao Menu" subtitle="Tray sizes and pricing" />
 
         <div className="rounded-sm border border-[#d4af37]/35 bg-[#fffef9] overflow-hidden">
           <table className="w-full border-collapse table-fixed">
             <thead>
               <tr className="bg-[#f5efde]">
-                <th className="px-2 py-1 text-left text-[11px] font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">Item</th>
-                <th className="px-2 py-1 text-center text-[11px] font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">S</th>
-                <th className="px-2 py-1 text-center text-[11px] font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">M</th>
-                <th className="px-2 py-1 text-center text-[11px] font-bold text-[#0e7c6b] border-b border-[#d4af37]/30">L</th>
+                <th className="px-2 py-1 text-left text-[13px] font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">Item</th>
+                <th className="px-2 py-1 text-center text-[13px] font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">S</th>
+                <th className="px-2 py-1 text-center text-[13px] font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">M</th>
+                <th className="px-2 py-1 text-center text-[13px] font-bold text-[#0e7c6b] border-b border-[#d4af37]/30">L</th>
               </tr>
             </thead>
             <tbody>
               {bilaoItems.map((item) => (
                 <tr key={item.name}>
-                  <td className="px-2 py-1 text-[11px] text-[#2f4f45] border-r border-b border-[#d4af37]/20">{item.name}</td>
-                  <td className="px-2 py-1 text-[11px] text-center font-bold text-[#d4af37] border-r border-b border-[#d4af37]/20">₱{item.small}</td>
-                  <td className="px-2 py-1 text-[11px] text-center font-bold text-[#d4af37] border-r border-b border-[#d4af37]/20">₱{item.medium}</td>
-                  <td className="px-2 py-1 text-[11px] text-center font-bold text-[#d4af37] border-b border-[#d4af37]/20">₱{item.large}</td>
+                  <td className="px-2 py-1 text-[13px] text-[#2f4f45] border-r border-b border-[#d4af37]/20">{item.name}</td>
+                  <td className="px-2 py-1 text-[13px] text-center font-bold text-[#d4af37] border-r border-b border-[#d4af37]/20">₱{item.small}</td>
+                  <td className="px-2 py-1 text-[13px] text-center font-bold text-[#d4af37] border-r border-b border-[#d4af37]/20">₱{item.medium}</td>
+                  <td className="px-2 py-1 text-[13px] text-center font-bold text-[#d4af37] border-b border-[#d4af37]/20">₱{item.large}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
 
-        <div className="rounded-sm border border-[#d4af37]/30 bg-[#fffdf8] px-3 py-2 flex items-center justify-center gap-5 text-[10px]">
+        <div className="rounded-sm border border-[#d4af37]/30 bg-[#fffdf8] px-3 py-2 flex items-center justify-center gap-5 text-[12px]">
           <p className="font-sans text-[#5a7a6e] uppercase tracking-[0.08em]">Small: 5-7 pax</p>
           <p className="font-sans text-[#5a7a6e] uppercase tracking-[0.08em]">Medium: 8-10 pax</p>
           <p className="font-sans text-[#5a7a6e] uppercase tracking-[0.08em]">Large: 10-13 pax</p>
