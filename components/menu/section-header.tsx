@@ -5,7 +5,7 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({ title, subtitle, size = "md" }: SectionHeaderProps) {
-  const titleSizeClass = size === "sm" ? "text-[24px]" : size === "lg" ? "text-5xl" : "text-4xl"
+  const titleSizeClass = size === "sm" ? "text-[20px]" : size === "lg" ? "text-4xl" : "text-3xl"
 
   return (
     <div className="mb-3">
