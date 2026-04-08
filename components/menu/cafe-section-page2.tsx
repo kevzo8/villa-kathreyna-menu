@@ -226,7 +226,7 @@ export function CafeSectionPage2() {
               {/* Drink sizes at bottom */}
               <div className="mb-4 text-center">
                 <p className="text-[13px] text-[#5a7a6e] font-sans inline-flex items-center justify-center gap-1">
-                  <span className="font-serif font-bold text-[#0e7c6b]">Drink Sizes:</span>
+                  <span className="font-serif font-bold text-[#0e7c6b]">Drink Sizes</span>
                   <span>Hot Drinks – Tall (12oz)</span>
                   <span className="text-[#d4af37]">|</span>
                   <span>Iced Drinks – Grande (16oz)</span>
