@@ -8,6 +8,7 @@ export default function HomePage() {
       links: [
         { href: "/menu", label: "Full Restaurant Menu" },
         { href: "/menu/cafe", label: "Cafe Menu" },
+        { href: "/menu/cafe/burnt-basque", label: "Burnt Basque Cheesecakes" },
         { href: "/menu/store", label: "Store & Snacks" },
       ],
     },
@@ -43,6 +44,7 @@ export default function HomePage() {
       title: "Miscellaneous Printables",
       description: "Additional operational and promo materials.",
       links: [
+        { href: "/menu/grand-opening-promo", label: "Grand Opening Promo" },
         { href: "/rules", label: "Rules & Regulations" },
         { href: "/emergency", label: "Emergency Hotlines" },
         { href: "/menu/facebook-promos", label: "Facebook Promos (Catering & Pan Trays)" },

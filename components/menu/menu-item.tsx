@@ -33,14 +33,14 @@ export function MenuItemCard({ item, layout = "horizontal", imageSize = "xl" }: 
             />
           </div>
         )}
-        <h3 className="font-serif text-[15px] font-bold text-[#0e7c6b] leading-tight">
+        <h3 className="font-serif text-[17px] font-bold text-[#0e7c6b] leading-tight">
           {item.name}
         </h3>
-        <span className="font-sans text-[14px] font-bold text-[#d4af37]">
+        <span className="font-sans text-[16px] font-bold text-[#d4af37]">
           {"₱"}{item.price}
         </span>
         {item.description && (
-          <p className="font-sans text-[11px] text-[#5a7a6e] mt-0.5 leading-snug">
+          <p className="font-sans text-[13px] text-[#5a7a6e] mt-0.5 leading-snug">
             {item.description}
           </p>
         )}
@@ -63,16 +63,16 @@ export function MenuItemCard({ item, layout = "horizontal", imageSize = "xl" }: 
       )}
       <div className="flex-1 min-w-0 pt-2">
         <div className="flex items-baseline justify-between gap-1">
-          <h3 className="font-serif text-[15px] font-bold text-[#0e7c6b] leading-tight">
+          <h3 className="font-serif text-[17px] font-bold text-[#0e7c6b] leading-tight">
             {item.name}
           </h3>
           <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
-          <span className="font-sans text-[14px] font-bold text-[#d4af37] whitespace-nowrap">
+          <span className="font-sans text-[16px] font-bold text-[#d4af37] whitespace-nowrap">
             {"₱"}{item.price}
           </span>
         </div>
         {item.description && (
-          <p className="font-sans text-[11px] text-[#5a7a6e] leading-snug mt-0.5">
+          <p className="font-sans text-[13px] text-[#5a7a6e] leading-snug mt-0.5">
             {item.description}
           </p>
         )}

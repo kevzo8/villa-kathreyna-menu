@@ -28,10 +28,10 @@ function PromoHeader({ title, subtitle }: { title: string; subtitle: string }) {
         />
         <div className="h-px flex-1 bg-[#d4af37] opacity-40" />
       </div>
-      <h1 className="mt-6 text-center font-display text-[62px] leading-none font-bold text-[#0e7c6b]">
+      <h1 className="mt-6 text-center font-display text-[64px] leading-none font-bold text-[#0e7c6b]">
         {title}
       </h1>
-      <p className="mt-3 text-center font-sans text-[24px] tracking-[0.16em] uppercase text-[#5a7a6e]">
+      <p className="mt-3 text-center font-sans text-[26px] tracking-[0.16em] uppercase text-[#5a7a6e]">
         {subtitle}
       </p>
     </div>
@@ -42,10 +42,10 @@ function PromoFooter() {
   return (
     <div className="mt-auto px-12 pb-10 pt-6">
       <div className="rounded-sm border border-[#d4af37]/45 bg-[#fffdf8] px-8 py-5 text-center">
-        <p className="font-sans text-[24px] font-semibold tracking-[0.08em] uppercase text-[#0e7c6b]">
+        <p className="font-sans text-[26px] font-semibold tracking-[0.08em] uppercase text-[#0e7c6b]">
           Book now at Villa Kathreyna
         </p>
-        <p className="mt-1 font-sans text-[18px] text-[#5a7a6e]">
+        <p className="mt-1 font-sans text-[20px] text-[#5a7a6e]">
           Perfect for birthdays, reunions, and special celebrations.
         </p>
       </div>
@@ -75,9 +75,9 @@ export function FacebookPromoCateringPost() {
         <div className="mt-8 grid grid-cols-2 gap-5">
           {cateringPackages.map((item) => (
             <div key={item.name} className="rounded-sm border border-[#d4af37]/35 bg-[#fffef9] px-6 py-5">
-              <p className="font-serif text-[38px] font-bold leading-none text-[#0e7c6b]">{item.name}</p>
-              <p className="mt-2 font-sans text-[19px] uppercase tracking-[0.1em] text-[#5a7a6e]">Per head</p>
-              <p className="mt-1 font-serif text-[46px] font-bold leading-none text-[#d4af37]">₱{item.price}</p>
+              <p className="font-serif text-[40px] font-bold leading-none text-[#0e7c6b]">{item.name}</p>
+              <p className="mt-2 font-sans text-[21px] uppercase tracking-[0.1em] text-[#5a7a6e]">Per head</p>
+              <p className="mt-1 font-serif text-[48px] font-bold leading-none text-[#d4af37]">₱{item.price}</p>
             </div>
           ))}
         </div>
@@ -116,19 +116,19 @@ export function FacebookPromoPanTraysPost() {
         </div>
 
         <div className="mt-8 rounded-sm border border-[#d4af37]/35 bg-[#fffef9] p-6">
-          <p className="text-center font-sans text-[20px] uppercase tracking-[0.12em] text-[#5a7a6e]">Starts at</p>
+          <p className="text-center font-sans text-[22px] uppercase tracking-[0.12em] text-[#5a7a6e]">Starts at</p>
           <div className="mt-5 grid grid-cols-2 gap-x-8 gap-y-4">
             {panTrayStarts.map((item) => (
               <div key={item.name} className="flex items-end justify-between border-b border-[#d4af37]/30 pb-1">
-                <span className="font-sans text-[23px] text-[#2f4f45]">{item.name}</span>
-                <span className="font-serif text-[34px] font-bold leading-none text-[#d4af37]">₱{item.price}</span>
+                <span className="font-sans text-[25px] text-[#2f4f45]">{item.name}</span>
+                <span className="font-serif text-[36px] font-bold leading-none text-[#d4af37]">₱{item.price}</span>
               </div>
             ))}
           </div>
 
           <div className="mt-6 rounded-sm border border-[#d4af37]/30 bg-[#fffdf8] px-5 py-4 text-center">
-            <p className="font-sans text-[20px] tracking-[0.08em] uppercase text-[#0e7c6b]">Bilao Menu Available</p>
-            <p className="mt-1 font-sans text-[18px] text-[#5a7a6e]">Small ₱499 | Medium ₱699 | Large ₱899</p>
+            <p className="font-sans text-[22px] tracking-[0.08em] uppercase text-[#0e7c6b]">Bilao Menu Available</p>
+            <p className="mt-1 font-sans text-[20px] text-[#5a7a6e]">Small ₱499 | Medium ₱699 | Large ₱899</p>
           </div>
         </div>
       </div>

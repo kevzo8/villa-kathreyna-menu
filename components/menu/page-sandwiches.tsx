@@ -24,7 +24,7 @@ export function PageSandwiches() {
         <SectionHeader title="Sandwiches" />
         <div className="grid grid-cols-2 gap-x-4 gap-y-2">
           {sandwiches?.items?.map((item) => (
-            <MenuItemCard key={item?.name} item={item} imageSize="lg" />
+            <MenuItemCard key={item?.name} item={item} imageSize="md" />
           ))}
         </div>
       </div>

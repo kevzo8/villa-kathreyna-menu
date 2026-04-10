@@ -16,11 +16,11 @@ interface CateringPackageCardProps {
 function CateringMenuColumn({ title, items, compact = false }: { title: string; items: string[]; compact?: boolean }) {
 	return (
 		<div className={`rounded-sm border border-[#d4af37]/30 bg-[#fffdf8] ${compact ? "p-2.5" : "p-3"}`}>
-			<h3 className={`font-serif text-[#0e7c6b] text-center tracking-wide ${compact ? "text-base" : "text-lg"}`}>{title}</h3>
+			<h3 className={`font-serif text-[#0e7c6b] text-center tracking-wide ${compact ? "text-lg" : "text-xl"}`}>{title}</h3>
 			<div className={`bg-[#d4af37] mx-auto opacity-60 ${compact ? "w-7 h-px my-1.5" : "w-10 h-px my-2"}`} />
 			<ul className={compact ? "space-y-0.5" : "space-y-1"}>
 				{items.map((item) => (
-					<li key={`${title}-${item}`} className={`font-sans text-[#2f4f45] text-center ${compact ? "text-[10px] leading-tight" : "text-[11px] leading-snug"}`}>
+					<li key={`${title}-${item}`} className={`font-sans text-[#2f4f45] text-center ${compact ? "text-[12px] leading-tight" : "text-[13px] leading-snug"}`}>
 						{item}
 					</li>
 				))}
@@ -42,14 +42,14 @@ export function CateringPackageCard({
 	const content = (
 		<>
 			<div className={`flex items-center justify-between ${compact ? "mb-2" : "mb-4 mt-1"}`}>
-				<h2 className={`font-display text-[#0e7c6b] ${compact ? "text-[32px]" : "text-3xl"}`}>{packageName}</h2>
+				<h2 className={`font-display text-[#0e7c6b] ${compact ? "text-[28px]" : "text-3xl"}`}>{packageName}</h2>
 				<div className={`rounded-sm border border-[#d4af37]/40 bg-[#0e7c6b] text-center ${compact ? "px-4 py-1.5" : "px-6 py-2"}`}>
-					<p className={`font-sans uppercase text-[#e8d5a3] opacity-90 ${compact ? "text-[10px] tracking-[0.12em]" : "text-xs tracking-[0.2em]"}`}>Per Head</p>
-					<p className={`font-serif text-[#d4af37] leading-none mt-1 ${compact ? "text-[30px]" : "text-3xl"}`}>₱{pricePerHead}</p>
+					<p className={`font-sans uppercase text-[#e8d5a3] opacity-90 ${compact ? "text-[12px] tracking-[0.12em]" : "text-sm tracking-[0.2em]"}`}>Per Head</p>
+					<p className={`font-serif text-[#d4af37] leading-none mt-1 ${compact ? "text-[26px]" : "text-3xl"}`}>₱{pricePerHead}</p>
 				</div>
 			</div>
 
-			<p className={`font-sans text-[#5a7a6e] text-center uppercase ${compact ? "text-[10px] tracking-[0.1em] mb-2" : "text-[10px] tracking-[0.15em] mb-3"}`}>
+			<p className={`font-sans text-[#5a7a6e] text-center uppercase ${compact ? "text-[12px] tracking-[0.1em] mb-2" : "text-[12px] tracking-[0.15em] mb-3"}`}>
 				Choose from Menu A, Menu B, or Menu C
 			</p>
 

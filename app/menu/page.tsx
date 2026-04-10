@@ -6,6 +6,8 @@ import { PageBreakfastAndSavers } from '../../components/menu/page-breakfast-sav
 import { PagePastaNoodles } from '../../components/menu/page-pasta-noodles'
 import { PageRiceSandwichesDesserts } from '../../components/menu/page-rice-sandwiches-desserts'
 import { CafeSection } from '../../components/menu/cafe-section'
+import { CafeSectionPage2 } from '../../components/menu/cafe-section-page2'
+import { PageBurntBasqueCheesecakes } from '../../components/menu/page-burnt-basque-cheesecakes'
 import { StoreSection } from '../../components/menu/store-section'
 import { PageCateringCombined } from '../../components/menu/page-catering-combined'
 import { PagePanTrays } from '../../components/menu/page-pan-trays'
@@ -46,6 +48,14 @@ export default function MenuIndexPage() {
 
           <div className="menu-print-sheet">
             <CafeSection />
+          </div>
+
+          <div className="menu-print-sheet">
+            <CafeSectionPage2 />
+          </div>
+
+          <div className="menu-print-sheet">
+            <PageBurntBasqueCheesecakes />
           </div>
 
           <div className="menu-print-sheet">

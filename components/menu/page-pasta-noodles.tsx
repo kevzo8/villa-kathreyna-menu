@@ -19,13 +19,13 @@ function PastaNoodleTableRow({
   return (
     <div className="grid grid-cols-[1fr_auto_auto] gap-x-3 items-start py-1.5 border-b border-[#d4af37] border-opacity-15 last:border-b-0">
       <div>
-        <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] leading-tight">{name}</h3>
+        <h3 className="font-serif text-[15px] font-bold text-[#0e7c6b] leading-tight">{name}</h3>
         {description && (
-          <p className="font-sans text-[10px] text-[#5a7a6e] leading-snug mt-0.5">{description}</p>
+          <p className="font-sans text-[12px] text-[#5a7a6e] leading-snug mt-0.5">{description}</p>
         )}
       </div>
-      <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap text-right pt-0.5">₱{solo}</span>
-      <span className="font-sans text-[11px] font-bold text-[#d4af37] whitespace-nowrap text-right pt-0.5">₱{platter ?? "-"}</span>
+      <span className="font-sans text-[13px] font-bold text-[#d4af37] whitespace-nowrap text-right pt-0.5">₱{solo}</span>
+      <span className="font-sans text-[13px] font-bold text-[#d4af37] whitespace-nowrap text-right pt-0.5">₱{platter ?? "-"}</span>
     </div>
   )
 }
@@ -54,9 +54,9 @@ function PastaNoodleSection({
   const tableBlock = (
     <div className="flex flex-col flex-1 min-w-0">
       <div className="grid grid-cols-[1fr_auto_auto] gap-x-3 px-0.5 mb-1">
-        <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e]">Item</span>
-        <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e] text-right">Solo</span>
-        <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e] text-right">Platter</span>
+        <span className="font-sans text-[12px] uppercase tracking-wider text-[#5a7a6e]">Item</span>
+        <span className="font-sans text-[12px] uppercase tracking-wider text-[#5a7a6e] text-right">Solo</span>
+        <span className="font-sans text-[12px] uppercase tracking-wider text-[#5a7a6e] text-right">Platter</span>
       </div>
       {items.map((item) => (
         <PastaNoodleTableRow

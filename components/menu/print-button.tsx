@@ -113,20 +113,20 @@ export function PrintButton() {
       <button
         onClick={handleDownloadPNG}
         disabled={generating}
-        className="bg-[#d4af37] text-[#0e7c6b] px-5 py-3 rounded-lg font-sans font-bold text-sm shadow-lg hover:bg-[#c9a030] transition-colors cursor-pointer disabled:opacity-50"
+        className="bg-[#d4af37] text-[#0e7c6b] px-5 py-3 rounded-lg font-sans font-bold text-base shadow-lg hover:bg-[#c9a030] transition-colors cursor-pointer disabled:opacity-50"
       >
         {generating ? "Generating..." : "Download as PNG"}
       </button>
       <button
         onClick={handleDownloadPDF}
         disabled={generating}
-        className="bg-[#0e7c6b] text-[#d4af37] px-5 py-3 rounded-lg font-sans font-bold text-sm shadow-lg hover:bg-[#0a6558] transition-colors cursor-pointer disabled:opacity-50"
+        className="bg-[#0e7c6b] text-[#d4af37] px-5 py-3 rounded-lg font-sans font-bold text-base shadow-lg hover:bg-[#0a6558] transition-colors cursor-pointer disabled:opacity-50"
       >
         {generating ? "Generating..." : "Download as PDF"}
       </button>
       <button
         onClick={() => window.print()}
-        className="bg-[#5a7a6e] text-[#d4af37] px-5 py-3 rounded-lg font-sans font-bold text-sm shadow-lg hover:bg-[#476960] transition-colors cursor-pointer"
+        className="bg-[#5a7a6e] text-[#d4af37] px-5 py-3 rounded-lg font-sans font-bold text-base shadow-lg hover:bg-[#476960] transition-colors cursor-pointer"
       >
         Print Menu
       </button>

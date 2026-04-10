@@ -6,7 +6,7 @@ interface PageBannerProps {
 
 export function PageBanner({ imageSrc, alt }: PageBannerProps) {
   return (
-    <div className="menu-banner relative w-full h-[140px] overflow-hidden mx-auto flex-shrink-0">
+    <div className="menu-banner relative w-full h-[120px] overflow-hidden mx-auto flex-shrink-0">
       <img
         src={imageSrc}
         alt={alt}

@@ -21,7 +21,7 @@ export function PageBreakfastAndSavers() {
       {/* Food banner below header */}
       <PageBanner imageSrc="/images/banners/breakfast-savers.jpg" alt="Filipino Breakfast and Savers Meals" />
 
-      <div className="px-7 flex-1 flex flex-col pt-2">
+      <div className="px-7 flex-1 flex flex-col pt-1">
         {/* Filipino Breakfast */}
         <SectionHeader
           title="Filipino Breakfast"
@@ -29,7 +29,7 @@ export function PageBreakfastAndSavers() {
         />
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-1">
           {filipinoBreakfast?.items?.map((item) => (
-            <MenuItemCard key={item?.name} item={item} imageSize="xl" />
+            <MenuItemCard key={item?.name} item={item} imageSize="md" />
           ))}
         </div>
 
@@ -49,9 +49,9 @@ export function PageBreakfastAndSavers() {
             <div className="flex flex-col gap-2">
               {saversMeal?.items?.map((item) => (
                 <div key={item?.name} className="flex items-baseline justify-between gap-1">
-                  <span className="font-sans text-[12px] text-[#0e7c6b] font-medium">{item.name}</span>
+                  <span className="font-sans text-[14px] text-[#0e7c6b] font-medium">{item.name}</span>
                   <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
-                  <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap">
+                  <span className="font-sans text-[14px] font-bold text-[#d4af37] whitespace-nowrap">
                     {"₱"}{item.price}
                   </span>
                 </div>

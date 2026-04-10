@@ -1,9 +1,7 @@
-import Image from "next/image"
 import { MenuPageHeader } from "./menu-page-header"
-import { PageBanner } from "./page-banner"
 import { MenuPageFooter } from "./menu-page-footer"
 import { SectionHeader } from "./section-header"
-import { chipsSnacks, instantNoodles } from "@/lib/menu-data"
+import { chipsSnacks, drinksAlcohol, softdrinksBeverages, noodlesFood, mealsUlam, coffeePowderedDrinks, water, candies } from "@/lib/menu-data"
 
 function formatPeso(value: string) {
   return value.startsWith("₱") ? value : `₱${value}`
@@ -12,33 +10,22 @@ function formatPeso(value: string) {
 function StoreCategoryBlock({
   title,
   items,
-  image,
-  imageAlt,
-  imageRight,
 }: {
   title: string
   items: { name: string; price: string }[]
-  image?: string
-  imageAlt?: string
-  imageRight?: boolean
 }) {
   return (
-    <div className="mb-3">
-      <SectionHeader title={title} />
-      <div className={`flex gap-3 items-start ${imageRight ? "flex-row-reverse" : "flex-row"}`}>
-        {image && (
-          <div className="w-[150px] h-[150px] rounded-2xl overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md flex-shrink-0">
-            <Image src={image} alt={imageAlt || title} width={150} height={150} className="object-cover w-full h-full" />
-          </div>
-        )}
+    <div className="mb-2">
+      <SectionHeader title={title} size="sm" />
+      <div className="flex gap-2 items-start">
         <div className="flex-1 min-w-0 rounded-sm border border-[#d4af37]/35 overflow-hidden bg-[#fffef9]">
           <table className="w-full border-collapse table-fixed">
             <thead>
               <tr className="bg-[#f5efde]">
-                <th className="px-2 py-1 text-left font-sans text-[10px] uppercase tracking-wide text-[#0e7c6b] border-b border-[#d4af37]/30">
+                <th className="px-1 py-1 text-left font-sans text-[11px] uppercase tracking-wide text-[#0e7c6b] border-b border-[#d4af37]/30">
                   Item
                 </th>
-                <th className="px-2 py-1 text-right font-sans text-[10px] uppercase tracking-wide text-[#0e7c6b] border-b border-[#d4af37]/30 w-[64px]">
+                <th className="px-1 py-1 text-right font-sans text-[11px] uppercase tracking-wide text-[#0e7c6b] border-b border-[#d4af37]/30 w-[56px]">
                   Price
                 </th>
               </tr>
@@ -46,10 +33,10 @@ function StoreCategoryBlock({
             <tbody>
               {items.map((it) => (
                 <tr key={it.name}>
-                  <td className="px-2 py-[5px] font-sans text-[12px] text-[#0e7c6b] border-b border-[#d4af37]/20">
+                  <td className="px-1 py-[4px] font-sans text-[13px] text-[#0e7c6b] border-b border-[#d4af37]/20">
                     {it.name}
                   </td>
-                  <td className="px-2 py-[5px] font-sans text-[12px] font-bold text-[#d4af37] text-right whitespace-nowrap border-b border-[#d4af37]/20">
+                  <td className="px-1 py-[4px] font-sans text-[13px] font-bold text-[#d4af37] text-right whitespace-nowrap border-b border-[#d4af37]/20">
                     {formatPeso(it.price)}
                   </td>
                 </tr>
@@ -72,24 +59,26 @@ export function StoreSection() {
       <div className="absolute bottom-3 right-3 w-10 h-10 border-b border-r border-[#d4af37] opacity-30" />
 
       <MenuPageHeader />
-      {/* reuse cafe banner since there's no dedicated store banner */}
-      <PageBanner imageSrc="/images/banners/cafe-drinks.jpg" alt="Store Items" />
 
-      <div className="px-7 flex-1 flex flex-col pt-2 pb-8">
-        <StoreCategoryBlock
-          title="Chips & Snacks"
-          items={chipsSnacks.items}
-          image="/images/food/beer-bites.jpg"
-          imageAlt="Chips and snacks"
-          imageRight
-        />
-
-        <StoreCategoryBlock
-          title="Instant Noodles"
-          items={instantNoodles.items}
-          image="/images/food/batchoy.jpg"
-          imageAlt="Instant noodles"
-        />
+      <div className="px-7 flex-1 pt-1 pb-4">
+        <div className="grid grid-cols-2 gap-3">
+          <StoreCategoryBlock
+            title="Beverages & Alcohol"
+            items={[...drinksAlcohol.items, ...water.items]}
+          />
+          <StoreCategoryBlock
+            title="Softdrinks & Powdered Drinks"
+            items={[...softdrinksBeverages.items, ...coffeePowderedDrinks.items]}
+          />
+          <StoreCategoryBlock
+            title="Snacks / Chips"
+            items={chipsSnacks.items}
+          />
+          <StoreCategoryBlock
+            title="Noodles & Candies"
+            items={[...noodlesFood.items, ...mealsUlam.items, ...candies.items]}
+          />
+        </div>
       </div>
 
       <MenuPageFooter pageNumber={7} />

@@ -27,14 +27,14 @@ export function PageRiceAndSandwiches() {
           {rice?.items?.map((item) => (
             <div key={item?.name}>
               <div className="flex items-baseline justify-between gap-1">
-                <span className="font-serif text-[12px] font-bold text-[#0e7c6b]">{item.name}</span>
+                <span className="font-serif text-[14px] font-bold text-[#0e7c6b]">{item.name}</span>
                 <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
-                <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap">
+                <span className="font-sans text-[14px] font-bold text-[#d4af37] whitespace-nowrap">
                   {"₱"}{item.price}
                 </span>
               </div>
               {item.description && (
-                <p className="font-sans text-[9px] text-[#5a7a6e] leading-tight">
+                <p className="font-sans text-[11px] text-[#5a7a6e] leading-tight">
                   {item.description}
                 </p>
               )}

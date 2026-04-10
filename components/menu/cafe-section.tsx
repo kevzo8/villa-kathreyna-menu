@@ -21,17 +21,17 @@ function CafeItemRow({ name, price, pitcher }: CafeItem) {
   return (
     <div>
       <div className="flex items-baseline justify-between gap-2 py-1.5">
-        <span className="font-sans text-[14px] text-[#0e7c6b] font-medium flex-1">{name}</span>
+        <span className="font-sans text-[16px] text-[#0e7c6b] font-medium flex-1">{name}</span>
         <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-2 mb-0.5 min-w-4" />
-        <span className="font-sans text-[14px] font-bold text-[#d4af37] whitespace-nowrap">
+        <span className="font-sans text-[16px] font-bold text-[#d4af37] whitespace-nowrap">
           {formatPeso(price!)}
         </span>
       </div>
       {pitcher && (
         <div className="flex items-baseline justify-between gap-2 ml-4">
-          <span className="font-sans text-[13px] text-[#5a7a6e]">Pitcher</span>
+          <span className="font-sans text-[15px] text-[#5a7a6e]">Pitcher</span>
           <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-30 mx-2 mb-0.5 min-w-4" />
-          <span className="font-sans text-[13px] font-bold text-[#d4af37] whitespace-nowrap">
+          <span className="font-sans text-[15px] font-bold text-[#d4af37] whitespace-nowrap">
             {formatPeso(pitcher)}
           </span>
         </div>
@@ -43,9 +43,9 @@ function CafeItemRow({ name, price, pitcher }: CafeItem) {
 function CafeDualPriceRow({ name, priceHot, priceIced }: { name: string; priceHot: string; priceIced: string }) {
   return (
     <div className="grid grid-cols-[2fr_1fr_1fr] gap-3 items-center py-2.5 border-b border-[#d4af37] border-opacity-20">
-      <span className="font-sans text-[15px] text-[#0e7c6b] font-medium">{name}</span>
-      <span className="font-sans text-[15px] font-bold text-[#d4af37] text-center">{formatPeso(priceHot)}</span>
-      <span className="font-sans text-[15px] font-bold text-[#d4af37] text-center">{formatPeso(priceIced)}</span>
+      <span className="font-sans text-[17px] text-[#0e7c6b] font-medium">{name}</span>
+      <span className="font-sans text-[17px] font-bold text-[#d4af37] text-center">{formatPeso(priceHot)}</span>
+      <span className="font-sans text-[17px] font-bold text-[#d4af37] text-center">{formatPeso(priceIced)}</span>
     </div>
   )
 }
@@ -104,7 +104,7 @@ function CafeCategoryBlock({
           {title}
         </h3>
         {subtitle ? (
-          <p className="text-[11px] text-[#5a7a6e] mt-2 font-sans">{subtitle}</p>
+          <p className="text-[13px] text-[#5a7a6e] mt-2 font-sans">{subtitle}</p>
         ) : null}
       </div>
 
@@ -112,8 +112,8 @@ function CafeCategoryBlock({
         <div>
           <div className="grid grid-cols-[2fr_1fr_1fr] gap-3 mb-2 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
             <div></div>
-            <div className="text-center font-serif text-[12px] font-bold text-[#0e7c6b]">🔥 Hot</div>
-            <div className="text-center font-serif text-[12px] font-bold text-[#0e7c6b]">❄️ Iced</div>
+            <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">🔥 Hot</div>
+            <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">❄️ Iced</div>
           </div>
           {items.map((it) => (
             <CafeDualPriceRow key={it.name} name={it.name} priceHot={it.priceHot!} priceIced={it.priceIced!} />
@@ -147,8 +147,8 @@ function CafeCategoryBlock({
 function DrinkSizesBlock({ sizes }: { sizes: string[] }) {
   return (
     <div className="mb-4 px-4 py-3 rounded-3xl border border-[#d4af37] border-opacity-30 bg-white/90 text-center shadow-sm">
-      <p className="font-serif text-[12px] text-[#0e7c6b] font-bold uppercase tracking-[0.1em] mb-2">Drink Sizes</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[10px] text-[#5a7a6e] font-sans">
+      <p className="font-serif text-[14px] text-[#0e7c6b] font-bold uppercase tracking-[0.1em] mb-2">Drink Sizes</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[12px] text-[#5a7a6e] font-sans">
         {sizes.map((line) => (
           <div key={line} className="rounded-2xl bg-[#fbf8f0] py-2 border border-[#d4af37] border-opacity-20">
             {line}
@@ -209,8 +209,8 @@ export function CafeSection() {
               <div>
                 <div className="grid grid-cols-[2fr_1fr_1fr] gap-3 mb-2 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
                   <div></div>
-                  <div className="text-center font-serif text-[12px] font-bold text-[#0e7c6b]">🔥 Hot</div>
-                  <div className="text-center font-serif text-[12px] font-bold text-[#0e7c6b]">❄️ Iced</div>
+                  <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">🔥 Hot</div>
+                  <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">❄️ Iced</div>
                 </div>
                 {items.map((it: CafeItem) => (
                   <CafeDualPriceRow key={it.name} name={it.name} priceHot={it.priceHot!} priceIced={it.priceIced!} />
@@ -223,13 +223,13 @@ export function CafeSection() {
                   <div className="w-[180px] h-[180px] rounded-2xl overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md mb-2">
                     <Image src="/images/cafe/caffe-americano.jpg" alt="Caffè Americano" width={180} height={180} className="object-cover w-full h-full" />
                   </div>
-                  <span className="text-[11px] text-[#0e7c6b] font-medium">Caffè Americano</span>
+                  <span className="text-[13px] text-[#0e7c6b] font-medium">Caffè Americano</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-[180px] h-[180px] rounded-2xl overflow-hidden border-2 border-[#d4af37] border-opacity-50 shadow-md mb-2">
                     <Image src="/images/cafe/spanish-latte.jpg" alt="Spanish Latte" width={180} height={180} className="object-cover w-full h-full" />
                   </div>
-                  <span className="text-[11px] text-[#0e7c6b] font-medium">Spanish Latte</span>
+                  <span className="text-[13px] text-[#0e7c6b] font-medium">Spanish Latte</span>
                 </div>
               </div>
             </div>

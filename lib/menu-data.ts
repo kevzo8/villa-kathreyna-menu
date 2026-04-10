@@ -70,7 +70,7 @@ export const pasta: MenuCategory = {
     { name: "Chicken Alfredo", price: "199", price2: "299", description: "Creamy white sauce pasta with tender chicken strips.", image: "/images/food/carbonara.jpg" },
     { name: "Meatball Spaghetti", price: "199", price2: "299", description: "Filipino-style sweet tomato sauce with savory meatballs.", image: "/images/food/spaghetti.jpg" },
     { name: "Creamy Carbonara", price: "199", price2: "299", description: "Rich and creamy egg-based pasta with bacon.", image: "/images/food/carbonara.jpg" },
-    { name: "Chicken Petuccini", price: "199", price2: "299", description: "Petuccini noodles in a creamy chicken sauce.", image: "/images/food/spaghetti.jpg" },
+    { name: "Chicken  Fettuccine", price: "199", price2: "299", description: " Fettuccine noodles in a creamy chicken sauce.", image: "/images/food/spaghetti.jpg" },
   ],
 }
 
@@ -149,9 +149,9 @@ export const sandwiches: MenuCategory = {
 export const desserts: MenuCategory = {
   title: "Desserts",
   items: [
-    { name: "Halo-Halo", price: "75", description: "Filipino icy dessert with assorted sweet preserves.", image: "/images/food/halo-halo.jpg" },
+    { name: "Halo-Halo", price: "75", description: "Icy Filipino dessert with sweet preserves.", image: "/images/food/halo-halo.jpg" },
     { name: "Fruit Salad", price: "50", description: "Creamy blend of assorted fruit preserves.", image: "/images/food/fruit-salad.jpg" },
-    { name: "Mango Graham", price: "50", description: "Layered graham crackers with cream and fresh mango.", image: "/images/food/mango-graham.jpg" },
+    { name: "Mango Graham", price: "50", description: "Graham layers with cream and mango.", image: "/images/food/mango-graham.jpg" },
     { name: "Mango Shake", price: "75", description: "Fresh blended mango shake." },
     { name: "Buko Shake", price: "75", description: "Fresh young coconut shake." },
     { name: "Mango Tapioca", price: "50", description: "Sweet mango with tapioca pearls." },
@@ -177,8 +177,13 @@ export const beverages = {
     { name: "Coffee (3-in-1)", price: "30" },
     { name: "Milo (Hot/Cold)", price: "30" },
     { name: "Hot Tea", price: "30" },
+    { name: "Mineral Water", price: "20" },
+    { name: "Coke Mismo", price: "25" },
+    { name: "Sting", price: "25" },
+    { name: "Coke/Mountain Dew/Royal/Sprite 1.5L", price: "100" },
+    { name: "Coke/Mountain Dew/Royal/Sprite in Can", price: "45" },
   ],
-  note: "Softdrinks & Mineral Water options available at the counter",
+  note: undefined,
 }
 
 // ===== BEER & ALCOHOL =====
@@ -208,34 +213,107 @@ export const beerBites = {
 
 // ===== CHIPS & SNACKS =====
 export const chipsSnacks = {
-  title: "Chips & Snacks",
+  title: "Snacks / Chips",
   items: [
-    { name: "Tortillos", price: "40" },
-    { name: "Oishi Spicy", price: "40" },
-    { name: "Oishi Prawn", price: "40" },
-    { name: "Mang Juan", price: "40" },
-    { name: "Piattos", price: "30" },
-    { name: "Nova", price: "50" },
-    { name: "Boy Bawang", price: "35" },
-    { name: "Ding Dong", price: "35" },
-    { name: "Martys", price: "35" },
-    { name: "Pic-A Cheese", price: "55" },
-    { name: "Pic-A BBQ", price: "55" },
-    { name: "Chippy", price: "45" },
     { name: "Tempura", price: "40" },
     { name: "Fishda", price: "40" },
+    { name: "Pic-A (Cheese)", price: "55" },
+    { name: "Pic-A (BBQ)", price: "55" },
+    { name: "PiC-A", price: "40 / 70" },
+    { name: "Oishi (Spicy)", price: "30 / 40" },
+    { name: "Oishi Prawn", price: "40" },
+    { name: "Piatos", price: "50" },
+    { name: "Nova", price: "50" },
+    { name: "Mang Juan", price: "40" },
+    { name: "Ding Dong", price: "70" },
+    { name: "Martys", price: "35" },
+    { name: "Boy Bawang", price: "35" },
+    { name: "Tortillos", price: "40" },
+    { name: "Chippy", price: "45" },
   ],
 }
 
-// ===== INSTANT NOODLES =====
-export const instantNoodles = {
-  title: "Instant Noodles",
+// ===== DRINKS / ALCOHOL =====
+export const drinksAlcohol = {
+  title: "Drinks / Alcohol",
   items: [
-    { name: "Seafood / Spicy / Cheesy", price: "35" },
-    { name: "Bulalo / Batchoy / Beef", price: "35" },
-    { name: "Lucky Me Cup (Small)", price: "35" },
+    { name: "GSM Blue", price: "80" },
+    { name: "GSM Apple / Honey Sun Mig", price: "80" },
+    { name: "Gin", price: "90" },
+    { name: "San Mig", price: "80" },
+    { name: "Red Horse", price: "150" },
+    { name: "Fundador (Giant)", price: "400" },
+    { name: "Fundador (Doublelight)", price: "300" },
+    { name: "GSM Mojito", price: "160" },
+    { name: "May (White Wine)", price: "300" },
+    { name: "May (Red Wine)", price: "300" },
+    { name: "May Wine", price: "300" },
+    { name: "Alfonso", price: "400" },
+  ],
+}
+
+// ===== SOFTDRINKS / BEVERAGES =====
+export const softdrinksBeverages = {
+  title: "Softdrinks / Beverages",
+  items: [
+    { name: "Coke Mismo", price: "25" },
+    { name: "Mountain Dew", price: "25" },
+    { name: "Minute Maid", price: "25" },
+    { name: "Royale in Can", price: "45" },
+    { name: "1L Coke", price: "100" },
+  ],
+}
+
+// ===== NOODLES / FOOD =====
+export const noodlesFood = {
+  title: "Noodles / Food",
+  items: [
+    { name: "Lucky Me Cup Noodles (Small)", price: "35" },
     { name: "Nissin Cup Noodles", price: "50" },
     { name: "Supreme Jjamppong", price: "40" },
+  ],
+}
+
+// ===== MEALS / ULAM =====
+export const mealsUlam = {
+  title: "Meals / Ulam",
+  items: [
+    { name: "Seafood", price: "35" },
+    { name: "Spicy Seafood", price: "35" },
+    { name: "Creamy Seafood", price: "35" },
+    { name: "Bulalo", price: "35" },
+    { name: "Batchoy", price: "35" },
+    { name: "Beef", price: "35" },
+  ],
+}
+
+// ===== COFFEE / POWDERED DRINKS =====
+export const coffeePowderedDrinks = {
+  title: "Coffee / Powdered Drinks",
+  items: [
+    { name: "Sugar Free Coffee", price: "15" },
+    { name: "Kopiko (Brown)", price: "15" },
+    { name: "Kopiko (Black)", price: "15" },
+    { name: "Milo", price: "15" },
+    { name: "Top Cafe Palm", price: "10" },
+  ],
+}
+
+// ===== WATER =====
+export const water = {
+  title: "Water",
+  items: [
+    { name: "Water Bottle", price: "20" },
+  ],
+}
+
+// ===== CANDIES =====
+export const candies = {
+  title: "Candies",
+  items: [
+    { name: "V-Fresh", price: "2" },
+    { name: "Fres", price: "2" },
+    { name: "Mentos", price: "2" },
   ],
 }
 
@@ -249,22 +327,23 @@ export const cafeMenu = {
   espresso: [
     { name: "Caffè Americano", priceHot: "99", priceIced: "109" },
     { name: "Caffè Latte", priceHot: "119", priceIced: "129" },
-    { name: "Spanish Latte", priceHot: "139", priceIced: "149" },
-    { name: "Caramel Macchiato", priceHot: "149", priceIced: "159" },
-    { name: "Caffè Mocha", priceHot: "149", priceIced: "159" },
-    { name: "White Chocolate Mocha", priceHot: "159", priceIced: "169" },
-    { name: "Salted Caramel Latte", priceHot: "149", priceIced: "159" },
-    { name: "French Vanilla Latte", priceHot: "149", priceIced: "159" },
+    { name: "Cappuccino", priceHot: "119", priceIced: "129" },
+    { name: "Spanish Latte", priceHot: "129", priceIced: "139" },
+    { name: "Caramel Macchiato", priceHot: "139", priceIced: "149" },
+    { name: "Caffè Mocha", priceHot: "139", priceIced: "149" },
+    { name: "White Chocolate Mocha", priceHot: "139", priceIced: "149" },
+    { name: "Salted Caramel Latte", priceHot: "139", priceIced: "149" },
+    { name: "French Vanilla Latte", priceHot: "139", priceIced: "149" },
   ],
   nonCoffee: [
-    { name: "Matcha Latte", priceHot: "149", priceIced: "159" },
-    { name: "Ube Latte", priceHot: "149", priceIced: "159" },
+    { name: "Matcha Latte", priceHot: "129", priceIced: "139" },
+    { name: "Ube Latte", priceHot: "139", priceIced: "149" },
     { name: "Choco Latte", priceHot: "129", priceIced: "139" },
   ],
   smoothies: [
     { name: "Strawberry", price: "159" },
     { name: "Mango", price: "159" },
-    { name: "Blueberry", price: "169" },
+    { name: "Blueberry", price: "159" },
   ],
 }
 

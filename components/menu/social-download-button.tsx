@@ -47,7 +47,7 @@ export function SocialDownloadButton({ targetId, label }: SocialDownloadButtonPr
     <button
       onClick={handleDownload}
       disabled={generating}
-      className="bg-[#d4af37] text-[#0e7c6b] px-5 py-3 rounded-lg font-sans font-bold text-sm shadow-lg hover:bg-[#c9a030] transition-colors cursor-pointer disabled:opacity-50"
+      className="bg-[#d4af37] text-[#0e7c6b] px-5 py-3 rounded-lg font-sans font-bold text-base shadow-lg hover:bg-[#c9a030] transition-colors cursor-pointer disabled:opacity-50"
     >
       {generating ? "Generating..." : label}
     </button>

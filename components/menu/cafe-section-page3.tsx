@@ -16,9 +16,9 @@ function formatPeso(value: string) {
 function MenuItemRow({ name, price }: MenuItem) {
   return (
     <div className="flex items-baseline justify-between gap-2 py-1.5">
-      <span className="font-sans text-[14px] text-[#0e7c6b] font-medium flex-1">{name}</span>
+      <span className="font-sans text-[16px] text-[#0e7c6b] font-medium flex-1">{name}</span>
       <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-2 mb-0.5 min-w-4" />
-      <span className="font-sans text-[14px] font-bold text-[#d4af37] whitespace-nowrap">
+      <span className="font-sans text-[16px] font-bold text-[#d4af37] whitespace-nowrap">
         {formatPeso(price)}
       </span>
     </div>

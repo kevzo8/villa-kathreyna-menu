@@ -78,7 +78,7 @@ function CafeCategoryBlock({
   return (
     <div className="mb-4">
       <div className="mb-3">
-        <h3 className="font-serif text-[18px] font-bold text-[#0e7c6b] leading-none">
+        <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none">
           {title}
         </h3>
         {subtitle ? (
@@ -125,7 +125,7 @@ function CafeCategoryBlock({
 function CafeTwoImageLayout({ title, items, image1, image2, image1Alt, image2Alt }: { title: string; items: CafeItem[]; image1: string; image2: string; image1Alt: string; image2Alt: string }) {
   return (
     <div className="mb-4">
-      <h3 className="font-serif text-[18px] font-bold text-[#0e7c6b] leading-none mb-3">
+      <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none mb-3">
         {title}
       </h3>
       <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-3 items-start">
@@ -176,7 +176,7 @@ export function CafeSectionPage2() {
             <div className="flex-1 flex flex-col">
               {/* Non-Coffee Drinks */}
               <div className="mb-6">
-                <h3 className="font-serif text-[18px] font-bold text-[#0e7c6b] leading-none mb-3">
+                <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none mb-3">
                   🍵 Non-Coffee Drinks
                 </h3>
                 <div>
@@ -193,7 +193,7 @@ export function CafeSectionPage2() {
 
               {/* Smoothies */}
               <div className="mb-6">
-                <h3 className="font-serif text-[18px] font-bold text-[#0e7c6b] leading-none mb-3 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
+                <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none mb-3 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
                   🥤 Smoothies
                 </h3>
                 <div>

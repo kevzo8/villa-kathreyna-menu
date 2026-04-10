@@ -8,10 +8,10 @@ import { beverages, beer, beerBites } from "@/lib/menu-data"
 function BeverageItem({ name, price, pitcher, showPitcher = true }: { name: string; price: string; pitcher?: string; showPitcher?: boolean }) {
   return (
     <div className={`grid ${showPitcher ? "grid-cols-[1fr_auto_auto]" : "grid-cols-[1fr_auto]"} items-baseline gap-x-2`}>
-      <span className="font-sans text-[12px] text-[#0e7c6b] font-medium leading-tight">{name}</span>
-      <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap text-right">₱{price}</span>
+      <span className="font-sans text-[14px] text-[#0e7c6b] font-medium leading-tight">{name}</span>
+      <span className="font-sans text-[14px] font-bold text-[#d4af37] whitespace-nowrap text-right">₱{price}</span>
       {showPitcher && (
-        <span className="font-sans text-[11px] text-[#5a7a6e] whitespace-nowrap text-right">
+        <span className="font-sans text-[13px] text-[#5a7a6e] whitespace-nowrap text-right">
           {pitcher ? `₱${pitcher}` : "-"}
         </span>
       )}
@@ -41,13 +41,13 @@ export function PageBeverages() {
         <div className="grid grid-cols-2 gap-x-8 gap-y-4 mb-2">
           {/* Juices */}
           <div>
-            <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] mb-1.5 pb-1 border-b border-[#d4af37] border-opacity-30">
+            <h3 className="font-serif text-[15px] font-bold text-[#0e7c6b] mb-1.5 pb-1 border-b border-[#d4af37] border-opacity-30">
               Juices
             </h3>
             <div className="grid grid-cols-[1fr_auto_auto] items-center gap-x-2 mb-1 border-b border-[#d4af37] border-opacity-20 pb-1">
-              <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e]">Item</span>
-              <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e] text-right">Glass</span>
-              <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e] text-right">Pitcher</span>
+              <span className="font-sans text-[12px] uppercase tracking-wider text-[#5a7a6e]">Item</span>
+              <span className="font-sans text-[12px] uppercase tracking-wider text-[#5a7a6e] text-right">Glass</span>
+              <span className="font-sans text-[12px] uppercase tracking-wider text-[#5a7a6e] text-right">Pitcher</span>
             </div>
             <div className="flex flex-col gap-1.5">
               {beverages?.juices?.map((item) => (
@@ -56,25 +56,20 @@ export function PageBeverages() {
             </div>
           </div>
 
-          {/* Tea & Coffee */}
+          {/* Tea, Coffee & Bottled Drinks */}
           <div>
-            <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] mb-1.5 pb-1 border-b border-[#d4af37] border-opacity-30">
-              Tea & Coffee
+            <h3 className="font-serif text-[15px] font-bold text-[#0e7c6b] mb-1.5 pb-1 border-b border-[#d4af37] border-opacity-30">
+              Tea, Coffee & Bottled Drinks
             </h3>
             <div className="grid grid-cols-[1fr_auto] items-center gap-x-2 mb-1 border-b border-[#d4af37] border-opacity-20 pb-1">
-              <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e]">Item</span>
-              <span className="font-sans text-[10px] uppercase tracking-wider text-[#5a7a6e] text-right">Cup</span>
+              <span className="font-sans text-[12px] uppercase tracking-wider text-[#5a7a6e]">Item</span>
+              <span className="font-sans text-[12px] uppercase tracking-wider text-[#5a7a6e] text-right">Cup/Bottle</span>
             </div>
             <div className="flex flex-col gap-1.5">
               {beverages?.teaCoffee?.map((item) => (
                 <BeverageItem key={item.name} {...item} showPitcher={false} />
               ))}
             </div>
-            {beverages?.note && (
-              <p className="font-sans text-[10px] text-[#5a7a6e] italic mt-1">
-                {beverages.note}
-              </p>
-            )}
           </div>
         </div>
 
@@ -84,14 +79,14 @@ export function PageBeverages() {
           {beer?.items?.map((item: { name: string; price: string; description?: string }) => (
             <div key={item?.name}>
               <div className="flex items-baseline justify-between gap-1">
-                <span className="font-sans text-[12px] text-[#0e7c6b] font-medium">{item.name}</span>
+                <span className="font-sans text-[14px] text-[#0e7c6b] font-medium">{item.name}</span>
                 <div className="flex-1 border-b border-dotted border-[#d4af37] border-opacity-40 mx-1 mb-1 min-w-4" />
-                <span className="font-sans text-[12px] font-bold text-[#d4af37] whitespace-nowrap">
+                <span className="font-sans text-[14px] font-bold text-[#d4af37] whitespace-nowrap">
                   {"₱"}{item.price}
                 </span>
               </div>
               {item.description && (
-                <p className="font-sans text-[10px] text-[#5a7a6e] italic">{item.description}</p>
+                <p className="font-sans text-[12px] text-[#5a7a6e] italic">{item.description}</p>
               )}
             </div>
           ))}
@@ -110,24 +105,24 @@ export function PageBeverages() {
             />
           </div>
           <div className="flex-1">
-            <div className="bg-[#0e7c6b] bg-opacity-5 rounded-lg p-4 border border-[#d4af37] border-opacity-30">
+            <div className="rounded-lg p-4">
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="font-display text-xl font-bold text-[#d4af37]">
+                <span className="font-display text-2xl font-bold text-[#d4af37]">
                   {"₱"}{beerBites.price}
                 </span>
-                <span className="font-sans text-[12px] text-[#0e7c6b] opacity-70">only</span>
+                <span className="font-sans text-[14px] text-[#0e7c6b] opacity-70">only</span>
               </div>
-              <p className="font-sans text-[12px] text-[#0e7c6b] mb-2 font-medium">
+              <p className="font-sans text-[14px] text-[#0e7c6b] mb-2 font-medium">
                 {beerBites.description}
               </p>
               <div className="flex flex-col gap-1">
-                <p className="font-sans text-[10px] text-[#5a7a6e] font-bold uppercase tracking-wider mb-0.5">
+                <p className="font-sans text-[12px] text-[#5a7a6e] font-bold uppercase tracking-wider mb-0.5">
                   Your Royal Choices:
                 </p>
                 {beerBites?.choices?.map((choice) => (
                   <div key={choice} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full" />
-                    <span className="font-sans text-[12px] text-[#0e7c6b]">{choice}</span>
+                    <span className="font-sans text-[14px] text-[#0e7c6b]">{choice}</span>
                   </div>
                 ))}
               </div>

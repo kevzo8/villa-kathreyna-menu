@@ -63,16 +63,16 @@ function CateringPackageBlock({ name, pricePerHead, menuA, menuB, menuC }: Cater
       <div className="flex items-start justify-between gap-2 mb-1.5">
         <div className="flex items-center gap-1.5">
           <span
-            className={`w-6 h-6 rounded-full ${packageIconBackground(name)} text-white text-[12px] leading-none flex items-center justify-center font-bold`}
+            className={`w-6 h-6 rounded-full ${packageIconBackground(name)} text-white text-[14px] leading-none flex items-center justify-center font-bold`}
             aria-hidden="true"
           >
             {packageIcon(name)}
           </span>
-          <h2 className="font-serif font-bold text-[17px] leading-tight text-[#0e7c6b]">{name}</h2>
+          <h2 className="font-serif font-bold text-[19px] leading-tight text-[#0e7c6b]">{name}</h2>
         </div>
         <div className="rounded-sm border border-[#d4af37]/50 bg-[#0e7c6b] px-2 py-1 text-right shrink-0">
-          <p className="font-sans text-[8px] uppercase tracking-[0.12em] text-[#e8d5a3] opacity-95">Per Head</p>
-          <p className="font-serif font-bold text-[20px] leading-none text-[#d4af37]">₱{pricePerHead}</p>
+          <p className="font-sans text-[10px] uppercase tracking-[0.12em] text-[#e8d5a3] opacity-95">Per Head</p>
+          <p className="font-serif font-bold text-[22px] leading-none text-[#d4af37]">₱{pricePerHead}</p>
         </div>
       </div>
 
@@ -80,21 +80,21 @@ function CateringPackageBlock({ name, pricePerHead, menuA, menuB, menuC }: Cater
         <table className="w-full border-collapse table-fixed">
           <thead>
             <tr className="bg-[#f5efde]">
-              <th className="px-1 py-1 text-[11px] text-center font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">Menu A</th>
-              <th className="px-1 py-1 text-[11px] text-center font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">Menu B</th>
-              <th className="px-1 py-1 text-[11px] text-center font-bold text-[#0e7c6b] border-b border-[#d4af37]/30">Menu C</th>
+              <th className="px-1 py-1 text-[13px] text-center font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">Menu A</th>
+              <th className="px-1 py-1 text-[13px] text-center font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">Menu B</th>
+              <th className="px-1 py-1 text-[13px] text-center font-bold text-[#0e7c6b] border-b border-[#d4af37]/30">Menu C</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((row) => (
               <tr key={`${name}-${row.a}-${row.b}-${row.c}`}>
-                <td className="px-1 py-[3px] text-[11px] leading-tight text-center text-[#2f4f45] border-r border-b border-[#d4af37]/20 break-words">
+                <td className="px-1 py-[3px] text-[13px] leading-tight text-center text-[#2f4f45] border-r border-b border-[#d4af37]/20 break-words">
                   {row.a}
                 </td>
-                <td className="px-1 py-[3px] text-[11px] leading-tight text-center text-[#2f4f45] border-r border-b border-[#d4af37]/20 break-words">
+                <td className="px-1 py-[3px] text-[13px] leading-tight text-center text-[#2f4f45] border-r border-b border-[#d4af37]/20 break-words">
                   {row.b}
                 </td>
-                <td className="px-1 py-[3px] text-[11px] leading-tight text-center text-[#2f4f45] border-b border-[#d4af37]/20 break-words">
+                <td className="px-1 py-[3px] text-[13px] leading-tight text-center text-[#2f4f45] border-b border-[#d4af37]/20 break-words">
                   {row.c}
                 </td>
               </tr>
@@ -117,10 +117,7 @@ export function PageCateringCombined({ pageNumber = 8 }: { pageNumber?: number }
       <MenuPageHeader />
 
       <div className="px-6 pt-1 pb-11 flex-1 flex flex-col">
-        <h1 className="font-display font-bold text-[34px] text-[#0e7c6b] leading-none text-center capitalize">Catering Packages</h1>
-        <p className="font-sans text-[11px] text-[#5a7a6e] text-center uppercase tracking-[0.16em] mt-1 mb-2.5">
-          Per Head Pricing & Menu Options
-        </p>
+        <h1 className="font-display font-bold text-2xl text-[#0e7c6b] leading-none text-center capitalize">Catering Packages</h1>
 
         <div className="flex-1 flex flex-col gap-2.5">
           <div className="grid grid-cols-2 gap-2.5 items-start">
@@ -140,7 +137,7 @@ export function PageCateringCombined({ pageNumber = 8 }: { pageNumber?: number }
             />
           </div>
 
-          <div className="relative h-[120px] overflow-hidden rounded-sm border border-[#d4af37]/40 menu-banner">
+          <div className="relative h-[90px] overflow-hidden rounded-sm border border-[#d4af37]/40 menu-banner">
             <Image
               src="/images/banners/catering.jpg"
               alt="Catering dishes banner"

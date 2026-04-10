@@ -1,5 +1,6 @@
 import { CafeSection } from '../../../components/menu/cafe-section'
 import { CafeSectionPage2 } from '../../../components/menu/cafe-section-page2'
+import { PageBurntBasqueCheesecakes } from '../../../components/menu/page-burnt-basque-cheesecakes'
 import { PrintButton } from '../../../components/menu/print-button'
 
 export default function CafeMenuPage() {
@@ -10,6 +11,9 @@ export default function CafeMenuPage() {
         <div className="menu-print-stack flex flex-col gap-8 items-center">
           <CafeSection />
           <CafeSectionPage2 />
+          <div className="menu-print-sheet">
+            <PageBurntBasqueCheesecakes />
+          </div>
         </div>
       </div>
     </main>
