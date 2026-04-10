@@ -256,11 +256,9 @@ export const drinksAlcohol = {
 export const softdrinksBeverages = {
   title: "Softdrinks / Beverages",
   items: [
-    { name: "Coke Mismo", price: "25" },
-    { name: "Mountain Dew", price: "25" },
-    { name: "Minute Maid", price: "25" },
-    { name: "Royale in Can", price: "45" },
-    { name: "1L Coke", price: "100" },
+    { name: "Royal/Coke/Sprite in Can", price: "45" },
+    { name: "1.5L Coke/Royal/Sprite/Mountain Dew", price: "100" },
+    { name: "Sting", price: "25" },
   ],
 }
 
