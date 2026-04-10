@@ -203,12 +203,9 @@ export function CafeSection() {
 
           return (
             <div className="mb-6">
-              <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none mb-3">
-                ☕ Espresso-Based Drinks
-              </h3>
               <div>
                 <div className="grid grid-cols-[2fr_1fr_1fr] gap-3 mb-2 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
-                  <div></div>
+                  <div className="text-center font-serif text-[16px] font-bold text-[#0e7c6b]">☕ Espresso-Based Drinks</div>
                   <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">🔥 Hot</div>
                   <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">❄️ Iced</div>
                 </div>

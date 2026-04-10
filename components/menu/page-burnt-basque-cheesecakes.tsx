@@ -22,6 +22,18 @@ const cheesecakes = [
     slicePrice: "179",
     image: "/images/cafe/pistachio-brownie-basque.jpg",
   },
+  {
+    name: "Butterscotch Brownie",
+    roundPrice: "1,759",
+    slicePrice: "179",
+    image: "image to follow",
+  },
+  {
+    name: "Classic Brownie",
+    roundPrice: "1,659",
+    slicePrice: "169",
+    image: "image to follow",
+  },
 ]
 
 export function PageBurntBasqueCheesecakes() {

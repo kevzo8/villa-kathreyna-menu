@@ -71,7 +71,7 @@ export function StoreSection() {
             items={[...softdrinksBeverages.items, ...coffeePowderedDrinks.items]}
           />
           <StoreCategoryBlock
-            title="Snacks / Chips"
+            title="Snacks & Chips"
             items={chipsSnacks.items}
           />
           <StoreCategoryBlock
