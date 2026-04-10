@@ -336,9 +336,9 @@ export const cafeMenu = {
     { name: "French Vanilla Latte", priceHot: "139", priceIced: "149" },
   ],
   nonCoffee: [
+    { name: "Choco Latte", priceHot: "129", priceIced: "139" },
     { name: "Matcha Latte", priceHot: "129", priceIced: "139" },
     { name: "Ube Latte", priceHot: "139", priceIced: "149" },
-    { name: "Choco Latte", priceHot: "129", priceIced: "139" },
   ],
   smoothies: [
     { name: "Strawberry", price: "159" },
