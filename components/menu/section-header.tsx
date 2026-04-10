@@ -5,10 +5,10 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({ title, subtitle, size = "md" }: SectionHeaderProps) {
-  const titleSizeClass = size === "sm" ? "text-[20px]" : size === "lg" ? "text-4xl" : "text-3xl"
+  const titleSizeClass = size === "sm" ? "text-[15px]" : size === "lg" ? "text-3xl" : "text-2xl"
 
   return (
-    <div className="mb-3">
+    <div className="mb-2">
       <div className="flex items-center gap-3">
         <div className="flex-1 h-px bg-[#d4af37] opacity-40" />
         <div className="flex flex-col items-center">
