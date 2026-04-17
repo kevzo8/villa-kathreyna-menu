@@ -22,6 +22,12 @@ const cheesecakes = [
     slicePrice: "179",
     image: "/images/cafe/pistachio-brownie-basque.jpg",
   },
+  {
+    name: "Mango Tropical Basque",
+    roundPrice: "2,059",
+    slicePrice: "209",
+    image: "/images/cafe/mango-basque.png",
+  },
 ]
 
 export function PageBurntBasqueCheesecakes() {

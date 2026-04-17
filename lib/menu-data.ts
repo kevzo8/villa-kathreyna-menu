@@ -19,6 +19,7 @@ export const appetizers: MenuCategory = {
   items: [
     { name: "Tokwa't Baboy", price: "190", description: "Fried pork and tofu with special vinegar and onions.", image: "/images/food/tokwa-baboy.jpg" },
     { name: "Calamares Fritos", price: "265", description: "Tasty deep-fried squid rings.", image: "/images/food/calamares.jpg" },
+    { name: "Salt & Pepper Squid", price: "265", description: "Crispy squid tossed with garlic, chilies, and cracked black pepper.", image: "/images/food/salt-pepper-squid.jpg" },
     { name: "Spicy Sisig", price: "220", description: "Crispy spiced minced pork mask.", image: "/images/food/sisig.jpg", badge: "Best Seller" },
     { name: "French Fries", price: "110", description: "Shoestring fries fried until crispy and served hot.", image: "/images/food/french-fries.jpg" },
     { name: "Spicy Chicken Wings", price: "250", description: "Succulent spicy fried chicken wings.", image: "/images/food/chicken-wings.jpg" },
@@ -40,7 +41,7 @@ export const soups: MenuCategory = {
 export const alaCarte: MenuCategory = {
   title: "Ala Carte",
   items: [
-    { name: "Crispy Pata", price: "640", description: "Deep-fried front pork leg that is crispy on the outside and moist inside.", image: "/images/food/crispy-pata.jpg", badge: "Best Seller" },
+    { name: "Crispy Pata", price: "699", description: "Deep-fried front pork leg that is crispy on the outside and moist inside.", image: "/images/food/crispy-pata.jpg", badge: "Best Seller" },
     { name: "Crispy Lechon Kawali", price: "260", description: "Desirable crispy deep-fried pork belly.", image: "/images/food/lechon-kawali.jpg" },
     { name: "Pan Grilled Liempo", price: "295", description: "Definitely as tasty as your traditional pork barbecue.", image: "/images/food/grilled-liempo.jpg" },
     { name: "Chicken Pork Adobo", price: "230", description: "Rich, dark marinated chicken and pork stew.", image: "/images/food/adobo.jpg" },
@@ -141,7 +142,7 @@ export const sandwiches: MenuCategory = {
     { name: "Cheeseburger", price: "165", description: "Delicious American-style burger topped with cheddar cheese.", image: "/images/food/cheeseburger.jpg" },
     { name: "Classic Clubhouse", price: "200", description: "Double-decker sandwich with ham, cheese, egg, and chicken.", image: "/images/food/clubhouse.jpg" },
     { name: "Grilled Ham & Cheese", price: "135", description: "Classic grilled sandwich with ham and cheese.", image: "/images/food/grilled-ham-cheese.jpg" },
-    { name: "Nachos", price: "160", description: "Crispy tortilla chips topped with cheese and jalapeños.", image: "/images/food/french-fries.jpg" },
+    { name: "Nachos Overload", price: "250", description: "Crispy tortilla chips topped with cheese and jalapeños.", image: "/images/food/french-fries.jpg" },
   ],
 }
 

@@ -507,7 +507,7 @@ export function OtherPackages() {
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="font-display text-[22px] text-[#d4af37] font-bold">₱60,000</p>
+                  <p className="font-display text-[22px] text-[#d4af37] font-bold">₱70,000</p>
                   <p className="font-sans text-[10px] text-[#5a7a6e]">100 pax</p>
                 </div>
               </div>
@@ -552,7 +552,7 @@ export function OtherPackages() {
                   <p className="font-sans text-[10.5px] text-[#d28b2a] uppercase tracking-[0.16em]">Villa Kathreyna</p>
                 </div>
                 <div className="text-right">
-                  <p className="font-display text-[22px] text-[#d4af37] font-bold">₱60,000</p>
+                  <p className="font-display text-[22px] text-[#d4af37] font-bold">₱70,000</p>
                   <p className="font-sans text-[10px] text-[#5a7a6e]">70 pax</p>
                 </div>
               </div>
@@ -590,10 +590,10 @@ export function OtherPackages() {
               <div className="flex items-baseline justify-between mb-1.5">
                 <div className="flex items-center gap-2">
                   <span className="w-6 h-6 rounded-full bg-red-600 text-white text-[12px] leading-none flex items-center justify-center font-bold">☀</span>
-                  <h2 className="font-display text-[18px] text-[#0e7c6b] font-bold">Debut Package A</h2>
+                  <h2 className="font-display text-[18px] text-[#0e7c6b] font-bold">Debut Package</h2>
                 </div>
                 <div className="text-right">
-                  <p className="font-display text-[22px] text-[#d4af37] font-bold">₱55,000</p>
+                  <p className="font-display text-[22px] text-[#d4af37] font-bold">₱60,000</p>
                   <p className="font-sans text-[10px] text-[#5a7a6e]">50 pax</p>
                 </div>
               </div>
@@ -625,7 +625,7 @@ export function OtherPackages() {
               <div className="flex items-baseline justify-between mb-1.5">
                 <div className="flex items-center gap-2">
                   <span className="w-6 h-6 rounded-full bg-blue-600 text-white text-[12px] leading-none flex items-center justify-center font-bold">☾</span>
-                  <h2 className="font-display text-[18px] text-[#0e7c6b] font-bold">Debut Package B</h2>
+                  <h2 className="font-display text-[18px] text-[#0e7c6b] font-bold">Birthday, Baptism or Debut Package</h2>
                 </div>
                 <div className="text-right">
                   <p className="font-display text-[22px] text-[#d4af37] font-bold">₱80,000</p>

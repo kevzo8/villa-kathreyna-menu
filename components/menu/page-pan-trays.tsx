@@ -105,7 +105,7 @@ export function PagePanTrays({ pageNumber = 9 }: { pageNumber?: number }) {
 
         <div className="text-center py-4">
           <p className="font-sans text-[15px] font-semibold text-[#0e7c6b]">
-            Rice — ₱399
+            Rice — ₱399 | Chopsuey — ₱699 | Amplaya Con Carne — ₱699 | Mixed Veggies — ₱699
           </p>
         </div>
 
