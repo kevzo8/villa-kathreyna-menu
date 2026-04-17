@@ -52,7 +52,7 @@ export function PageRiceSandwichesDesserts() {
 
         {/* Desserts */}
         <SectionHeader title="Desserts" />
-        <div className="grid grid-cols-3 gap-x-3 gap-y-1">
+        <div className="grid grid-cols-3 gap-x-3 gap-y-1 [&_h3]:text-[15px] [&_span.font-sans]:text-[14px] [&_p]:text-[11px]">
           {desserts?.items?.map((item) => (
             <MenuItemCard key={item?.name} item={item} layout="vertical" imageSize="md" />
           ))}
