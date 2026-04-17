@@ -17,13 +17,13 @@ export interface MenuCategory {
 export const appetizers: MenuCategory = {
   title: "Appetizers",
   items: [
-    { name: "Tokwa't Baboy", price: "190", description: "Fried pork and tofu with special vinegar and onions.", image: "/images/food/tokwa-baboy.jpg" },
     { name: "Calamares Fritos", price: "265", description: "Tasty deep-fried squid rings.", image: "/images/food/calamares.jpg" },
     { name: "Salt & Pepper Squid", price: "265", description: "Crispy squid tossed with garlic, chilies, and cracked black pepper.", image: "/images/food/salt-pepper-squid.jpg" },
-    { name: "Spicy Sisig", price: "220", description: "Crispy spiced minced pork mask.", image: "/images/food/sisig.jpg", badge: "Best Seller" },
-    { name: "French Fries", price: "110", description: "Shoestring fries fried until crispy and served hot.", image: "/images/food/french-fries.jpg" },
     { name: "Spicy Chicken Wings", price: "250", description: "Succulent spicy fried chicken wings.", image: "/images/food/chicken-wings.jpg" },
     { name: "Chicharon Bulaklak", price: "225", description: "Deep-fried pork ruffle fats cooked to perfect crispiness.", image: "/images/food/chicharon-bulaklak.jpg" },
+    { name: "Spicy Sisig", price: "220", description: "Crispy spiced minced pork mask.", image: "/images/food/sisig.jpg", badge: "Best Seller" },
+    { name: "Tokwa't Baboy", price: "190", description: "Fried pork and tofu with special vinegar and onions.", image: "/images/food/tokwa-baboy.jpg" },
+    { name: "French Fries", price: "110", description: "Shoestring fries fried until crispy and served hot.", image: "/images/food/french-fries.jpg" },
   ],
 }
 
@@ -41,15 +41,15 @@ export const soups: MenuCategory = {
 export const alaCarte: MenuCategory = {
   title: "Ala Carte",
   items: [
-    { name: "Crispy Pata", price: "699", description: "Deep-fried front pork leg that is crispy on the outside and moist inside.", image: "/images/food/crispy-pata.jpg", badge: "Best Seller" },
-    { name: "Crispy Lechon Kawali", price: "260", description: "Desirable crispy deep-fried pork belly.", image: "/images/food/lechon-kawali.jpg" },
-    { name: "Pan Grilled Liempo", price: "295", description: "Definitely as tasty as your traditional pork barbecue.", image: "/images/food/grilled-liempo.jpg" },
-    { name: "Chicken Pork Adobo", price: "230", description: "Rich, dark marinated chicken and pork stew.", image: "/images/food/adobo.jpg" },
-    { name: "Orange Chicken", price: "250", description: "Crispy fried chicken glazed in sweet tangy orange sauce.", image: "/images/food/orange-chicken.jpg", badge: "Best Seller" },
+    { name: "Crispy Pata", price: "750", description: "Deep-fried front pork leg that is crispy on the outside and moist inside.", image: "/images/food/crispy-pata.jpg", badge: "Best Seller" },
     { name: "Salmon Belly Sinigang", price: "299", description: "Fresh salmon belly in a savory tamarind-based sour soup.", image: "/images/food/salmon-belly.jpg" },
+    { name: "Chicken Ala Max", price: "299", description: "Signature-style crispy fried chicken with special seasoning.", image: "/images/food/fried-chicken.jpg" },
+    { name: "Pan Grilled Liempo", price: "295", description: "Definitely as tasty as your traditional pork barbecue.", image: "/images/food/grilled-liempo.jpg" },
+    { name: "Crispy Lechon Kawali", price: "260", description: "Desirable crispy deep-fried pork belly.", image: "/images/food/lechon-kawali.jpg" },
+    { name: "Orange Chicken", price: "250", description: "Crispy fried chicken glazed in sweet tangy orange sauce.", image: "/images/food/orange-chicken.jpg", badge: "Best Seller" },
+    { name: "Chicken Pork Adobo", price: "230", description: "Rich, dark marinated chicken and pork stew.", image: "/images/food/adobo.jpg" },
     { name: "Breaded Porkchop", price: "230", description: "Golden crispy breaded pork cutlet served with gravy.", image: "/images/food/porkchop.jpg" },
     { name: "Chicken Pastel", price: "230", description: "Creamy chicken stew with carrots, potatoes, and green peas.", image: "/images/food/chicken-pastel.jpg" },
-    { name: "Chicken Ala Max", price: "299", description: "Signature-style crispy fried chicken with special seasoning.", image: "/images/food/fried-chicken.jpg" },
   ],
 }
 
@@ -153,8 +153,9 @@ export const desserts: MenuCategory = {
   title: "Desserts",
   items: [
     { name: "Halo-Halo", price: "75", description: "Icy Filipino dessert with sweet preserves.", image: "/images/food/halo-halo.jpg" },
-    { name: "Fruit Salad", price: "50", description: "Creamy blend of assorted fruit preserves.", image: "/images/food/fruit-salad.jpg" },
+    { name: "Leche Flan", price: "50", description: "Silky smooth custard dessert with caramel topping.", image: "/images/food/leche-flan.jpg" },
     { name: "Mango Graham", price: "50", description: "Graham layers with cream and mango.", image: "/images/food/mango-graham.jpg" },
+    { name: "Fruit Salad", price: "50", description: "Creamy blend of assorted fruit preserves." },
     { name: "Mango Shake", price: "75", description: "Fresh blended mango shake." },
     { name: "Buko Shake", price: "75", description: "Fresh young coconut shake." },
     { name: "Mango Tapioca", price: "50", description: "Sweet mango with tapioca pearls." },

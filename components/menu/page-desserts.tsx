@@ -25,7 +25,7 @@ export function PageDesserts() {
         <SectionHeader title="Desserts" />
         <div className="grid grid-cols-3 gap-x-3 gap-y-1">
           {desserts?.items?.map((item) => (
-            <MenuItemCard key={item?.name} item={item} layout="vertical" imageSize="sm" />
+            <MenuItemCard key={item?.name} item={item} layout="vertical" imageSize="xs" />
           ))}
         </div>
       </div>

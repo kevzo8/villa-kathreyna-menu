@@ -4,11 +4,12 @@ import type { MenuItem } from "@/lib/menu-data"
 interface MenuItemCardProps {
   item: MenuItem
   layout?: "horizontal" | "vertical"
-  imageSize?: "sm" | "md" | "mdPlus" | "lg" | "xl" | "2xl"
+  imageSize?: "xs" | "sm" | "md" | "mdPlus" | "lg" | "xl" | "2xl"
 }
 
 export function MenuItemCard({ item, layout = "horizontal", imageSize = "xl" }: MenuItemCardProps) {
   const sizeMap = {
+    xs: { w: 60, h: 60, cls: "w-[60px] h-[60px]" },
     sm: { w: 80, h: 80, cls: "w-20 h-20" },
     md: { w: 100, h: 100, cls: "w-[100px] h-[100px]" },
     mdPlus: { w: 110, h: 110, cls: "w-[110px] h-[110px]" },
