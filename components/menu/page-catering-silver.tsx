@@ -2,7 +2,7 @@ import { CateringPackageCard } from "./catering-package-card"
 
 export const silverCateringMenuA = [
   "Creamy Onion Soup",
-  "Chicken Ala King",
+  "Chicken Caldereta",
   "Sweet & Sour Fish Fillet",
   "Mixed Vegetable",
   "Rice",
@@ -11,8 +11,9 @@ export const silverCateringMenuA = [
 ]
 
 export const silverCateringMenuB = [
-  "Creamy Onion Soup",
-  "Chicken Teriyaki",
+  "Creamy Mushroom Soup",
+  "Chicken Marengo",
+  "Fish Fillet w/ Tartar Sauce",
   "Garlic Mixed Vegetable",
   "Pandan Rice",
   "Macaroni Salad",
@@ -22,7 +23,8 @@ export const silverCateringMenuB = [
 export const silverCateringMenuC = [
   "Corn Soup",
   "Chicken Salpicao",
-  "Lechon Kawali",
+  "Fish Fillet w/ Creamy White Sauce",
+  "Chopsuey",
   "Rice",
   "Fruit Salad",
   "Juice",

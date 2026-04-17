@@ -39,7 +39,7 @@ export const diamondCateringMenuC = [
   "Juice",
 ]
 
-export const diamondPricePerHead = 700
+export const diamondPricePerHead = 800
 
 export function PageCateringDiamond() {
   return <CateringPackageCard packageName="Diamond" menuA={diamondCateringMenuA} menuB={diamondCateringMenuB} menuC={diamondCateringMenuC} pricePerHead={diamondPricePerHead} pageNumber={11} />
