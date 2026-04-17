@@ -104,6 +104,8 @@ export const filipinoBreakfast: MenuCategory = {
     { name: "Porkchopsilog", price: "149", description: "Breaded porkchop with egg and garlic rice." },
     { name: "Hotsilog", price: "129", description: "Hotdog with egg and garlic rice." },
     { name: "Hamsilog", price: "129", description: "Ham with egg and garlic rice." },
+    { name: "Lumpiasilog", price: "149", description: "Crispy spring rolls with egg and garlic rice." },
+    { name: "Adobo Silog", price: "159", description: "Chicken pork adobo with egg and garlic rice." },
   ],
 }
 

@@ -57,12 +57,12 @@ const panTrayCategories: TrayCategory[] = [
 ]
 
 const bilaoItems = [
-  { name: "Pancit Guisado", small: 499, medium: 699, large: 899 },
-  { name: "Bihon Guisado", small: 499, medium: 699, large: 899 },
-  { name: "Sotanghon", small: 499, medium: 699, large: 899 },
-  { name: "Spaghetti", small: 599, medium: 799, large: 999 },
-  { name: "Carbonara", small: 599, medium: 799, large: 999 },
-  { name: "Special Biko", small: 499, medium: 699, large: 899 },
+  { name: "Pancit Guisado", small: 499, medium: 699, large: 899, xl: 1299 },
+  { name: "Bihon Guisado", small: 499, medium: 699, large: 899, xl: 1299 },
+  { name: "Sotanghon", small: 499, medium: 699, large: 899, xl: 1299 },
+  { name: "Spaghetti", small: 599, medium: 799, large: 999, xl: 1399 },
+  { name: "Carbonara", small: 599, medium: 799, large: 999, xl: 1399 },
+  { name: "Special Biko", small: 499, medium: 699, large: 899, xl: 1299 },
 ]
 
 function TrayCategoryCard({ title, items }: TrayCategory) {
@@ -118,7 +118,8 @@ export function PagePanTrays({ pageNumber = 9 }: { pageNumber?: number }) {
                 <th className="px-2 py-1 text-left text-[13px] font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">Item</th>
                 <th className="px-2 py-1 text-center text-[13px] font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">S</th>
                 <th className="px-2 py-1 text-center text-[13px] font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">M</th>
-                <th className="px-2 py-1 text-center text-[13px] font-bold text-[#0e7c6b] border-b border-[#d4af37]/30">L</th>
+                <th className="px-2 py-1 text-center text-[13px] font-bold text-[#0e7c6b] border-r border-b border-[#d4af37]/30">L</th>
+                <th className="px-2 py-1 text-center text-[13px] font-bold text-[#0e7c6b] border-b border-[#d4af37]/30">XL</th>
               </tr>
             </thead>
             <tbody>
@@ -127,7 +128,8 @@ export function PagePanTrays({ pageNumber = 9 }: { pageNumber?: number }) {
                   <td className="px-2 py-1 text-[13px] text-[#2f4f45] border-r border-b border-[#d4af37]/20">{item.name}</td>
                   <td className="px-2 py-1 text-[13px] text-center font-bold text-[#d4af37] border-r border-b border-[#d4af37]/20">₱{item.small}</td>
                   <td className="px-2 py-1 text-[13px] text-center font-bold text-[#d4af37] border-r border-b border-[#d4af37]/20">₱{item.medium}</td>
-                  <td className="px-2 py-1 text-[13px] text-center font-bold text-[#d4af37] border-b border-[#d4af37]/20">₱{item.large}</td>
+                  <td className="px-2 py-1 text-[13px] text-center font-bold text-[#d4af37] border-r border-b border-[#d4af37]/20">₱{item.large}</td>
+                  <td className="px-2 py-1 text-[13px] text-center font-bold text-[#d4af37] border-b border-[#d4af37]/20">₱{item.xl}</td>
                 </tr>
               ))}
             </tbody>
@@ -137,7 +139,8 @@ export function PagePanTrays({ pageNumber = 9 }: { pageNumber?: number }) {
         <div className="rounded-sm border border-[#d4af37]/30 bg-[#fffdf8] px-3 py-2 flex items-center justify-center gap-5 text-[12px]">
           <p className="font-sans text-[#5a7a6e] uppercase tracking-[0.08em]">Small: 5-7 pax</p>
           <p className="font-sans text-[#5a7a6e] uppercase tracking-[0.08em]">Medium: 8-10 pax</p>
-          <p className="font-sans text-[#5a7a6e] uppercase tracking-[0.08em]">Large: 10-13 pax</p>
+          <p className="font-sans text-[#5a7a6e] uppercase tracking-[0.08em]">Large: 11-14 pax</p>
+          <p className="font-sans text-[#5a7a6e] uppercase tracking-[0.08em]">XL: 15-17 pax</p>
         </div>
 
         <div className="mt-3 grid grid-cols-3 gap-2">
