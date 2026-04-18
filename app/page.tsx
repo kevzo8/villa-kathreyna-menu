@@ -38,6 +38,7 @@ export default function HomePage() {
         { href: "/resort-rates", label: "Resort Rates" },
         { href: "/rooms", label: "Room Accommodation" },
         { href: "/other-packages", label: "Other Packages (Events)" },
+        { href: "/brochure", label: "Tri-Fold Brochure (2-Page)" },
       ],
     },
     {
