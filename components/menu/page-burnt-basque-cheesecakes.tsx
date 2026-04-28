@@ -64,7 +64,7 @@ export function PageBurntBasqueCheesecakes() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <div className="grid grid-cols-3 gap-3">
           {cheesecakes.map((item) => (
             <div key={item.name} className="rounded-3xl border border-[#d4af37]/25 bg-white overflow-hidden shadow-sm">
               <div className="h-36 overflow-hidden bg-[#f6f2ea]">
