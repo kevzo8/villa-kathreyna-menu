@@ -40,11 +40,11 @@ function CafeItemRow({ name, price, pitcher }: CafeItem) {
   )
 }
 
-function CafeDualPriceRow({ name, priceHot, priceIced }: { name: string; priceHot: string; priceIced: string }) {
+function CafeDualPriceRow({ name, priceHot, priceIced }: { name: string; priceHot?: string; priceIced: string }) {
   return (
     <div className="grid grid-cols-[2fr_1fr_1fr] gap-3 items-center py-2.5 border-b border-[#d4af37] border-opacity-20">
       <span className="font-sans text-[17px] text-[#0e7c6b] font-medium">{name}</span>
-      <span className="font-sans text-[17px] font-bold text-[#d4af37] text-center">{formatPeso(priceHot)}</span>
+      <span className="font-sans text-[17px] font-bold text-[#d4af37] text-center">{priceHot ? formatPeso(priceHot) : "—"}</span>
       <span className="font-sans text-[17px] font-bold text-[#d4af37] text-center">{formatPeso(priceIced)}</span>
     </div>
   )
@@ -171,6 +171,7 @@ export function CafeSectionPage2() {
           const { title, drinkSizes, espresso, ...categories } = cafeMenu as any
           const nonCoffeeItems = categories.nonCoffee || []
           const smoothiesItems = categories.smoothies || []
+          const sodaPopItems = categories.sodaPop || []
 
           return (
             <div className="flex-1 flex flex-col">
@@ -188,18 +189,20 @@ export function CafeSectionPage2() {
                 </div>
               </div>
 
-              {/* Smoothies */}
+              {/* Fruit Drinks */}
               <div className="mb-6">
-                <h3 className="font-serif text-[16px] font-bold text-[#0e7c6b] leading-none mb-3 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
-                  🥤 Smoothies
-                </h3>
                 <div>
-                  {smoothiesItems.map((it: CafeItem) => (
-                    <div key={it.name} className="grid grid-cols-[2fr_1fr_1fr] gap-3 items-center py-2.5 border-b border-[#d4af37] border-opacity-20">
-                      <span className="font-sans text-[17px] text-[#0e7c6b] font-medium">{it.name}</span>
-                      <span className="font-sans text-[17px] font-bold text-[#d4af37] text-center">{formatPeso(it.price!)}</span>
-                      <div></div>
-                    </div>
+                  <div className="grid grid-cols-[2fr_1fr_1fr] gap-3 mb-2 pb-2 border-b-2 border-[#d4af37] border-opacity-40">
+                    <div className="text-center font-serif text-[16px] font-bold text-[#0e7c6b]">🍹 Fruit Drinks</div>
+                    <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">🥤 Soda Pop</div>
+                    <div className="text-center font-serif text-[14px] font-bold text-[#0e7c6b]">🧃 Smoothie</div>
+                  </div>
+                  {[
+                    { name: "Mango" },
+                    { name: "Strawberry" },
+                    { name: "Blueberry" },
+                  ].map((it) => (
+                    <CafeDualPriceRow key={it.name} name={it.name} priceHot="119" priceIced="159" />
                   ))}
                 </div>
               </div>

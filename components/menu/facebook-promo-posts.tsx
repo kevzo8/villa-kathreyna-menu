@@ -4,7 +4,7 @@ const cateringPackages = [
   { name: "Silver", price: 400 },
   { name: "Gold", price: 500 },
   { name: "Platinum", price: 600 },
-  { name: "Diamond", price: 700 },
+  { name: "Diamond", price: 800 },
 ]
 
 const panTrayStarts = [

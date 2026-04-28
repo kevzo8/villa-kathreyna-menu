@@ -12,62 +12,89 @@ import { StoreSection } from '../../components/menu/store-section'
 import { PageCateringCombined } from '../../components/menu/page-catering-combined'
 import { PagePanTrays } from '../../components/menu/page-pan-trays'
 import { PrintButton } from '../../components/menu/print-button'
+import { MenuPageScaler } from '../../components/menu/menu-page-scaler'
 
 export default function MenuIndexPage() {
   return (
     <main className="min-h-screen bg-[#0e7c6b] py-8">
       <PrintButton />
       <div className="menu-print-root mx-auto px-4">
-        <MenuCover />
+        <MenuPageScaler>
+          <MenuCover />
+        </MenuPageScaler>
 
         {/* All menu sections in one scroll; each component is a printable page */}
-        <div className="menu-print-stack flex flex-col gap-8 mt-8 items-center">
-          <div className="menu-print-sheet">
-            <PageAlaCarte />
+        <div className="menu-print-stack flex flex-col gap-8 mt-8">
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <PageAlaCarte />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <PageAppetizersAndSoups />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <PageAppetizersAndSoups />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <PageBeverages />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <PageBeverages />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <PageBreakfastAndSavers />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <PageBreakfastAndSavers />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <PageRiceSandwichesDesserts />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <PageRiceSandwichesDesserts />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <PagePastaNoodles />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <PagePastaNoodles />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <CafeSection />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <CafeSection />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <CafeSectionPage2 />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <CafeSectionPage2 />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <PageBurntBasqueCheesecakes />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <PageBurntBasqueCheesecakes />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <StoreSection />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <StoreSection />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <PageCateringCombined pageNumber={8} />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <PageCateringCombined pageNumber={8} />
+            </MenuPageScaler>
           </div>
 
-          <div className="menu-print-sheet">
-            <PagePanTrays pageNumber={9} />
+          <div className="menu-print-sheet w-full">
+            <MenuPageScaler>
+              <PagePanTrays pageNumber={9} />
+            </MenuPageScaler>
           </div>
         </div>
       </div>

@@ -123,6 +123,17 @@
     max-width: 100% !important;
     height: auto !important;
   }
+
+  /* Reset the mobile scaler so print layout is unaffected */
+  .menu-scaler-outer {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .menu-scaler-outer > div {
+    width: auto !important;
+    transform: none !important;
+  }
 }
 
 @page {
