@@ -22,6 +22,7 @@ const panTrayCategories: TrayCategory[] = [
       { name: "Korean Beef", price: 1299 },
       { name: "Beef Salpicao", price: 1299 },
       { name: "Bistik Tagalog", price: 1299 },
+      { name: "Kare-Kare", price: 1299 },
     ],
   },
   {

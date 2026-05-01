@@ -46,9 +46,10 @@ export default function HomePage() {
       description: "Additional operational and promo materials.",
       links: [
         { href: "/menu/grand-opening-promo", label: "Grand Opening Promo" },
+        { href: "/menu/mothers-day-promo", label: "Mother's Day Promo Package" },
         { href: "/rules", label: "Rules & Regulations" },
         { href: "/emergency", label: "Emergency Hotlines" },
-        { href: "/menu/facebook-promos", label: "Facebook Promos (Catering & Pan Trays)" },
+        { href: "/menu/facebook-promos", label: "Facebook Promos (Catering, Pan Trays, Mother's Day)" },
       ],
     },
   ]

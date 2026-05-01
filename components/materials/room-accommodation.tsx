@@ -61,8 +61,8 @@ export function RoomAccommodation() {
     { label: "Private Bathroom", icon: Bath },
     { label: "Air-Conditioned", icon: Snowflake },
     { label: "Free Breakfast for 2", icon: Coffee },
-    { label: "Pool & Garden Access", icon: Trees },
-    { label: "WiFi", icon: Wifi },
+    { label: "Hygiene Kit for 2", icon: Trees },
+    { label: "WiFi Access", icon: Wifi },
   ]
 
   return (
@@ -118,11 +118,14 @@ export function RoomAccommodation() {
               <div className="text-right flex-shrink-0 ml-4">
                 <div className="mb-1">
                   <span className="font-display text-[22px] font-bold text-[#d4af37]">₱{room.rate22}</span>
-                  <p className="font-sans text-[10px] text-[#5a7a6e] font-medium">per 22 hrs</p>
+                  <p className="font-sans text-[9px] text-[#5a7a6e] font-medium leading-tight">22-Hr Stay (2PM - 12NN next day)</p>
+                  <p className="font-sans text-[8.5px] text-[#0e7c6b] font-semibold leading-tight">Free Breakfast for 2 • Free Pool Access</p>
                 </div>
                 <div>
                   <span className="font-serif text-[16px] font-bold text-[#0e7c6b]">₱{room.rate12}</span>
-                  <p className="font-sans text-[10px] text-[#5a7a6e] font-medium">per 12 hrs</p>
+                  <p className="font-sans text-[9px] text-[#5a7a6e] font-medium leading-tight">12-Hr Stay (add-ons available)</p>
+                  <p className="font-sans text-[8.5px] text-[#5a7a6e] font-medium leading-tight">Breakfast: ₱200/pax</p>
+                  <p className="font-sans text-[8.5px] text-[#5a7a6e] font-medium leading-tight">Pool Access: ₱150/pax</p>
                 </div>
               </div>
             </div>

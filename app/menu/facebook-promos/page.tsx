@@ -1,5 +1,6 @@
 import {
   FacebookPromoCateringPost,
+  FacebookPromoMothersDayPost,
   FacebookPromoPanTraysPost,
 } from "../../../components/menu/facebook-promo-posts"
 import { PrintButton } from "../../../components/menu/print-button"
@@ -29,6 +30,16 @@ export default function FacebookPromosPage() {
           </div>
           <div className="overflow-auto rounded-sm border border-[#d4af37]/30 bg-[#083f37] p-3">
             <FacebookPromoPanTraysPost />
+          </div>
+        </section>
+
+        <section className="rounded-lg border border-[#d4af37]/40 bg-[#0b6b5d] p-4">
+          <div className="mb-4 flex items-center justify-between gap-3">
+            <p className="font-sans text-sm uppercase tracking-[0.08em] text-[#d4af37]">Mother&apos;s Day Post • 1080 x 1080</p>
+            <SocialDownloadButton targetId="fb-promo-mothers-day" label="Download Mother's Day PNG" />
+          </div>
+          <div className="overflow-auto rounded-sm border border-[#d4af37]/30 bg-[#083f37] p-3">
+            <FacebookPromoMothersDayPost />
           </div>
         </section>
       </div>

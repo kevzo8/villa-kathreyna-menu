@@ -33,67 +33,83 @@ export function ResortRates() {
             <Waves className="h-4 w-4 text-[#d4af37]" aria-hidden="true" />
             Walk-In Rates
           </h2>
-          <div className="grid grid-cols-[1.6fr_1fr] gap-3 items-start">
-            <div>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="bg-[#f8f5ef] rounded-lg p-3 border border-[#d4af37]/30">
-                  <div className="mb-1.5">
-                    <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] flex items-center gap-1">
-                      <Sun className="h-3.5 w-3.5 text-[#d4af37]" aria-hidden="true" />
-                      Day Rate <span className="font-sans font-normal text-[9px] text-[#5a7a6e]">(7:00 AM - 3:00 PM)</span>
-                    </h3>
-                  </div>
-                  <div className="flex flex-col gap-0.5">
-                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">Adults</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">₱120</span></div>
-                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">{'Kids (6-12 yrs)'}</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">₱80</span></div>
-                  </div>
-                </div>
-                <div className="bg-[#0e7c6b]/5 rounded-lg p-3 border border-[#0e7c6b]/20">
-                  <div className="mb-1.5">
-                    <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] flex items-center gap-1">
-                      <Moon className="h-3.5 w-3.5 text-[#0e7c6b]" aria-hidden="true" />
-                      Night Rate <span className="font-sans font-normal text-[9px] text-[#5a7a6e]">(4:00 PM - 12:00 MN)</span>
-                    </h3>
-                  </div>
-                  <div className="flex flex-col gap-0.5">
-                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">Adults</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">₱150</span></div>
-                    <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">{'Kids (6-12 yrs)'}</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">₱100</span></div>
-                  </div>
-                </div>
+          <div className="grid grid-cols-4 gap-3 items-stretch">
+            <div className="bg-[#f8f5ef] rounded-lg p-3 border border-[#d4af37]/30">
+              <div className="mb-1.5">
+                <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] flex items-center gap-1">
+                  <Sun className="h-3.5 w-3.5 text-[#d4af37]" aria-hidden="true" />
+                  Day Rate
+                </h3>
+                <p className="font-sans font-normal text-[9px] text-[#5a7a6e] leading-tight ml-5">(7:00 AM - 3:00 PM)</p>
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">Adults</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">₱120</span></div>
+                <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">{'Kids (6-12 yrs)'}</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">₱80</span></div>
               </div>
             </div>
 
-            <div className="bg-[#f8f5ef] rounded-lg p-2.5 border border-[#d4af37]/20">
-              <div className="flex flex-col gap-1.25">
+            <div className="bg-[#0e7c6b]/5 rounded-lg p-3 border border-[#0e7c6b]/20">
+              <div className="mb-1.5">
+                <h3 className="font-serif text-[13px] font-bold text-[#0e7c6b] flex items-center gap-1">
+                  <Moon className="h-3.5 w-3.5 text-[#0e7c6b]" aria-hidden="true" />
+                  Night Rate
+                </h3>
+                <p className="font-sans font-normal text-[9px] text-[#5a7a6e] leading-tight ml-5">(4:00 PM - 12:00 MN)</p>
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">Adults</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">₱150</span></div>
+                <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">{'Kids (6-12 yrs)'}</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">₱100</span></div>
+              </div>
+            </div>
+
+            <div className="bg-[#eaf2ff] rounded-lg p-3 border border-[#3b82f6]/30">
+              <div className="mb-1.5">
+                <h3 className="font-serif text-[13px] font-bold text-[#1e3a8a] flex items-center gap-1">
+                  <BadgePercent className="h-3.5 w-3.5 text-[#2563eb]" aria-hidden="true" />
+                  Overnight Rate
+                </h3>
+                <p className="font-sans font-normal text-[9px] text-[#4f6295] leading-tight ml-5">(12:00 MN - 6:00 AM)</p>
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">Adults</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">₱200</span></div>
+                <div className="flex items-center"><span className="font-sans text-[11px] text-[#0e7c6b]">{'Kids (6-12 yrs)'}</span><div className="flex-1 border-b border-dotted border-[#d4af37]/40 mx-1 mb-0.5" /><span className="font-serif text-[15px] font-bold text-[#d4af37]">₱150</span></div>
+              </div>
+            </div>
+
+            <div className="bg-[#e8f6f3] rounded-lg p-2 border border-[#0e7c6b]/30">
+              <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-2">
                   <div>
-                    <p className="font-serif text-[11.5px] font-bold text-[#0e7c6b] inline-flex items-center gap-1">
-                      <Umbrella className="h-3.5 w-3.5 text-[#d4af37]" aria-hidden="true" />
-                      Umbrella <span className="font-sans font-normal text-[9px] text-[#5a7a6e]">(Good for 4 pax)</span>
+                    <p className="font-serif text-[10.5px] font-bold text-[#0e7c6b] inline-flex items-center gap-1">
+                      <Umbrella className="h-3 w-3 text-[#0e7c6b]" aria-hidden="true" />
+                      Umbrella
                     </p>
+                    <p className="font-sans font-normal text-[8.5px] text-[#5a7a6e] leading-tight ml-4">(Good for 4 pax)</p>
                   </div>
-                  <div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" />
-                  <p className="font-serif text-[16px] font-bold text-[#d4af37]">₱250</p>
+                  <div className="flex-1 border-b border-dotted border-[#0e7c6b]/30 mb-0.5" />
+                  <p className="font-serif text-[14px] font-bold text-[#0e7c6b]">₱250</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <div>
-                    <p className="font-serif text-[11.5px] font-bold text-[#0e7c6b] inline-flex items-center gap-1">
-                      <Waves className="h-3.5 w-3.5 text-[#d4af37]" aria-hidden="true" />
-                      Poolside Table <span className="font-sans font-normal text-[9px] text-[#5a7a6e]">(Good for 8 pax)</span>
+                    <p className="font-serif text-[10.5px] font-bold text-[#0e7c6b] inline-flex items-center gap-1">
+                      <Waves className="h-3 w-3 text-[#0e7c6b]" aria-hidden="true" />
+                      Poolside Table
                     </p>
+                    <p className="font-sans font-normal text-[8.5px] text-[#5a7a6e] leading-tight ml-4">(Good for 8 pax)</p>
                   </div>
-                  <div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" />
-                  <p className="font-serif text-[16px] font-bold text-[#d4af37]">₱400</p>
+                  <div className="flex-1 border-b border-dotted border-[#0e7c6b]/30 mb-0.5" />
+                  <p className="font-serif text-[14px] font-bold text-[#0e7c6b]">₱400</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <div>
-                    <p className="font-serif text-[11.5px] font-bold text-[#0e7c6b] inline-flex items-center gap-1">
-                      <Building2 className="h-3.5 w-3.5 text-[#d4af37]" aria-hidden="true" />
-                      Hall <span className="font-sans font-normal text-[9px] text-[#5a7a6e]">(Min. 20 pax + videoke)</span>
+                    <p className="font-serif text-[10.5px] font-bold text-[#0e7c6b] inline-flex items-center gap-1">
+                      <Building2 className="h-3 w-3 text-[#0e7c6b]" aria-hidden="true" />
+                      Hall
                     </p>
+                    <p className="font-sans font-normal text-[8.5px] text-[#5a7a6e] leading-tight ml-4">(20 pax + videoke)</p>
                   </div>
-                  <div className="flex-1 border-b border-dotted border-[#d4af37]/40 mb-0.5" />
-                  <p className="font-serif text-[16px] font-bold text-[#d4af37]">₱2,000</p>
+                  <div className="flex-1 border-b border-dotted border-[#0e7c6b]/30 mb-0.5" />
+                  <p className="font-serif text-[14px] font-bold text-[#0e7c6b]">₱2,000</p>
                 </div>
               </div>
             </div>
