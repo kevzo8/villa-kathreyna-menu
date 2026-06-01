@@ -144,7 +144,7 @@ export const sandwiches: MenuCategory = {
     { name: "Cheeseburger", price: "165", description: "Delicious American-style burger topped with cheddar cheese.", image: "/images/food/cheeseburger.jpg" },
     { name: "Classic Clubhouse", price: "200", description: "Double-decker sandwich with ham, cheese, egg, and chicken.", image: "/images/food/clubhouse.jpg" },
     { name: "Grilled Ham & Cheese", price: "135", description: "Classic grilled sandwich with ham and cheese.", image: "/images/food/grilled-ham-cheese.jpg" },
-    { name: "Nachos Overload", price: "250", description: "Crispy tortilla chips topped with cheese and jalapeños.", image: "/images/food/french-fries.jpg" },
+    { name: "Nachos Overload", price: "250", description: "Crispy tortilla chips topped with cheese and jalapeños.", image: "/images/food/nachos.jpg" },
   ],
 }
 
